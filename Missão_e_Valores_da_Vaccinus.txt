@@ -1,0 +1,13 @@
+Sobre nós: Criada a partir do altruísmo de 6 jovens desenvolvedores, a Vaccinus surgiu da necessidade de desenvolver soluções que visem extinguir o desperdício de vacinas durante o transporte, garantindo sua integridade até o seu destino e assim assegurando o bem-estar e saúde da população.
+
+Missão: "Assegurar a integridade das vacinas durante o seu deslocamento, independente da distância e meio de transporte, mediante o monitoramento em tempo real da temperatura de resfriamento com isso visando salvaguardar o bem estar e saúde da população"
+
+Visão: Tornarmo-nos referência nacional em soluções de IoT para controle de refrigeração de vacinas em unidades móveis.
+
+Valores:
+Integridade: Orientados pela ética, responsabilidade profissional e pessoal, acreditamos que a integridade é o essencial em qualquer atividade humana.
+Cidadania: Nos preocupamos com o bem estar de nosso semelhante, portanto nossas soluções são voltadas a aprimorar sistemas de refrigeração de vacinas para zelar pela saúde da população.
+Criatividade: Acreditamos que sempre é possível fazer mais e melhor, nos dedicamos continuamente em desenvolver sistemas eficientes e inovadores para simplificar as demandas de nosso mercado.
+
+
+
