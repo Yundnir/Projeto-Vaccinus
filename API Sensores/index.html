@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Line Chart</title>
+	<title>Vaccinus - Dashboard</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
 	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
@@ -13,10 +13,20 @@
 			-webkit-user-select: none;
 			-ms-user-select: none;
 		}
+		#img{ 
+		margin-left: 430px; /*Para centralizar o LOGO no centro da tela*/
+		}	
+		body{
+			font-family: Arial, Helvetica, sans-serif; /* Toda a página estará com fonte ARIAL */
+		}
 	</style>
 </head>
 
-<body style="background-color: lightgray">
+<body style="background-color:#e1ecec"> <!--Altera cor da página-->
+	<div id="img"> <!--Cria uma div com ID "IMG" que será puxada na linha 16-->
+		<img src="../Logo/Logo_Ajustado.png" alt=""> <!--Nossa LOGO-->
+	</div>
+	
 	<section>
 		<h2>Média: <label id='average'>0.00</label></h2>
 		<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
@@ -27,17 +37,17 @@
 	<script>
 
 		var context = document.getElementById("chart").getContext("2d");
-		context.canvas.width = 1000; //altera largura do gráfico
+		context.canvas.width = 750; //alterei a  largura do gráfico
 		context.canvas.height = 300; //altera altura do gráfico
         
         var configuration = {
 			type: 'line', //alteração do tipo de gráfico (barra, linhas, pizza...)
 			data: {
 				datasets: [{
-					label: "Temperatura x Tempo", //Coloquei para português
+					label: "Temperatura ºC x Tempo (Seg)", //Coloquei para português
 					type: 'line',
-					backgroundColor: ['rgba(255, 99, 0, 0.2)'], //altera a cor de fundo do gráfico
-					borderColor: ['#ff3232'], // altera a cor da linha do gráfico
+					//backgroundColor: ['#e1ecec'], //altera a cor de fundo do gráfico
+					borderColor: ['#9DD2EE'], // altera a cor da linha do gráfico
 				}]
 			},
 			options: {
@@ -46,28 +56,28 @@
 						//type: 'value',
 						distribution: 'series',
 						scaleLabel: {
-							display: true,		  //Acrescentei no eixo X o label TEMPO.
-							labelString: 'Tempo'  //Acrescentei no eixo X o label TEMPO.
+							display: true,  //Acrescentei no eixo X o label TEMPO.
+							labelString: 'Tempo (Seg)'  //Acrescentei no eixo X o label TEMPO.
                         },
                         ticks: {
 							beginAtZero:true,
-							maxticksLimit: 5,      
+							maxticksLimit: 3,      
                         }
 					}],
 					yAxes: [{
 						scaleLabel: {
 							display: true,
-							labelString: 'Temperatura'
+							labelString: 'Temperatura °C' //Label alterada para Graus Celcius
                         },
                         ticks: {
 							beginAtZero:true,
-							suggestedMin: 0,
-							suggestedMax: 30
+							suggestedMin: -5, //Alterei a escala para que a temperatura mínima seja negativa
+							suggestedMax: 40  //Alterei a escala para até  40 de temperatura máxima
                         }
 					}]
 				},
 				animation: {
-					duration: 0
+					duration: 10
 				}
 			}
         };
