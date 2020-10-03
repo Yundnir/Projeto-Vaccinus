@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccinus - Simulador Financeiro</title>
+</head>
+<style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    <center>
+        <h1>SPRINT 2</h1>
+        <h2>Simulador Financeiro</h2>
+        <img src="../../Projeto PI/Grupo-11---1ADSB/Logo/Logo_Ajustado.png" alt=""> <br>
+        <select id="vacinas" onchange="tipo()">
+            <option value="Escolha uma vacina">Escolher Vacina</option>
+            <option value="100.00">Dengue</option>
+            <option value="200.00">Febre Amarela</option>
+            <option value="300.00">Gripe</option>
+            <option value="400.00">Sarampo</option>
+            <option value="500.00">Tétano</option>
+        </select>
+        <div id="preco_unitario"></div> 
+        <b>Insira a quantidade de vacinas:</b><input id="num_vacinas" type="number" oninput="numero()" placeholder="Qtde Vacinas" style="width: 100px; text-align: center;"> 
+        <div id="preco_total"></div>
+        <b>Quantidade de vacinas perdidas:</b> <input id="perdidas" type="number" oninput="perdas()" placeholder="Qtde Perdas" style="text-align: center; width: 100px;"> <br>
+        <div id="valor_total_perdas"></div>
+    </center>
+</body>
+</html>
+<script>
+    function tipo() {
+            preco_unitario.innerHTML = `O valor unitário estimado para essa vacina é: R$${vacinas.value}`;
+        }
+    function numero() {
+            var total = num_vacinas.value * vacinas.value;
+            preco_total.innerHTML = `O valor total do lote desta vacina é: R$ ${total}`;
+        }
+    function perdas() {
+            var total = num_vacinas.value * vacinas.value;
+            var perdas_totais = perdidas.value * vacinas.value;
+            var perda_percentual = (perdas_totais * 100) / total;
+            valor_total_perdas.innerHTML = `<br>Você teve um prejuízo de <b><u>R$ ${perdas_totais}</u></b> referente às vacinas que foram estragadas<br>
+                                            no processo de transporte, o que corresponde a um prejuízo de <b><u>${perda_percentual.toFixed(2)}%</u></b>
+                                            do investimento inicial.`;
+    }
+</script>
