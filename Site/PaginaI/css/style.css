@@ -1,0 +1,112 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #363636;
+}
+
+.header{
+    background-color: #393B44;
+    height: 110px;
+    padding-top: 25px;
+}
+
+.header .nav .current a,
+.header span{
+    color: #9DD2EE;
+}
+
+.container{
+    /* Largura do elemento */ 
+    width: 80%;
+    margin: auto;
+
+    /* height: 50px; */
+}
+
+.container img{
+    width: 12%;
+    float: left;
+}
+
+
+.title-header h1,
+.nav ul
+{
+    margin: 0;
+}
+
+.title-header{
+    float: left;
+    color: #ffffff;
+}
+
+.nav{
+    float: right;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 20px;
+    padding: 10px 20px 0px 20px;
+    
+}
+
+/* SHOWCASE */
+.showcase {
+    /* Coloca imagem no fundo, que nao precise usar o <img> 
+    .. = vai pra pasta de trás, volta repositorio no caso */
+    /* background-image: url(../img/team.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center; */
+    /* min-height: 400px; */
+}
+
+.showcase p{
+    font-size: 22px;
+}
+
+.carousel-caption h3{
+    font-size: 100px;
+    margin-bottom: 320px;
+}
+
+.carousel-caption p{
+    font-size: 35px; 
+    margin-bottom: 20px;
+}
+
+/*FIM SHOWCASE*/
+
+/* NEWS */
+.new{
+    background-color: #232323;
+    color: #ffffff;
+    padding: 30px 0px 20px 0px;
+}
+
+.new h1{
+    margin: 0;
+    float: left;
+}
+
+.new form{
+    float: right;
+}
+
+.new input{
+    height: 25px;
+    width: 225px;
+}
+/*FIM NEW*/
+
+
