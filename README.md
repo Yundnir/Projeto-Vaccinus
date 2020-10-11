@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="logo/logo_v_a.png" alt="Vaccinus" width="120" height = "120">
+  <img src="Logo/logo_v_a.png" alt="Vaccinus" width="120" height = "120">
 <br>
 <br>
 Vaccinus
