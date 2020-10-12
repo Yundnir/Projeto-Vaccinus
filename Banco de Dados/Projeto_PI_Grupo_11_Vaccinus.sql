@@ -18,73 +18,73 @@ create table tbUsuario (
 ('Matheus Daniel', 'matheus.boaventura@bandtec.com.br', '1199999-9994', '72.330.495/0001-28', 'qualquercoisa4'),
 ('Guilherme Santos', 'guilherme.santos@bandtec.com.br', '1199999-9995', '92.754.738/0001-62', 'qualquercoisa5');
                             
+-- Tabela de transporte/destino para onde a vacina está sendo encaminhada
+create table tbDestino (
+idDestino int primary key auto_increment,
+partida varchar (50),
+destino varchar (50)
+);
+insert into tbDestino (partida, destino) values 
+('São Paulo/SP', 'Rio Grande/AC'),
+('Rio de Janeiro/RJ', 'Porto Alegre/RS'),
+('São Paulo/SP', 'Osasco/SP'),
+('Campina Grande/PB', 'Belem/PA');
+
 create table tbVacinas (
 	idVacina int primary key auto_increment,
     nomeVacina varchar(60),
     datahora date,
-    loteVacina varchar(20)
+    loteVacina varchar(20),
+    fkDestino int,
+    foreign key (FkDestino) references tbDestino (idDestino)
 );
-
-drop table tbVacinas;
-
-insert into tbVacinas(nomeVacina, datahora, loteVacina) values
+insert into tbVacinas(nomeVacina, datahora, loteVacina) values -- COLOCAR A COLUNA DA FK
 	('Febre Amarela', '2020/10/09', '149VPOO'),
 	('H1N1', '2020/10/12', '150VPOO'),
 	('Sarampo', '2020/01/09', '151VPOO');
     
 select * from tbVacinas;
 
+-- Tabela de Relatório - Registro (máxima e mínima)
+create table tbControleTemp (
+idControleTemp int primary key auto_increment,
+sobre_temperatura varchar (8),
+abaixo_temperatura varchar (8)	
+						
+);
+insert into tbControleTemp values (null,'10°C', '-6°C'),
+								  (null,'9°C', '-3°C'),
+								  (null,'12°C', '-3,5°C'),
+								  (null,'8°C', '-7°C');
 
 -- Tabela de temperatura no tempo real dentro do Container
-create table tbContainerTemp (
+create table tbContainerTemp (  -- ACRESCENTAR A CHAVE ESTRANGEIRA
 idContainer int primary key auto_increment,
 datahora varchar (30),
 temperatura varchar (7),
-fkLote int,
-foreign key(fkLote) references tbVacinas(idVacina)
+fkVacina int,
+fkUsuario int,
+foreign key(fkVacina) references tbVacinas(idVacina),
+foreign key (fkUsuario) references tbUsuario (idUsuario)
 )auto_increment = 100;
 
-insert into tbContainerTemp (datahora, temperatura, fkLote) values 
+insert into tbContainerTemp (datahora, temperatura, fkVacina) values 
 ('01/10/2020 12:00', '3ºC', 1),
 ('02/10/2020 13:00', '4ºC', 2),
 ('03/10/2020 14:00', '2,5ºC', 3),
 ('04/10/2020 14:30', '3,25ºC', 3);
 
 select * from tbContainerTemp;
-								
--- Tabela de Relatório - Registro (máxima e mínima)
-create table tbControleTemp (
-idControleTemp int primary key auto_increment,
-sobre_temperatura varchar (8),
-abaixo_temperatura varchar (8)							
-);
-insert into tbControleTemp values (null,'10°C', '-6°C'),
-								(null,'9°C', '-3°C'),
-								(null,'12°C', '-3,5°C'),
-								(null,'8°C', '-7°C');
-
--- Tabela de transporte/destino para onde a vacina está sendo encaminhada
-create table tbDestino (
-idDestino int primary key auto_increment,
-partida varchar (50),
-destino varchar (50),
-fkLote int,
-foreign key(fkLote) references tbVacinas(idVacina)
-);
-insert into tbDestino (partida, destino, fkLote) values 
-('São Paulo/SP', 'Rio Grande/AC', 1),
-('Rio de Janeiro/RJ', 'Porto Alegre/RS', 2),
-('São Paulo/SP', 'Osasco/SP', 3),
-('Campina Grande/PB', 'Belem/PA', 2);
-     
- select * from tbUsuario;
- select * from tbContainerTemp;
- select * from tbControleTemp;
- select * from tbDestino;
+					
+select * from tbUsuario;
+select * from tbContainerTemp;
+select * from tbControleTemp;
+select * from tbDestino;
  
- desc tbDestino;
+desc tbDestino;
 
  
  
  
+
  
