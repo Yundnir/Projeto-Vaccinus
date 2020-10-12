@@ -22,8 +22,8 @@ Este website apresenta todas as ferramentas e práticas mais recentes em desenvo
 
 ## Começando
 
-1. Clone este repositório usando `git clone https://github.com/nicolascarvalhobandtec/Grupo-11---1ADSB`;
-2. Mova-se para o diretório apropriado: `Grupo-11---1ADSB`.<br />
+1. Clone este repositório usando `git clone https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus`;
+2. Mova-se para o diretório apropriado: `Projeto-Vaccinus`.<br />
 
 ### Introdução ao servidor de back-end
 
