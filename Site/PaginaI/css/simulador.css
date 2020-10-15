@@ -1,0 +1,66 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(89, 89, 90);
+  }
+ 
+  .header {
+    background-color: rgb(89, 89, 90);
+    height: 80px;
+    padding-top: 15px;
+  }  
+
+  .titulo_header {
+    float: left;
+    color: lightskyblue;
+    padding-left: 50px;
+  }
+  
+  .navegacao {
+    float: right;
+  }
+  
+  .navegacao li{
+    display: inline-block;
+    padding: 10px 25px 0 20px;
+    font-size: 20px;
+    color: lightskyblue;
+  }
+
+  .navegacao .simulator{
+    color: white;
+  }
+  
+  .plano_fundo {
+    background-image: url(../img/vaccine4.png);
+    height: 580px;
+    padding: 10px 0px 0px 0px;
+  }
+
+  .exibicao .texto_exibicao {
+    color: white;
+    text-align: center;
+    height: 350px;
+    width: 700px;
+    margin-left: 330px;
+    margin-top: 80px;
+    }
+  .exibicao .texto_exibicao .sub_titulo {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .exibicao .texto_exibicao p {
+    font-size: 20px;
+  }
+
+  .exibicao button {
+      font-family: monospace;
+      color: lightskyblue;
+      width: 120px;
+      height: 40px;
+      background-color: rgb(89, 89, 90);
+      border-radius: 7px;
+      border: lightskyblue solid 2px;
+  }
