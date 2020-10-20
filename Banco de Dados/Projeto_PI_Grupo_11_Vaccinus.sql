@@ -30,22 +30,6 @@ insert into tbDestino (partida, destino) values
 ('São Paulo/SP', 'Osasco/SP'),
 ('Campina Grande/PB', 'Belem/PA');
 
-create table tbVacinas (
-	idVacina int primary key auto_increment,
-    nomeVacina varchar(60),
-    datahora date,
-    loteVacina varchar(20),
-    fkDestino int,
-    foreign key (FkDestino) references tbDestino (idDestino)
-);
-insert into tbVacinas(nomeVacina, datahora, loteVacina) values -- COLOCAR A COLUNA DA FK
-	('Febre Amarela', '2020/10/09', '149VPOO'),
-	('H1N1', '2020/10/12', '150VPOO'),
-	('Sarampo', '2020/01/09', '151VPOO');
-    
-select * from tbVacinas;
-
--- Tabela de Relatório - Registro (máxima e mínima)
 create table tbControleTemp (
 idControleTemp int primary key auto_increment,
 sobre_temperatura varchar (8),
@@ -57,22 +41,47 @@ insert into tbControleTemp values (null,'10°C', '-6°C'),
 								  (null,'12°C', '-3,5°C'),
 								  (null,'8°C', '-7°C');
 
--- Tabela de temperatura no tempo real dentro do Container
 create table tbContainerTemp (  -- ACRESCENTAR A CHAVE ESTRANGEIRA
 idContainer int primary key auto_increment,
 datahora varchar (30),
 temperatura varchar (7),
-fkVacina int,
 fkUsuario int,
-foreign key(fkVacina) references tbVacinas(idVacina),
-foreign key (fkUsuario) references tbUsuario (idUsuario)
-)auto_increment = 100;
+fkControleTemp int,
+foreign key (fkUsuario) references tbUsuario (idUsuario),
+foreign key (fkControleTemp) references tbControleTemp (idControleTemp)
+);
 
-insert into tbContainerTemp (datahora, temperatura, fkVacina) values 
-('01/10/2020 12:00', '3ºC', 1),
-('02/10/2020 13:00', '4ºC', 2),
-('03/10/2020 14:00', '2,5ºC', 3),
-('04/10/2020 14:30', '3,25ºC', 3);
+insert into tbContainerTemp (datahora, temperatura, fkUsuario, fkControleTemp) values 
+('01/10/2020 12:00', '3ºC', 1, 3),
+('02/10/2020 13:00', '4ºC', 2, 2),
+('03/10/2020 14:00', '2,5ºC', 3, 4),
+('04/10/2020 14:30', '3,25ºC', 5, 1);
+
+create table tbVacinas (
+	idVacina int primary key auto_increment,
+    nomeVacina varchar(60),
+    datahora date,
+    loteVacina varchar(20),
+    fkDestino int,
+    fkContainerTemp int,
+    foreign key (FkDestino) references tbDestino (idDestino),
+    foreign key (fkContainerTemp) references tbContainerTemp (idContainer)
+);
+
+insert into tbVacinas(nomeVacina, datahora, loteVacina, fkDestino, fkContainerTemp) values
+	('Febre Amarela', '2020/10/09', '149VPOO', 2, 3),
+	('H1N1', '2020/10/12', '150VPOO', 3, 1),
+	('Sarampo', '2020/01/09', '151VPOO', 4, 2);
+    
+select * from tbVacinas;
+
+-- Tabela de Relatório - Registro (máxima e mínima)
+
+
+-- Tabela de temperatura no tempo real dentro do Container
+
+
+
 
 select * from tbContainerTemp;
 					
@@ -82,6 +91,8 @@ select * from tbControleTemp;
 select * from tbDestino;
  
 desc tbDestino;
+
+
 
  
  
