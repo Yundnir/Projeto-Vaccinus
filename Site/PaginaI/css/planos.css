@@ -1,0 +1,171 @@
+/* Global */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #363636;
+}
+
+.header{
+    background-color: #393B44;
+    height: 110px;
+    padding-top: 25px;
+}
+
+.container{
+    /* Largura do elemento */ 
+    width: 80%;
+    margin: auto;
+
+    /* height: 50px; */
+}
+
+.container img{
+    width: 12%;
+    float: left;
+}
+
+
+.title-header h1,
+.nav ul
+{
+    margin: 0;
+}
+
+.title-header{
+    float: left;
+    color: #ffffff;
+}
+
+.title-header h2{
+    padding-top: 15px;
+}
+
+.nav{
+    float: right;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 20px;
+    padding: 10px 20px 0px 20px;
+    
+}
+
+.slide1{
+    position: absolute;
+    width: 412px;
+    height: 687px;
+    left: 51px;
+    top: 149px;
+    
+    background: rgba(157, 210, 238, 0.7);
+    border-radius: 50px;
+}
+
+.comeceagora {
+    position: absolute;
+width: 960px;
+height: 60px;
+left: 497px;
+top: 149px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 60px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.slide2{
+    /* Rectangle 24 */
+
+position: absolute;
+width: 398px;
+height: 583px;
+left: 488px;
+top: 235px;
+
+background: rgba(86, 79, 79, 0.2);
+border-radius: 50px;
+}
+.slide3{
+    position: absolute;
+width: 398px;
+height: 583px;
+left: 914px;
+top: 235px;
+
+background: #9DD2EE;
+border-radius: 50px;
+}
+.buttonslide2{
+    position: absolute;
+width: 310px;
+height: 81px;
+left: 533px;
+top: 787px;
+
+background: rgba(196, 196, 196, 0.1);
+border-radius: 50px;
+}
+.buttonslide3{
+    /* Rectangle 29 */
+
+
+position: absolute;
+width: 310px;
+height: 81px;
+left: 958px;
+top: 784px;
+
+background: #FFFFFF;
+border-radius: 50px;
+}
+.comecar2{
+    position: absolute;
+width: 244px;
+height: 23px;
+left: 581px;
+top: 816px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: 900;
+font-size: 21px;
+line-height: 25px;
+
+color:rgba(157, 210, 238, 1);
+
+text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.comecar3{
+position: absolute;
+width: 244px;
+height: 23px;
+left: 1019px;
+top: 810px;
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 25px;
+
+color: #363636;
+
+text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
