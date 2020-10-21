@@ -104,5 +104,6 @@ body {
 .showcase .imagem {
     float: right;
     width: 50%;
-    padding-right: 250px;
+    padding-right: 180px;
+    height: 20px;
 }
