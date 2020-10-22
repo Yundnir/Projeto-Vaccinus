@@ -19,6 +19,9 @@ width: 122px;
 height: auto;
 top: 0px;
 }
+.header .nav .current a, span{
+    color: #9DD2EE;
+}
 .Headertexto{
     position: absolute;
 width: 671px;
@@ -44,6 +47,11 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
     margin: auto;
 
     /* height: 50px; */
+}
+.linkslista{
+    position: absolute;
+    left: 1000px;
+    top: 40px;
 }
 .title-header h1,
 .nav ul
@@ -88,6 +96,9 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
     background: rgba(157, 210, 238, 0.7);
     border-radius: 50px;
 }
+.listalite{
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.50);
+}
 
 .comeceagora {
     position: absolute;
@@ -127,7 +138,7 @@ height: 583px;
 left: 914px;
 top: 235px;
 
-background: #9DD2EE;
+background: #033652;
 border-radius: 50px;
 }
 .buttonslide2{
@@ -150,7 +161,7 @@ height: 81px;
 left: 958px;
 top: 784px;
 
-background: #FFFFFF;
+background:  #012335;
 border-radius: 50px;
 }
 .comecar2{
@@ -183,9 +194,9 @@ font-weight: bold;
 font-size: 21px;
 line-height: 25px;
 
-color: #363636;
+color: rgb(8, 255, 8);
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+text-shadow: 2px 2px 13px rgb(123, 255, 8);
 }
 .slide1salve{
     position: absolute;
@@ -260,16 +271,20 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .slide3 li{
     font-family: Arial, Helvetica, sans-serif;
-    font-style: bold;
     font-size: x-large;
-    color: #363636;
+    color:rgba(8, 255, 8);
     padding: 20px;
+    text-shadow: 2px 2px 13px rgb(123, 255, 8);
 }
 .slide3 h1{
-    color: #363636;
-    font-weight: 100;
-    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgba(8, 255, 8);
+    padding-left: 20px;
+    margin-right: 200px;
+    text-shadow: 2px 2px 13px rgb(123, 255, 8);
+    background:  rgba(65, 57, 57, 0.89);
     margin-left: 20px;
+    border-radius: 20px;
 }
 .premiumreais{
     position: absolute;
@@ -284,9 +299,14 @@ font-weight: bold;
 font-size: 30px;
 line-height: 45px;
 
-color: #363636;
+color: rgba(255, 255, 255);
+text-shadow: 2px 2px 8px rgb(0, 0, 0);
+background-color: rgb(200, 200, 200);
+margin-right: 330px;
+padding-right: 0px;
+padding-left: 50px;
+border-radius: 20px;
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .premiumporano{
     position: absolute;
@@ -301,7 +321,7 @@ font-weight: bold;
 font-size: 20px;
 line-height: 30px;
 
-color: #363636;
+color: white;
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+text-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
