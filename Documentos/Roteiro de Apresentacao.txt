@@ -1,0 +1,20 @@
+
+// ROTEIRO DE APRESENTAÇÃO
+
+1ª Renato - Vaccinus
+2ª Todos - Team
+3ª Renato - Sobre nós
+4ª Renato - Escolha de tema
+5ª Renato - Problematica
+5.1ª Gui - Problematica 2.0 
+6ª Daniel - HLD
+7ª Daniel - LLD
+8ª Nikao - Tabela de Riscos
+9ª Daniel - Trello
+10ª André - Login
+11ª André - Site Geral
+12ª Shoyo - Darhboard
+13ª Shoyo - Analytics
+14ª Gui - Banco de Dados
+15ª Gui - Modelagem de Dados
+16ª Nikao - GitHub
