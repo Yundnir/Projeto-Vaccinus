@@ -1,0 +1,221 @@
+body {
+    position: relative;
+    padding: 0 1rem;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    background-color: #363636;
+}
+
+
+.l-navbar {
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #363636;
+    padding: .5rem 1rem 0 0;
+    transition: .5s;
+    display: block;
+    float: left;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow: hidden; */
+}
+
+.nav_logo, .nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 0 0 0 1.5rem;
+}
+
+.nav_logo {
+    margin-bottom: 2rem;
+    padding: 0 20px 0 10px;
+    text-decoration: none;
+   
+}
+
+.nav_logo-icon {
+    /* width: 63px;
+    height: 89px; */
+    color: white;
+    /* width: 60px; */
+    height: 60px;
+    padding-top: 17px;
+  
+}
+
+.nav_logo-name {
+    position: absolute;
+    width: 152px;
+    height: 52px;
+    left: 68px;
+    top: 34px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 52px;
+    color: #FFFCFC;
+ 
+}
+
+.nav_link {
+    position: relative;
+    color: #FFFFFF;
+    opacity: 0.4;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1.5rem;
+    transition: .3s;
+    margin-left: 10px;
+    text-decoration: none;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+}
+
+.nav_icon {
+    font-size: 1.25rem;
+}
+
+.nav_link-est {
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 0 0 .2rem 1.5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    transition: .3s;
+    margin-left: 10px;
+    text-decoration: none;
+    width: 25px;
+    height: 25px;
+    font-size: 21px;
+}
+
+.nav_icon-est {
+    font-size: 21px;
+    color: #9ee2dd
+}
+
+.linha-vertical {
+    height: 0px;
+    /*Altura da linha*/
+    border-left: 11px solid;
+    /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    
+}
+
+.box {
+    width: 50%;
+    float: left;
+    height: 660px;
+    /*Altura da linha*/
+    top: -10px;
+    position: absolute;
+    margin-left: 250px;
+}
+
+.linha-vertical {
+    border-left: 0.5px solid;
+    /* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    /* box-sizing: border-box; */
+    height: 100%;
+    margin-left: 270px;
+}
+
+.estatistica_box {
+    position: absolute;
+    width: 239px;
+    height: 105px;
+    left: 10px;
+    right: 10px;
+    top: 365px;
+    background: rgba(157, 210, 238, 0.8);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.estatistica_item {
+    text-align: center;
+    width: 204px;
+    height: 15px;
+    left: 49px;
+    top: 475px;
+    padding: 15px;
+    font-family: Roboto, sans-serif;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.estatistica_item i, span {
+    font-size: 20px;
+}
+
+.estatistica_item p {
+    font-size: 15px;
+}
+
+.section-not {
+    float: left;
+    width: 100%;
+}
+
+.notificacao-box {
+    position: absolute;
+    width: 239px;
+    height: 250px;
+    left: 10px;
+    right: 10px;
+    top: 505px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.notificacao_item {
+    text-align: center;
+    width: 204px;
+    height: 15px;
+    left: 49px;
+    top: 475px;
+    padding: 15px;
+    font-family: Roboto, sans-serif;
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 15px;
+}
+
+.notificacao_item i {
+    width: 100px;
+    height: 100px;
+    left: 93px;
+    top: 676px;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/*FIM HEADER CSS*/
+
+/* Começo CONTEUDO RELATORIO */
+
+.rContainer {
+    height: 100%;
+    width: 800px;
+    margin-left: 20px;
+    background-color: tomato;
+    float: left;
+}
+
+/*FIM RELATORIO CONTEUDO*/
