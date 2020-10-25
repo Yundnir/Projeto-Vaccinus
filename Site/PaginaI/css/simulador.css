@@ -6,7 +6,7 @@ body {
   }
  
   .header {
-    background-color: rgb(89, 89, 90);
+    background-color:#363636;
     height: 80px;
     padding-top: 15px;
   }  
@@ -26,7 +26,7 @@ body {
   }
   
   .navegacao {
-    float: right;
+    float: right; 
   }
   
   .navegacao li{
@@ -45,11 +45,15 @@ body {
     padding: 10px 0px 0px 0px;
   }
 
+  img {
+    height: 300px;
+    margin-left: 10%;
+  }
+
   .exibicao .texto_exibicao {
     color: white;
     height: 350px;
-    width: 700px;
-    margin-left: 330px;
+    margin-left: 700px;
     margin-top: 80px;
     }
   .exibicao .sub_titulo {
@@ -59,16 +63,56 @@ body {
     text-transform: uppercase;
   }
 
-  .exibicao .texto_exibicao p {
-    font-size: 20px;
+  .exibicao .texto_exibicao {
+    font-size: 13px;
+    margin-top: -20%;
   }
 
-  .exibicao button {
-      font-family: monospace;
-      color: lightskyblue;
-      width: 120px;
-      height: 40px;
-      background-color: rgb(89, 89, 90);
-      border-radius: 7px;
-      border: lightskyblue solid 2px;
+  .exibicao .texto_exibicao .text_vacin {
+    color: lightskyblue;
+  }
+
+  .exibicao .linha_retangular {
+    background-color: rgba(135, 206, 250, 0.774);
+    padding: 3px 3px 3px 3px;
+    width: 450px;
+  }
+
+  .exibicao .texto_exibicao .text_quantidade {
+    color: lightskyblue;
+  }
+  .exibicao .texto_exibicao .text_perdidas {
+    color: lightskyblue;
+  }
+
+  .exibicao .texto_exibicao .all_select #inp_vacina{
+    border-radius: 10px;
+    background-color: rgba(87, 87, 87, 0.904);
+    color: white;
+    font-family: monospace;
+    padding: 2px;
+  }
+
+  .exibicao .texto_exibicao .all_select #qtd_vacina{
+    border-radius: 10px;
+    background-color: rgba(87, 87, 87, 0.904);
+    color: white;
+    font-family: monospace;
+    padding: 2px;  
+  }
+
+  .exibicao .texto_exibicao .all_select #qtd_vacinas_perdidas{
+    border-radius: 10px;
+    background-color: rgba(87, 87, 87, 0.904);
+    color: white;
+    font-family: monospace;
+    padding: 2px;  
+  }
+
+  .exibicao .texto_exibicao button {
+    border-radius: 10px;
+    background-color: rgba(87, 87, 87, 0.904);
+    color: lightskyblue;
+    font-family: monospace;
+    padding: 4px;
   }
