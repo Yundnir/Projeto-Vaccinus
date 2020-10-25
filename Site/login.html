@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
+    <title>Login - Vaccinus</title>
+    
+</head>
+<body>
+    <div class="content">
+
+    
+        <div class="header">
+            <div class="container">
+                <div class="title-header">
+                    <a href="index.html">
+                        <img src="img/logo_sem.png" alt="">
+                    </a>
+                    <h1 class="texto-header"> Bem vindo de <span>volta!</span></h1>
+                </div>
+
+                <div class="planos">
+                    <h3 class="texto-header">Não tem uma conta?<a href="planos.html"><span> Veja os planos disponivéis agora!</span></a></h3>
+                <div class="retangulo_azul"></div>
+                </div>
+                
+            </div>
+        </div>
+
+    <div class="showcase">
+        <div class="conteudo">
+            <img src="img/user-profile.png" alt="" width="10%">
+            <br><br>
+            <div class="corpo_texto">
+            <p>Email:</p>
+            <input id="email" type="text">
+            <br>
+            <p>Senha:</p>
+            <input id="senha" type="password">
+            <br><br>
+            <p>Esqueceu sua senha? <span>Recupere.</span></p>
+            <button onclick="logar()">Login</button>
+        </div>
+        </div>
+        
+        <div class="imagem">
+            <img src="img/undraw_medicine_b1ol.svg" alt="" style="height: 500px;">
+        </div>
+
+    
+    </div>
+</div>
+ <!-- Footer/Rodapé -->
+ <div class="footer">
+    <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i>  Todos os direitos reservados. <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p> <br>
+    
+</div>
+    
+</body>
+</html>
+
+<script>
+    function logar() {
+        if (email.value == 'vaccinus@gmail.com' && senha.value == 'vaccinus') {
+            alert('Login feito com sucesso!')
+        } else{
+            alert('Dados incorretos!Tente Novamente!')
+        }
+    }
+</script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccinus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- Cabeçalho/HEADER  -->
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <a href="index.html"><img src="img/logo_sem.png" alt="Logo">
+                <h2><span>accinus</span></h2></a>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="current"><a href="contato.html">Contato</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    
+                </ul>
+                <div class="icon_login">
+                    <img src="img/user-profile.png" alt="">
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="pageContent">
+        <div class="cContainer">
+            <h1>Contato</h1>
+            <h4>Nos contate para qualquer dúvida</h4> 
+            <!-- Caixa preta com os 3 itens de contato -->
+            <div class="rectangle">
+                <div class="localization">
+                    <img src="img/location.png" alt="">
+                    <p>Rua Haddock Lobo, 595 <br>
+                    Cerqueira César, São Paulo - SP <br>
+                    01414-001 </p>
+                </div>
+                
+                <div class="rectWhite">
+                    <img src="img/tel.png" alt="">
+                    <h5>+11 3444-9811</h5>
+                </div>
+
+                <div class="contEmail">
+                    <img src="img/mail.png" alt="">
+                    <p>contato@vaccinus.com.br</p>
+                </div>                
+            </div>
+
+            <div class="contMensagem">
+                <div class="contInformation">
+                    <div class="menInfo">
+                        <p>Nome</p>
+                        <!-- <i class="far fa-user"></i> -->
+                        <input id="nomeContato" type="text" placeholder="Seu nome:">
+                        
+                    </div>
+
+                    <div class="menInfo">
+                        <p>Email</p>
+                        <input id="emailContato" type="text" placeholder="Seu email:">
+                    </div>
+
+                    <div class="menInfo">
+                        <p>Telefone</p>
+                        <input id="telefoneContato" type="text" placeholder="Seu número de telefone:">
+                    </div>
+                </div>
+
+                <div class="menMensagem">
+                    <p>Mensagem</p>
+                    <input id="mensagemContato" type="text" placeholder="Sua mensagem:">
+                </div>
+                <button onclick="enviar()">Enviar Mensagem</button>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer/Rodapé -->
+    <div class="footer">
+        <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i>  Todos os direitos reservados. <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p> <br>
+        
+    </div>
+
+</body>
+</html>
+<script>
+    function enviar() {
+        var nome = nomeContato.value;
+        var mail = emailContato.value;
+        var tel = telefoneContato.value;
+        var msg = mensagemContato.value;
+
+        if (nome != '' && mail != '' && tel != '' && msg != '') {
+            alert('Mensagem enviada!');
+        } else{
+            alert('Preencha todos os campos!')
+        }
+    }
+</script>
