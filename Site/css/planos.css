@@ -14,32 +14,44 @@ body{
 }
 .imagemlogo{
     position: absolute;
-left: 20px;
-width: 122px;
-height: auto;
-top: 0px;
+    left: 125px;
+    width: 122px;
+    height: auto;
+    top: 0px;
 }
 .header .nav .current a, span{
     color: #9DD2EE;
 }
+
+.header a:hover{
+    text-decoration: none;
+    color: #9DD2EE;
+}
+
+.header .icon_login img{
+    width: 35px;
+    margin-top: 19px;
+    padding-right: 145px;
+}
+
 .Headertexto{
     position: absolute;
-width: 671px;
-height: 52px;
-left: 165px;
-top: 35px;
+    width: 671px;
+    height: 52px;
+    left: 246px;
+    top: 49px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 44px;
-line-height: 52px;
-/* identical to box height */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 52px;
+    /* identical to box height */
 
 
-color: #FFFCFC;
+    color: #FFFCFC;
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .container{
     /* Largura do elemento */ 
@@ -89,9 +101,9 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 .slide1{
     position: absolute;
     width: 412px;
-    height: 687px;
-    left: 51px;
-    top: 149px;
+    height: 582px;
+    left: 193px;
+    top: 164px;
     
     background: rgba(157, 210, 238, 0.7);
     border-radius: 50px;
@@ -102,161 +114,159 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 
 .comeceagora {
     position: absolute;
-width: 960px;
-height: 60px;
-left: 497px;
-top: 149px;
+    width: 960px;
+    height: 60px;
+    left: 710px;
+    top: 149px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 60px;
-/* identical to box height */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 60px;
+    /* identical to box height */
 
 
-color: #FFFFFF;
+    color: #FFFFFF;
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .slide2{
     /* Rectangle 24 */
 
-position: absolute;
-width: 398px;
-height: 583px;
-left: 488px;
-top: 235px;
+    position: absolute;
+    width: 398px;
+    height: 460px;
+    left: 770px;
+    top: 235px;
 
-background: rgba(86, 79, 79, 0.2);
-border-radius: 50px;
+    background: rgba(86, 79, 79, 0.2);
+    border-radius: 50px;
 }
 .slide3{
     position: absolute;
-width: 398px;
-height: 583px;
-left: 914px;
-top: 235px;
+    width: 398px;
+    height: 460px;
+    left: 1300px;
+    top: 235px;
 
-background: #033652;
-border-radius: 50px;
+    background: #033652;
+    border-radius: 50px;
 }
 .buttonslide2{
     position: absolute;
 width: 310px;
 height: 81px;
-left: 533px;
-top: 787px;
+left: 810px;
+top: 669px;
 
 background: rgba(196, 196, 196, 0.1);
 border-radius: 50px;
 }
 .buttonslide3{
     /* Rectangle 29 */
+    position: absolute;
+    width: 310px;
+    height: 81px;
+    left: 1348px;
+    top: 670px;
 
-
-position: absolute;
-width: 310px;
-height: 81px;
-left: 958px;
-top: 784px;
-
-background:  #012335;
-border-radius: 50px;
+    background:  #012335;
+    border-radius: 50px;
 }
 .comecar2{
     position: absolute;
-width: 244px;
-height: 23px;
-left: 581px;
-top: 816px;
+    width: 244px;
+    height: 23px;
+    left: 867px;
+    top: 696px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: italic;
-font-weight: 900;
-font-size: 21px;
-line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 25px;
 
-color:rgba(157, 210, 238, 1);
+    color:rgba(157, 210, 238, 1);
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .comecar3{
-position: absolute;
-width: 244px;
-height: 23px;
-left: 1019px;
-top: 810px;
+    position: absolute;
+    width: 244px;
+    height: 23px;
+    left: 1417px;
+    top: 696px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 21px;
-line-height: 25px;
+    color: rgb(8, 255, 8);
 
-color: rgb(8, 255, 8);
-
-text-shadow: 2px 2px 13px rgb(123, 255, 8);
+    text-shadow: 2px 2px 13px rgb(123, 255, 8);
 }
+
 .slide1salve{
     position: absolute;
-width: 386px;
-height: 79px;
-left: 71px;
-top: 191px;
-
-font-family: Arial, Helvetica, sans-serif;
-font-size: 40px;
-line-height: 60px;
-text-align: center;
-
-color: #FFFFFF;
-
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 386px;
+    height: 79px;
+    left: 197px;
+    top: 220px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .imagemslide1{
     position: absolute;
-width: 338px;
-height: 256px;
-left: 95px;
-top: 533px;
-background: rgba(0, 0, 0, 0.25);;
+    /* width: 273px; */
+    height: 250px;
+    left: 219px;
+    top: 458px;
+    background: rgba(0, 0, 0, 0.25);;
 }
 .slide2 li{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: x-large;
+    font-size: large;
     color: white;
     padding: 20px;
 }
+
 .slide2 h1{
     color: white;
     font-weight: 100;
-    font-size: xx-large;
-    margin-left: 20px;
+    font-size: x-large;
+    margin-left: 41px;
+    margin-top: 35px;
 }
+
 .litereais{
     position: absolute;
-width: 192px;
-height: 64px;
-left: 743px;
-top: 256px;
+    width: 192px;
+    height: 64px;
+    left: 1000px;
+    top: 256px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 
-text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .litepormes {
     position: absolute;
     width: 192px;
     height: 64px;
-    left: 808px;
+    left: 1098px;
     top: 292px;
     
     font-family: Arial, Helvetica, sans-serif;
@@ -271,16 +281,16 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .slide3 li{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
+    font-size: large;
     color:rgba(8, 255, 8);
-    padding: 20px;
+    padding: 14px;
     text-shadow: 2px 2px 13px rgb(123, 255, 8);
 }
 .slide3 h1{
     font-family: Arial, Helvetica, sans-serif;
     color:rgba(8, 255, 8);
     padding-left: 20px;
-    margin-right: 200px;
+    margin-right: 174px;
     text-shadow: 2px 2px 13px rgb(123, 255, 8);
     background:  rgba(65, 57, 57, 0.89);
     margin-left: 20px;
@@ -288,40 +298,78 @@ text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .premiumreais{
     position: absolute;
-width: 192px;
-height: 64px;
-left: 1157px;
-top: 267px;
+    width: 192px;
+    height: 64px;
+    left: 1535px;
+    top: 285px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
 
-color: rgba(255, 255, 255);
-text-shadow: 2px 2px 8px rgb(0, 0, 0);
-background-color: rgb(200, 200, 200);
-margin-right: 330px;
-padding-right: 0px;
-padding-left: 50px;
-border-radius: 20px;
+    color: rgba(255, 255, 255);
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    margin-right: 330px;
+    padding-right: 0px;
+    padding-left: 50px;
+    border-radius: 20px;
 
 }
 .premiumporano{
     position: absolute;
-width: 192px;
-height: 64px;
-left: 1232px;
-top: 299px;
+    width: 192px;
+    height: 64px;
+    left: 1700px;
+    top: 319px;
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
 
-color: white;
+    color: white;
 
-text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+/* FOOTER */
+.footer{
+    background-color: #363636;
+    width: 100%;
+    height: 210px;
+    background-image: url(../img/onda3.png);
+    background-size: cover;
+    padding-bottom: 10px;
+
+}
+
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    padding-top: 165px;
+    margin-bottom: -15px;
+}
+
+.footer a{
+    padding-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #9DD2EE;
+    text-decoration: none;
+}
+
+/* Fim FOOTER */
+
+.conteudo {
+    /* background-color: violet; */
+    height: 690px;
+    width: 100%;
 }
