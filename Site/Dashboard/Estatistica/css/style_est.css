@@ -188,7 +188,7 @@ body {
     top: 475px;
     padding: 15px;
     font-family: Roboto, sans-serif;
-    color: rgba(0, 0, 0, 0.3);
+    color:rgba(255, 255, 255, 0.3);
     line-height: 15px;
 }
 
@@ -198,7 +198,7 @@ body {
     left: 93px;
     top: 676px;
     font-size: 100px;
-    color: rgba(0, 0, 0, 0.3);
+    color:rgba(255, 255, 255, 0.3);
 }
 
 .plano_box button {
