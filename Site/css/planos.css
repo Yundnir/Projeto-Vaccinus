@@ -110,6 +110,7 @@ body{
 }
 .listalite{
     text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.50);
+    list-style:none;
 }
 
 .comeceagora {
@@ -150,7 +151,7 @@ body{
     left: 1300px;
     top: 235px;
 
-    background: #033652;
+    background: rgb(105, 152, 177);
     border-radius: 50px;
 }
 .buttonslide2{
@@ -171,18 +172,18 @@ border-radius: 50px;
     left: 1348px;
     top: 670px;
 
-    background:  #012335;
+    background:  #FFFFFF;
     border-radius: 50px;
 }
 .comecar2{
     position: absolute;
     width: 244px;
     height: 23px;
-    left: 867px;
+    left: 860px;
     top: 696px;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
+    font-style: bold;
     font-weight: 900;
     font-size: 21px;
     line-height: 25px;
@@ -195,17 +196,16 @@ border-radius: 50px;
     position: absolute;
     width: 244px;
     height: 23px;
-    left: 1417px;
+    left: 1400px;
     top: 696px;
-    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 25px;
-
-    color: rgb(8, 255, 8);
-
-    text-shadow: 2px 2px 13px rgb(123, 255, 8);
+    
+    color: #363636;
+    
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .slide1salve{
@@ -227,14 +227,14 @@ border-radius: 50px;
     height: 250px;
     left: 219px;
     top: 458px;
-    background: rgba(0, 0, 0, 0.25);;
+    background: rgba(0, 0, 0, 0.25);
 }
 .slide2 li{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: large;
     color: white;
-    padding: 20px;
+    padding: 16px;
 }
 
 .slide2 h1{
@@ -282,17 +282,18 @@ border-radius: 50px;
 .slide3 li{
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    color:rgba(8, 255, 8);
+    font-style: bold;
+    color:#363636;
     padding: 14px;
-    text-shadow: 2px 2px 13px rgb(123, 255, 8);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
 }
 .slide3 h1{
     font-family: Arial, Helvetica, sans-serif;
-    color:rgba(8, 255, 8);
+    color: #363636;
     padding-left: 20px;
-    margin-right: 174px;
-    text-shadow: 2px 2px 13px rgb(123, 255, 8);
-    background:  rgba(65, 57, 57, 0.89);
+    margin-right: 200px;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+
     margin-left: 20px;
     border-radius: 20px;
 }
@@ -300,8 +301,8 @@ border-radius: 50px;
     position: absolute;
     width: 192px;
     height: 64px;
-    left: 1535px;
-    top: 285px;
+    left: 1480px;
+    top: 255px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -309,9 +310,8 @@ border-radius: 50px;
     font-size: 30px;
     line-height: 45px;
 
-    color: rgba(255, 255, 255);
-    text-shadow: 2px 2px 8px rgb(0, 0, 0);
-    background-color: rgb(200, 200, 200);
+    color: #363636;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
     margin-right: 330px;
     padding-right: 0px;
     padding-left: 50px;
@@ -322,8 +322,8 @@ border-radius: 50px;
     position: absolute;
     width: 192px;
     height: 64px;
-    left: 1700px;
-    top: 319px;
+    left: 1600px;
+    top: 290px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -331,9 +331,9 @@ border-radius: 50px;
     font-size: 20px;
     line-height: 30px;
 
-    color: white;
+    color: #363636;
 
-    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* FOOTER */
@@ -372,4 +372,9 @@ border-radius: 50px;
     /* background-color: violet; */
     height: 690px;
     width: 100%;
+}
+.listapremium{
+    list-style:none;
+    color: #363636;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
