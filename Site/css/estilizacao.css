@@ -95,6 +95,16 @@ body{
     font-size: 45px;
 }
 
+/* André LinkedIn LOGO */
+.equipe img{    
+    position: absolute;
+    height: 25px;
+    padding-top: 110px;
+    padding-left: 205px;
+}
+/* André LinkedIn LOGO */
+
+/* Fotos da Equipe */
 .membros img{
     height: 400px;
     padding-top: 30px;
@@ -102,6 +112,17 @@ body{
     margin-bottom: 200px;
     position: absolute;
 }
+/* Fotos da Equipe */
+
+/* André GitHub LOGO */
+.github img{
+    position: absolute;
+    height: 25px;
+    padding-top: 110px;
+    padding-left: 165px;
+    margin-bottom: 200px;
+}
+/* André GitHub LOGO */
 
 .andre p{
     float: left;
@@ -121,12 +142,32 @@ body{
     position: absolute;
 }
 
+.guilhermelinked img{
+    position: absolute;
+    padding-left: 590px;
+}
+
+.guilhermegit img{
+    position: absolute;
+    padding-left: 550px;
+}
+
 .matheus p{
     position: absolute;
     padding-left: 945px;
     padding-top: 70px;
     color: whitesmoke;
     text-align: justify;
+}
+
+.matheuslinked img{
+    position: absolute;
+    padding-left: 970px;
+}
+
+.matheusgit img{
+    position: absolute;
+    padding-left: 930px;
 }
 
 .nicolas p{
@@ -136,6 +177,18 @@ body{
     color: whitesmoke;
 }
 
+.nicolaslinked img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 205px;
+}
+
+.nicolasgit img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 165px;
+}
+
 .priscila p{
     position: absolute;
     padding-top: 300px;
@@ -143,11 +196,35 @@ body{
     color: whitesmoke;
 }
 
+.priscilalinked img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 590px;
+}
+
+.priscilagit img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 550px;
+}
+
 .renato p{
     position: absolute;
     padding-top: 300px;
     padding-left: 945px;
     color: whitesmoke;
+}
+
+.renatolinked img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 970px;
+}
+
+.renatogit img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 930px;
 }
 
 footer{
