@@ -44,6 +44,10 @@ body {
     color: #111010;
 }
 
+.nav i {
+    padding-right: 5px;
+}
+
 .nav li {
     padding-bottom: 15px;
 }

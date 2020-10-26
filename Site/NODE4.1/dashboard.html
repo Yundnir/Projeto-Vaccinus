@@ -2,10 +2,11 @@
 <html>
 
 <head>
-	<title>Line Chart</title>
+	<title>Dashboard - Vaccinus</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
 	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="dashboard_style.css">
 	<style>
 		canvas {
@@ -27,10 +28,10 @@
 			</div>
             <div class="nav">	
 				<ul>
-					<li><a href="#" class="current">Resumo</a></li>
-					<li><a href="#">Estatísticas</a></li>
-					<li><a href="#">Relatórios</a></li>
-					<li><a href="#">Configurações</a></li>
+					<li><a href="#" class="current"><i class='bx bx-grid-alt nav_icon'></i>Resumo</a></li>
+					<li><a href="../estatistica.html"><i class='bx bx-stats nav_icon-est'></i>Estatísticas</a></li>
+					<li><a href="../relatorio.html"><i class='bx bx-folder nav_icon'></i>Relatórios</a></li>
+					<li><a href="#"><i class='bx bxs-cog nav_icon'></i>Configurações</a></li>
 				</ul>
 				</div>
 				<div class="linha_azul"></div>
@@ -58,7 +59,7 @@
 		</div>
 		<div class="icones">
 			<button class="mode"></button>
-			<button class="notify"></button>
+			<button class="notify" onclick="notificacao()"></button>
 			<br><br>
 			<span>9:00 AM</span>
 			<p>Segunda-Feira</p>
@@ -82,8 +83,8 @@
 				<br>
 				<h4>Nicolas Campos</h4>
 				<div>
-					<button class="suport"></button>
-					<button class="settings"></button>
+					<button class="suport" onclick="zendesk()"></button>
+					<button class="settings" onclick="config()"></button>
 				</div>
 			<br>
 			</div>
@@ -235,6 +236,14 @@
         setInterval(() => {
 			get_data();
         }, 1000);
+
+		function notificacao() {
+			window.location.href = '../estatistica.html'
+		}
+
+		// function config() {
+		// 	window.location.href = '../'
+		// }
 
 	</script>
 </body>
