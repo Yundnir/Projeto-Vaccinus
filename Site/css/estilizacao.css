@@ -21,6 +21,18 @@ body{
     font-weight: 100;
 }
 
+.texto p{
+    position: absolute;
+    padding-top: 35px;
+    padding-left: 503px;
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 30px;
+    color: whitesmoke;
+    font-size: 23px;
+    font-style: italic;
+}
+
 .titulo{
     height: 40px;
 }
@@ -52,7 +64,6 @@ body{
 
 .lista img{
     height: 20px;
-    
 }
 
 .lista a{
