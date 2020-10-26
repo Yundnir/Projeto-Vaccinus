@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style_cadastro.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
+    <title>Login - Vaccinus</title>
+    
+</head>
+<body>
+    <div class="content">
+
+    
+        <div class="header">
+            <div class="container">
+                <div class="title-header">
+                    <a href="index.html">
+                        <img src="img/logo_sem.png" alt="">
+                    </a>
+                    <h1 class="texto-header"> Bem vindo de <span>volta!</span></h1>
+                </div>
+
+                <div class="planos">
+                    <h3 class="texto-header">Já possui uma conta?<a href="login.html"><span> Entre agora!</span></a></h3>
+                <div class="retangulo_azul"></div>
+                </div>
+                
+            </div>
+        </div>
+
+    <div class="showcase">
+        <div class="conteudo">
+            <div class="corpo_texto">
+            
+            <div class="primeiro_lado"> 
+            <p>Nome:</p>
+            <input id="Nome" type="text">  
+            <p>CPF:</p>
+            <input id="CPF" type="number">
+            <br>
+            <p>Senha:</p>
+            <input id="Senha" type="password">
+            <br>
+            <p>Confirme sua senha:</p>
+            <input id="Senha2" type="password">
+            </div>
+
+            <div class="segundo_lado">
+            <p>Telefone Residencial:</p>
+            <input id="Telefone" type="text">
+            <p>Celular:</p>
+            <input id="Celular" type="text">
+            <br>
+            <p>Email:</p>
+            <input id="Email" type="email">
+            <br><br>
+            </div>
+            <button onclick="cadastrar()">Cadastrar</button>
+            <br>
+            <p>
+                Ao cadastrar você está automaticamente aceitando os <br><span>Termos de Serviço</span> e <span>Política de Privacidade</span>
+            </p>
+        </div>
+        </div>
+        
+        <div class="imagem">
+            <img src="img/add.svg" alt="" style="height: 500px;">
+        </div>
+
+    
+    </div>
+</div>
+ <!-- Footer/Rodapé -->
+ <div class="footer">
+    <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i>  Todos os direitos reservados. <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p> <br>
+    
+</div>
+    
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        if (Nome.value != "" && CPF.value != "" && Telefone.value != "" && Celular.value != "" && Email.value != "" && Senha.value != "" && Senha2.value != "") {
+
+            if (Senha.value == Senha2.value ) {
+                alert('Cadastro feito com sucesso!');
+                window.location.href = 'login.html';
+                Nome.value = "";
+                CPF.value = "";
+                Telefone.value = "";
+                Celular.value = "";
+                Email.value = "";
+
+            } else {
+                alert ("As senhas não coincidem");
+                Senha.value = "";
+                Senha2.value = "";
+
+            }
+
+        } else {
+            alert ("Preencha todos os campos");
+        }
+
+            
+            
+    }
+</script>
