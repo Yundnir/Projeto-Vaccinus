@@ -156,21 +156,21 @@ body{
 }
 .buttonslide2{
     position: absolute;
-width: 310px;
-height: 81px;
-left: 810px;
-top: 669px;
+    width: 310px;
+    height: 66px;
+    left: 810px;
+    top: 695px;
 
-background: rgba(196, 196, 196, 0.1);
-border-radius: 50px;
+    background: rgba(196, 196, 196, 0.1);
+    border-radius: 50px;
 }
 .buttonslide3{
     /* Rectangle 29 */
     position: absolute;
     width: 310px;
-    height: 81px;
+    height: 66px;
     left: 1348px;
-    top: 670px;
+    top: 690px;
 
     background:  #FFFFFF;
     border-radius: 50px;
@@ -180,8 +180,7 @@ border-radius: 50px;
     width: 244px;
     height: 23px;
     left: 860px;
-    top: 696px;
-
+    top: 715px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
     font-weight: 900;
@@ -197,7 +196,7 @@ border-radius: 50px;
     width: 244px;
     height: 23px;
     left: 1400px;
-    top: 696px;
+    top: 708px;
     font-style: normal;
     font-weight: bold;
     font-size: 21px;

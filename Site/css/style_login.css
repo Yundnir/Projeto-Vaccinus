@@ -76,7 +76,7 @@ body {
 .showcase .conteudo {
     padding-left: 150px;
     float: left;
-    padding-top: 70px;
+    padding-top: 10px;
 }
 
 .showcase .conteudo input {
@@ -115,6 +115,10 @@ body {
     height: 20px;
 }
 
+.showcase a{
+    color: #9DD2EE;
+    
+}
 /* Decoração de LINK */
 a{
     text-decoration: none;

@@ -127,7 +127,7 @@ body {
     border-left: 0.5px solid;
     /* Adiciona borda esquerda na div como ser fosse uma linha.*/
     box-sizing: border-box;
-    height: 80%;
+    height: 90%;
     margin-left: 270px;
 }
 
@@ -208,9 +208,9 @@ body {
     position: absolute;
     width: 239px;
     height: 79px;
-    left: 1090px;
-    right: 10px;
-    top: 18px;
+    /* left: 1090px; */
+    right: 150px;
+    top: 55px;
     background: #9dd2ee;
     mix-blend-mode: normal;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -259,13 +259,14 @@ body {
 
 .container span {
     font-size: 40px;
-    top: -20px;
+    top: 20px;
     position: absolute;
+    left: 20px;
 }
 
 .data_box {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 71px;
     top: 100px;
     float: left;
@@ -276,10 +277,10 @@ body {
 
 .data_box1 {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 71px;
-    top: 100px;
-    left: 255px;
+    top: 190px;
+    left: 355px;
     float: left;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -288,10 +289,10 @@ body {
 
 .data_box2 {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 71px;
-    top: 100px;
-    left: 510px;
+    top: 190px;
+    left: 680px;
     float: left;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -300,10 +301,10 @@ body {
 
 .data_box3 {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 71px;
-    top: 100px;
-    left: 770px;
+    top: 191px;
+    left: 1000px;
     float: left;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -326,8 +327,8 @@ body {
     position: absolute;
     width: 80px;
     height: 32px;
-    left: 84px;
-    top: 70px;
+    left: 130px;
+    top: 150px;
     font-family: roboto;
     font-style: normal;
     font-weight: bold;
@@ -341,8 +342,8 @@ body {
     position: absolute;
     width: 80px;
     height: 32px;
-    left: 84px;
-    top: -30px;
+    left: 104px;
+    top: -38px;
     font-family: roboto;
     font-style: normal;
     font-weight: bold;
@@ -355,8 +356,8 @@ body {
     position: absolute;
     width: 152px;
     height: 32px;
-    left: 25%;
-    top: -30px;
+    left: 27%;
+    top: -38px;
     text-align: left;
     font-family: roboto;
     font-style: normal;
@@ -382,45 +383,10 @@ body {
 
 .data_box {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 71px;
-    top: 100px;
-    float: left;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-.data_box1 {
-    position: absolute;
-    width: 240px;
-    height: 71px;
-    top: 100px;
-    left: 255px;
-    float: left;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-.data_box2 {
-    position: absolute;
-    width: 240px;
-    height: 71px;
-    top: 100px;
-    left: 510px;
-    float: left;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-.data_box3 {
-    position: absolute;
-    width: 240px;
-    height: 71px;
-    top: 100px;
-    left: 770px;
+    top: 190px;
+    left: 30px;
     float: left;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -431,8 +397,8 @@ body {
     position: absolute;
     width: 174px;
     height: 23px;
-    left: 326px;
-    top: 260px;
+    left: 370px;
+    top: 375px;
     font-family: roboto;
     font-style: normal;
     font-weight: normal;
@@ -447,8 +413,8 @@ body {
     position: absolute;
     width: 174px;
     height: 24px;
-    left: 5px;
-    top: 10px;
+    left: 26px;
+    top: 20px;
     font-family: roboto;
     font-style: normal;
     font-weight: normal;
@@ -463,8 +429,8 @@ body {
     position: absolute;
     width: 174px;
     height: 23px;
-    left: 5px;
-    top: 10px;
+    left: 26px;
+    top: 20px;
     font-family: roboto;
     font-style: normal;
     font-weight: normal;
@@ -479,8 +445,8 @@ body {
     position: absolute;
     width: 174px;
     height: 23px;
-    left: 5px;
-    top: 10px;
+    left: 26px;
+    top: 20px;
     font-family: roboto;
     font-style: normal;
     font-weight: normal;
@@ -493,10 +459,10 @@ body {
 
 .grafico_box {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 221px;
-    left: 310px;
-    top: 250px;
+    left: 345px;
+    top: 350px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -504,10 +470,10 @@ body {
 
 .grafico_box1 {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 221px;
-    left: 570px;
-    top: 250px;
+    left: 669px;
+    top: 350px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -515,10 +481,10 @@ body {
 
 .grafico_box2 {
     position: absolute;
-    width: 240px;
+    width: 280px;
     height: 221px;
-    left: 830px;
-    top: 250px;
+    left: 995px;
+    top: 350px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -526,10 +492,10 @@ body {
 
 .grafico_box3 {
     position: absolute;
-    width: 230px;
+    width: 280px;
     height: 221px;
-    left: 1090px;
-    top: 250px;
+    left: 1315px;
+    top: 350px;
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -538,8 +504,8 @@ body {
 .numero_box {
     position: absolute;
     width: 53px;
-    left: 310px;
-    top: 502px;
+    left: 355px;
+    top: 635px;
     border-radius: 5px;
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaccinus</title>
+    <title>Relatório - Vaccinus</title>
     <link rel="stylesheet" href="css/relatorio.css">
     <!-- LINK do FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
@@ -28,19 +28,19 @@
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="#" class="nav_link-est">
-                            <i class='bx bx-stats nav_icon-est'></i></i>
+                        <a href="estatistica.html" class="nav_link">
+                            <i class='bx bx-stats nav_icon'></i></i>
                             <span-um class="nav_name">Estatisticas</span>
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-folder nav_icon'></i></i>
+                        <a href="#" class="nav_link-est">
+                            <i class='bx bx-folder nav_icon-est'></i></i>
                             <span class="nav_name">Relátorio</span>
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="#" class="nav_link">
+                        <a href="Dashboard/Configuracões/configuracoes.html" class="nav_link">
                             <i class='bx bxs-cog nav_icon'></i></i>
                             <span class="nav_name">Configurações</span>
                         </a>
@@ -66,20 +66,75 @@
                 </div>
             </nav>
         </div>
-        <!-- <div class="box"></div>
-        <div class="box linha-vertical"></div> -->
-    </header>
-    <!-- FIM HEADER -->
-
-    <!-- Relatórios Conteudo -->
-    
-    <div class="rContainer">
         <div class="box"></div>
         <div class="box linha-vertical"></div>
-        <h1>Imprima seu relatório!</h1>
-        <!-- <button onclick="imprimir()">Imprimir</button> -->
+    </header>
 
-    </div>
+    <!-- button UPGRADE -->
+    <section class="section-plano">
+        <a href='planos.html'>
+        <div class="plano_box">
+            <button class="plano_box">
+                <div class="plano_item">
+                    <i class='bx bx-right-arrow-alt'></i> <br>
+                    <span>Faça um upgrade do seu plano!</span>
+                </div>
+            </button>
+        </div>
+        </a>
+    </section>
+
+    <!-- CONTAINER CONTEUDO RELATORIO-->
+    <section>
+        <div class="container">
+            <span>Imprima o seu Relatório</span>
+            <!-- button IMPRIMIR -->
+            <section class="section-plano">
+
+                <div class="plano_box2">
+                    <button class="plano_box2">
+                        <div class="plano_item2">
+                            <p>Imprimir</p>
+                        </div>
+                    </button>
+                </div>
+
+            </section>
+
+
+
+            <section class="section-data">
+                <div class="data_item">
+                    <span>Rotas</span>
+                    <img src="img/rotas.png" alt="">
+                </div>
+                <div class="data_box">Cada detalhe pronto na sua tela.
+                    <div class="data_item2">
+                        <b>Vacina:</b>  Febre Amarela <br>
+                        <b>Lote:</b>  1508LVP <br>
+                        <b>Data:</b>  15/10/2020 <br>
+                        <b>Destino:</b>  Hospital São Paulo
+                    </div>
+                </div>
+
+                <div class="data_box1">Todos os seus passos.
+                    <div class="data_item2">
+                        <b>Início:</b> Rua Haddock Lobo, 595 - Cerqueira César, São Paulo <br>
+                        <b>Localização Atual:</b> Avenioda Gal Manoel Rabelo, 5746 - Paraíso, São Paulo <br>
+                        <b>Final:</b> Rua Napoleão de Barros, 715 - Vila Clementina, São Paulo
+                    </div>
+                </div>
+
+                <div class="data_box2">Sobre as vacinas agora.
+                    <div class="data_item2">
+                        <b>Temperatura atual:</b> 4°C
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- Relatórios Conteudo -->
+    
+ 
 
 
 </body>

@@ -1,9 +1,11 @@
+/*HEADER CSS*/
 body {
     position: relative;
     padding: 0 1rem;
     font-family: 'Roboto', sans-serif;
     /* font-family: Arial, Helvetica, sans-serif; */
     background-color: #363636;
+    
 }
 
 
@@ -15,8 +17,6 @@ body {
     background-color: #363636;
     padding: .5rem 1rem 0 0;
     transition: .5s;
-    display: block;
-    float: left;
 }
 
 .nav {
@@ -48,7 +48,6 @@ body {
     color: white;
     /* width: 60px; */
     height: 60px;
-    padding-top: 17px;
   
 }
 
@@ -57,7 +56,7 @@ body {
     width: 152px;
     height: 52px;
     left: 68px;
-    top: 34px;
+    top: 17px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -78,7 +77,7 @@ body {
     text-decoration: none;
     width: 25px;
     height: 25px;
-    font-size: 25px;
+    font-size: 21px;
 }
 
 .nav_icon {
@@ -128,7 +127,7 @@ body {
 .linha-vertical {
     border-left: 0.5px solid;
     /* Adiciona borda esquerda na div como ser fosse uma linha.*/
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     height: 100%;
     margin-left: 270px;
 }
@@ -139,7 +138,7 @@ body {
     height: 105px;
     left: 10px;
     right: 10px;
-    top: 365px;
+    top: 340px;
     background: rgba(157, 210, 238, 0.8);
     mix-blend-mode: normal;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -178,7 +177,7 @@ body {
     height: 250px;
     left: 10px;
     right: 10px;
-    top: 505px;
+    top: 480px;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
     border-radius: 15px;
@@ -206,16 +205,182 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-/*FIM HEADER CSS*/
+/*FIM HEADER */
 
-/* Começo CONTEUDO RELATORIO */
-
-.rContainer {
-    height: 100%;
-    width: 800px;
-    margin-left: 20px;
-    background-color: tomato;
-    float: left;
+.plano_box button {
+    position: absolute;
+    width: 239px;
+    height: 79px;
+    /* left: 1090px; */
+    right: 150px;
+    top: 55px;
+    background: #9dd2ee;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
 }
 
-/*FIM RELATORIO CONTEUDO*/
+.plano_box2 button {
+    position: absolute;
+    width: 150px;
+    height: 42px;
+    left: 480px;
+    /* right: 150px; */
+    top: 30px;
+    background: rgba(157, 210, 238,0.2);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.plano_item2 p{
+    margin: 0;
+    font-size: 25px;
+    color: white;
+}
+
+
+.plano_item button {
+    text-align: center;
+    width: 204px;
+    height: 15px;
+    left: 49px;
+    padding: 15px;
+    font-family: Roboto, sans-serif;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.plano_item i {
+    position: absolute;
+    font-size: 40px;
+    left: 190px;
+    text-align: center;
+    top: 0px;
+    color: #FFFFFF;
+}
+
+.plano_item span {
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.container {
+    position: absolute;
+    width: 541px;
+    height: 10px;
+    left: 314px;
+    top: 50px;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container span {
+    font-size: 40px;
+    top: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+.data_box {
+    position: absolute;
+    width: 280px;
+    height: 71px;
+    top: 345px;
+    float: left;
+    /* background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 15px;
+    left: 53px;
+    font-size: 30px;
+}
+
+.data_box1 {
+    position: absolute;
+    width: 280px;
+    height: 71px;
+    top: 345px;
+    left: 470px;
+    float: left;
+    /* background: rgba(0, 0, 0, 0.2); */
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+.data_box2 {
+    position: absolute;
+    width: 280px;
+    height: 71px;
+    top: 345px;
+    left: 930px;
+    float: left;
+    /* background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+
+.data_item {
+    text-align: center;
+    width: 204px;
+    height: 15px;
+    left: 49px;
+    top: 475px;
+    padding: 15px;
+    font-family: roboto;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.data_item img{
+    margin-top: 189px;
+    margin-left: 27px;
+    width: 1260px;
+}
+
+
+.data_item span {
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    left: 55px;
+    top: 150px;
+    font-family: roboto;
+    font-style: normal;
+    /* font-weight: bold; */
+    font-size: 40px;
+    line-height: 31px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.data_item1 span {
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    left: 104px;
+    top: -38px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.data_item2 {
+    width: 300px;
+    font-size: 18px;
+}
+
+.data_item2 b{
+    color: #888787;
+}
+

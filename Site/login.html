@@ -43,6 +43,7 @@
             <input id="senha" type="password">
             <br><br>
             <p>Esqueceu sua senha? <span>Recupere.</span></p>
+            <p>Não é cadastrado? <span> <a href="cadastro.html">Clique aqui</a></span></p>
             <button onclick="logar()">Login</button>
         </div>
         </div>
@@ -67,7 +68,7 @@
     function logar() {
         if (email.value == 'vaccinus@gmail.com' && senha.value == 'vaccinus') {
             alert('Login feito com sucesso!')
-            window.location.href = '../NODE4.1/dashboard.html'
+            window.location.href = 'NODE4.1/dashboard.html'
         } else{
             alert('Dados incorretos!Tente Novamente!')
         }
