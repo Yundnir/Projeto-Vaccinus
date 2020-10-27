@@ -31,7 +31,7 @@ create table tbUsuario (
     foreign key (fkEmpresa) references tbEmpresa (idEmpresa)
 );
 
-drop table tbUsuario;
+
 
  insert into tbUsuario (nome, email, Tel_Residencial, Celular ,CPF, senha, fkEmpresa) values 
 ('Renato Paulino', 'renato.paulino@bandtec.com.br', '1199999-9990','11997677464' , '123.456.789-10', 'qualquercoisa0', 1),
@@ -58,11 +58,12 @@ insert into tbVacinas(nomeVacina, loteVacina,temp_min, temp_max) values
 
 
 create table tbSensor (
-idSensor int primary key auto_increment
-
+	idSensor int primary key auto_increment,
+	serialNumber char(8)
 );
 
-insert into tbSensor  values (null);
+insert into tbSensor  values (null, 'sSRGTj2L'),
+(null, '3BqUgr58');
 
 
 create table tbContainer (
@@ -75,6 +76,8 @@ foreign key (fkEmpresa) references tbEmpresa (idEmpresa),
 foreign key (fkVacina) references tbVacinas (idVacina),
 foreign key (fkSensor) references tbSensor (idSensor)
 );
+
+select * from tbContainer;
 
 insert into tbContainer (nomeContainer, fkEmpresa, fkVacina, fkSensor) values 
 ('CD1', 1, 1, 1);
@@ -117,15 +120,15 @@ select * from tbVacinas;
 
 
 select * from tbSensor;
-select * from tbContainerTemp;
 					
 select * from tbUsuario;
-select * from tbContainerTemp;
-select * from tbControleTemp;
-select * from tbDestino;
- 
-desc tbDestino;
+select * from tbContainer;
+select * from tbRota;
+select * from tbEmpresa;
 
+select idContainer, nomeContainer, nomeEmpresa, nomeVacina, serialNumber 
+from tbContainer, tbEmpresa, tbVacinas, tbSensor
+where idVacina = fkVacina and idSensor = fkSensor;
 
 
  
