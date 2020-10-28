@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<!-- <div class="conteudo">
+	<div class="conteudo">
 		<div class="linha_preta"></div>
 	<div class="header">
         <div class="container">
@@ -47,71 +47,6 @@
 			<button>Imprimir</button>
 		</div>
 	</div>
-	 -->
-
-	 <header class="header" id="header">
-        <div class="l-navbar" id="nav-bar">
-            <nav class="nav">
-                <div>
-                    <a href="index.html" class="nav_logo">
-                        <img src="img/logo_v_a.png" class='nav_logo-icon'>
-                        <span class="nav_logo-name">accinus</span>
-                    </a>
-                    <div class="nav_list">
-                        <a href="../NODE4.1/dashboard.html" class="nav_link">
-                            <i class='bx bx-grid-alt nav_icon'></i>
-                            <span class="nav_name">Resumo</span>
-                        </a>
-                    </div>
-                    <div class="nav_list">
-                        <a href="#" class="nav_link-est">
-                            <i class='bx bx-stats nav_icon-est'></i></i>
-                            <span-um class="nav_name">Estatisticas</span>
-                        </a>
-                    </div>
-                    <div class="nav_list">
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-folder nav_icon'></i></i>
-                            <span class="nav_name">Relátorio</span>
-                        </a>
-                    </div>
-                    <div class="nav_list">
-                        <a href="#" class="nav_link">
-                            <i class='bx bxs-cog nav_icon'></i></i>
-                            <span class="nav_name">Configurações</span>
-                        </a>
-                        <section class="section">
-                            <div class="estatistica_box">
-                                <div class="estatistica_item">
-                                    <i class='bx bx-wifi-off'></i>
-                                    <span>Conexão perdida</span>
-                                    <p>Se conecte para visualizar seus dados</p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="section-not">
-                            <div class="notificacao-box">
-                                <div class="notificacao_item">
-                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);"></i> <br><br> <br>
-                                    <span style="color: rgb(151, 151, 151);">Notificações</span>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-	<!-- FIM HEADER -->
-	
-	<div class="rContainer">
-        <div class="box"></div>
-        <div class="box linha-vertical"></div>
-        <h1>Imprima seu relatório!</h1>
-        <!-- <button onclick="imprimir()">Imprimir</button> -->
-
-    </div>
 
 	<!-- ---------------------------------------------------- -->
 	<div class="showcase">
@@ -138,9 +73,9 @@
 				</section> -->
 				<section style="width:100%">
 					<canvas id="chart"></canvas>
-			<section>
+				<section>
 		</div> 
-		</div>
+	</div>
 		<div class="layout_esquerda">
 			<div class="user">
 				<img src="person.svg" alt="" width="90%">
@@ -168,7 +103,9 @@
 		var context = document.getElementById("chart").getContext("2d");
 		context.canvas.width = 1250;
 		context.canvas.height = 600;
-        
+
+        Chart.defaults.global.defaultFontColor = 'white';
+
         var configuration = {
 			type: 'line',
 			data: {
@@ -179,8 +116,7 @@
 					borderColor: ['#8C52FF'],
 					// backgroundColor: ['#e1ecec']
 					fill: 'false',
-					z: 'number'
-					
+					z: 'number',
 				},
 				{
 					label: "Temperatura Mínima",
@@ -230,7 +166,8 @@
 						distribution: 'series',
 						scaleLabel: {
 							display: true,  //Acrescentei no eixo X o label TEMPO.
-							labelString: 'Tempo (Hora)'  //Acrescentei no eixo X o label TEMPO.
+							labelString: 'Tempo (Hora)',  //Acrescentei no eixo X o label TEMPO.
+							fontSize: '20'
                         },
                         ticks: {
                             beginAtZero:true
@@ -239,7 +176,9 @@
 					yAxes: [{
 						scaleLabel: {
 							display: true,
-							labelString: 'Temperatura °C'
+							labelString: 'Temperatura °C',
+							fontSize: '20'
+				
                         },
                         ticks: {
 							beginAtZero:true,
@@ -294,8 +233,6 @@
 			document.getElementById('average').textContent = obj.average;
 			document.getElementById('averageHour').textContent = obj.averageHour;
 		} 
-
-		//Second Graphic
 
         setInterval(() => {
 			get_data();

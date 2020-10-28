@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dash_style.css">
+    <!-- LINK do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+    </style>
+    
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="index.html" class="nav_logo">
+                        <img src="../img/logo_v_a.png" class='nav_logo-icon'>
+                        <span class="nav_logo-name">accinus</span>
+                    </a>
+                    <div class="nav_list">
+                        <a href="../NODE4.1/dashboard.html" class="nav_link-est">
+                            <i class='bx bx-grid-alt nav_icon-est'></i>
+                            <span class="nav_name">Resumo</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="../estatistica.html" class="nav_link">
+                            <i class='bx bx-stats nav_icon'></i></i>
+                            <span-um class="nav_name">Estatisticas</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="../relatorio.html" class="nav_link">
+                            <i class='bx bx-folder nav_icon'></i></i>
+                            <span class="nav_name">Relátorio</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="../Dashboard/Configuracões/configuracoes.html" class="nav_link">
+                            <i class='bx bxs-cog nav_icon'></i></i>
+                            <span class="nav_name">Configurações</span>
+                        </a>
+                        <section class="section">
+                            <div class="estatistica_box">
+                                <div class="estatistica_item">
+                                    <i class='bx bx-wifi-off'></i>
+                                    <span>Conexão perdida</span>
+                                    <p>Se conecte para visualizar seus dados</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section-not">
+                            <div class="notificacao-box">
+                                <div class="notificacao_item">
+                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);"></i> <br><br> <br>
+                                    <span style="color: rgb(151, 151, 151);">Notificações</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="box"></div>
+        <div class="box linha-vertical"></div>
+    </header>
+    <!-- FIM HEADER -->
+    
+    <section>
+        <div class="container">
+            <div class="search">
+                <input id="pesquisa" type="text" placeholder="Pesquisar"><i class="fas fa-search fa-xs"></i>
+            </div>
+            <span>Olá, Usuário. Bem vindo de volta!</span>
+
+           <!-- Hora/TEMPO -->
+        <section class="section-plano">
+            <a href='planos.html'>
+            <div class="plano_box">
+                <button class="plano_box">
+                    <div class="plano_item">
+                        <img src="day-and-night.svg" alt="">
+                    </div>
+                    <div class="plano_item2">
+                        <img src="notify.svg" alt="">
+                    </div>
+                    <p>16:15 <br>
+                    Sexta-feira</p>
+                </button>
+            </div>
+            </a>
+        </section>
+
+        <section class="section-prof">
+            <div class="user">
+                <div class="plano_profile">
+                    <img src="person.svg" alt="icon user">
+                    <p>Nicolas Campos</p>
+                    <button class="suport" onclick="zendesk()"><i class="far fa-comment-alt-lines fa-3x"></i></button>
+                    <button class="settings" onclick="config()"></button>
+                    
+                    <div class="lite">
+                        <h3>Planos Lite</h3>
+                        <span>Pagamento dia 05/05 <i class="fas fa-check"></i> <br>
+                        Pagamento dia 10/06 <i class="fas fa-check"></i> <br>    
+                        Pagamento dia 22/07 <i class="fas fa-check"></i>    <br>
+                        Pagamento dia 25/09 <i class="fas fa-check"></i>  <br>  
+                        Pagamento dia 21/10 <i class="fas fa-check"></i> </span>    
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </section>
+
+        <div class="graphic">
+            <div class="sensores">
+                <div class="lm35">
+                    <h1>Febre Amarela - Container 1</h1>
+                        <!-- <section>
+                            <h4>Média: <label id='average'>0.00</label></h4>
+                            <h4>Média Hora: <label id='averageHour'>0.00</label></h4>
+                        </section> -->
+                        <section style="width:100%">
+                            <canvas id="chart"></canvas>
+                        <section>
+                </div> 
+            </div>
+        </div>
+        
+
+        <script>
+
+            var context = document.getElementById("chart").getContext("2d");
+            context.canvas.width = 1250;
+            context.canvas.height = 600;
+    
+            Chart.defaults.global.defaultFontColor = 'white';
+    
+            var configuration = {
+                type: 'line',
+                data: {
+                    datasets: [
+                        {
+                        label: "Temperature(°C) x Tempo(Hora)",
+                        type: 'line',
+                        borderColor: ['#8C52FF'],
+                        // backgroundColor: ['#e1ecec']
+                        fill: 'false',
+                        z: 'number',
+                    },
+                    {
+                        label: "Temperatura Mínima",
+                        type: 'line',
+                        borderColor: ['#86EAE9'],
+                        // backgroundColor: ['#e1ecec']
+                        fill: 'false',
+                        data: [2,2,2,2,2,2,2,2,2,2]
+                    },
+                    {
+                        label: "Alerta FRIO",
+                        type: 'line',
+                        borderColor: ['#2C92D5'],
+                        // backgroundColor: ['#e1ecec']
+                        fill: 'false',
+                        data: [3,3,3,3,3,3,3,3,3,3]
+                    },
+                    {
+                        label: "Temperatura Ideal",
+                        type: 'line',
+                        borderColor: ['#008037'],
+                        // backgroundColor: ['#e1ecec']
+                        fill: 'false',
+                        data: [5,5,5,5,5,5,5,5,5,5]
+                    },
+                    {
+                        label: "Alerta QUENTE",
+                        type: 'line',
+                        borderColor: ['#F45D00'],
+                        // backgroundColor: ['#e1ecec']
+                        fill: 'false',
+                        data: [7,7,7,7,7,7,7,7,7,7]
+                    },
+                    {
+                        label: "Temperatura Máxima",
+                        type: 'line',
+                        borderColor: ['#FF1616'],
+                        // backgroundColor: ['#e1ecec']
+                        fill: 'false',
+                        data: [8,8,8,8,8,8,8,8,8,8]
+                    }				
+                ]},
+                options: {
+                    scales: {
+                        xAxes: [{
+                            //type: 'value',
+                            distribution: 'series',
+                            scaleLabel: {
+                                display: true,  //Acrescentei no eixo X o label TEMPO.
+                                labelString: 'Tempo (Hora)',  //Acrescentei no eixo X o label TEMPO.
+                                fontSize: '20'
+                            },
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Temperatura °C',
+                                fontSize: '20'
+                    
+                            },
+                            ticks: {
+                                beginAtZero:true,
+                                suggestedMin: -2, //Alters a escala para que a temperatura mínima seja negativa
+                                suggestedMax:  10 //Alters a escala para até 10 de temperatura máxima
+                            }
+                        }]
+                    },
+                    animation: {
+                        duration: 0
+                    }
+                }
+            };
+            
+            var chart = new Chart(context, configuration);
+    
+            //Função para obter os dados de temperatura do server
+            //Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+            
+            //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+            //hora de montar/atualizar o gráfico
+            this.lastIndexTemp = 0;
+            this.time = 0;
+    
+            function get_data(){
+    
+                var http = new XMLHttpRequest();
+                http.open('GET', 'http://localhost:3000/api', false);
+                http.send(null);        
+                
+                var obj = JSON.parse(http.responseText);
+                if (obj.data.length == 0){
+                    return;
+                }
+    
+                var _lastIndexTemp = this.lastIndexTemp;
+                this.lastIndexTemp = obj.data.length;
+                listTemp = obj.data.slice(_lastIndexTemp);
+    
+                listTemp.forEach(data => {
+                    //Máximo de 60 itens exibidos no gráfico
+                    if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+                        chart.data.labels.shift();
+                        chart.data.datasets[0].data.shift();
+                    }
+    
+                    chart.data.labels.push(this.time++);
+                    chart.data.datasets[0].data.push(parseFloat(data));
+                    chart.update();
+                });
+                
+                document.getElementById('average').textContent = obj.average;
+                document.getElementById('averageHour').textContent = obj.averageHour;
+            } 
+    
+            //Second Graphic
+    
+            setInterval(() => {
+                get_data();
+            }, 1000);
+    
+            function notificacao() {
+                window.location.href = '../estatistica.html'
+            }
+    
+            // function config() {
+            // 	window.location.href = '../'
+            // }
+    
+        </script>
+</body>
+</html>
+
