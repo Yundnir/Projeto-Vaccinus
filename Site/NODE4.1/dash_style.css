@@ -459,6 +459,7 @@ body {
 }
 
 .section-prof .suport{
+    position: absolute;
     background-image: url(img/conversation.png);
     background-color: #00000010;
     background-position: center;
@@ -468,9 +469,12 @@ body {
     height: 50px;
     border-radius: 50px;
     border-color: #9DD2EE;
+    top: 182px;
+    right: 110px;
 }
 
 .section-prof .plano_profile .settings{
+    position: absolute;
     background-image: url(img/member.png);
     background-color: #00000010;
     background-position: center;
@@ -480,13 +484,15 @@ body {
     height: 50px;
     border-radius: 50px;
     border-color: #9DD2EE;
+    top: 182px;
+    right: 40px;
 }
 
 
 /*ENMD PROFILE*/
 
 .lite h3{
-    margin-top: 100px;
+    margin-top: 155px;
     background-color:rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     height: 355px;
