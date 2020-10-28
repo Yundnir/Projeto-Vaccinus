@@ -25,6 +25,12 @@ body {
     display: inline-block;
   }
 
+  .login img {
+    height: 30px;
+    padding-left: 83%;
+    padding-top: 1%;
+    position: absolute;
+  }
   
   .navegacao {
     float: right; 
@@ -32,13 +38,13 @@ body {
   
   .navegacao li{
     display: inline-block;
-    padding: 10px 25px 0 20px;
+    padding: 10px 70px 0 0px;
     font-size: 20px;
-    color: lightskyblue;
+    color: white;
   }
 
   .navegacao .simulator{
-    color: white;
+    color: lightskyblue;
   }
   
   .plano_fundo {
@@ -46,7 +52,7 @@ body {
     padding: 10px 0px 0px 0px;
   }
 
-  img {
+  .exibicao .plano_fundo img {
     height: 300px;
     margin-left: 10%;
   }
