@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simulador Financeiro </title>
+    <link rel="stylesheet" href="css/simulador.css">
+    <!-- LINK do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+</head>
+<body>
+    <!-- <div class="header">
+        <div class="conteudo_header">
+            <div class="titulo_header">
+                <img src="img/logo_ajustado.png" alt="logo_vaccinus">
+                <h1> <i> accinus </i> </h1>
+            </div>
+
+            <div class="login">
+                <img src="img/user-profile.png" alt="">
+            </div>
+            
+            <div class="navegacao">
+                <ul>
+                    <li href="sobre.html"> Sobre Nós  </li>
+                    <li> Contatos </li>
+                    <li class ="simulator"> Simulador </li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Cabeçalho/HEADER  -->
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <a href="index.html"><img src="img/logo_sem.png" alt="Logo">
+                <h2><span>accinus</span></h2></a>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                    <li class="current"><a href="contato.html">Contato</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    
+                </ul>
+                <div class="icon_login">
+                    <a href="login.html">
+                        <img src="img/user-profile.png" alt="">
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="exibicao">
+        <div class="plano_fundo">
+            <h1> Simulador Financeiro </h1>
+            <img src="img/medicos.svg" alt="medicos">
+            <div class="texto_exibicao">
+    <br>
+                Escolha uma <span class="text_vacin"> vacina! </span> 
+    <br>
+                <div class="all_select">
+                    <select id="inp_vacina"> 
+                        <option value="escolha"> Escolha a Vacina </option>
+                        <option value="100"> Dengue </option>
+                        <option value="200"> Febre Amarela </option>
+                        <option value="300"> Gripe </option>
+                        <option value="400"> Sarampo </option>
+                        <option value="500"> Tétano </option>
+                    </select>
+                </div>
+                <div id="unitario" class="valor_estimado">
+                    O valor unitário estimado para essa vacina é: R$100.00.
+                </div>
+                <div class="linha_retangular">
+
+                </div>
+    <br>
+                    Insira a <span class="text_quantidade"> quantidade </span> de vacinas!
+    <br>
+                <div class="all_select">
+                    <select id="qtd_vacina">
+                        <option value="quantidade"> Escolha Quantidade </option>
+                        <option value="um"> 1 </option>
+                        <option value="dois"> 2 </option>
+                        <option value="tres"> 3 </option>
+                        <option value="quatro"> 4 </option>
+                    </select>
+                </div>
+                <div class="valor_total_lote">
+                    O valor total do lote desta vacina é: R$700.00.
+                </div>
+
+                <div class="linha_retangular">
+
+                </div>
+    <br>
+                <div class="vacinas_perdidas">
+                    Insira a <span class="text_quantidade"> quantidade </span> 
+                    de vacinas <span class="text_perdidas"> perdidas! </span>
+    <br>
+                <div class="all_select">
+                    <select id="qtd_vacinas_perdidas">
+                        <option value="quantidade"> Quantidade Perdida </option>
+                        <option value="um_vacina"> 1 </option>
+                        <option value="dois_vacina"> 2 </option>
+                        <option value="tres_vacina"> 3 </option>
+                        <option value="quatro_vacina"> 4 </option>
+                </select>
+                </div>
+    <br>
+                <button onclick="calcular()"> Calcular </button>
+                </div>
+    <br>
+                    <div class="prejuizo">
+                    Você teve um prejuízo de R$400 referente às vacinas que foram estragadas
+    <br> 
+                    no processo de transporte.
+    <br>
+    <br>    
+                    O que corresponde a um prejuízo de 57.14% do investimento inicial.
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer/Rodapé -->
+    <div class="footer">
+        <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i>  Todos os direitos reservados. <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p> <br>
+        
+    </div>
+</body>
+</html>
+
+<script>
+    function tipo() {
+            preco_unitario.innerHTML = `O valor unitário estimado para essa vacina é: R$${vacinas.value}`;
+        }
+    function numero() {
+            var total = num_vacinas.value * vacinas.value;
+            preco_total.innerHTML = `O valor total do lote desta vacina é: R$ ${total}`;
+        }
+    function perdas() {
+            var total = num_vacinas.value * vacinas.value;
+            var perdas_totais = perdidas.value * vacinas.value;
+            var perda_percentual = (perdas_totais * 100) / total;
+            valor_total_perdas.innerHTML = `<br>Você teve um prejuízo de <b><u>R$ ${perdas_totais}</u></b> referente às vacinas que foram estragadas<br>
+                                            no processo de transporte, o que corresponde a um prejuízo de <b><u>${perda_percentual.toFixed(2)}%</u></b>
+                                            do investimento inicial.`;
+    }
+</script>
