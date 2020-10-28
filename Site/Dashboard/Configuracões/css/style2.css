@@ -3,7 +3,9 @@ body {
     padding: 0 1rem;
     font-family: 'Roboto', sans-serif;
     background-color: #363636;
+    
 }
+
 
 .l-navbar {
     top: 0;
@@ -16,13 +18,11 @@ body {
 }
 
 .nav {
-  
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
-    top: -10px;
+    /* overflow: hidden; */
 }
 
 .nav_logo, .nav_link {
@@ -35,32 +35,33 @@ body {
 
 .nav_logo {
     margin-bottom: 2rem;
-    padding:0 0 0 0;
+    padding: 0 20px 0 10px;
     text-decoration: none;
-    top: -18px;
-    position: relative;
+   
 }
 
 .nav_logo-icon {
-    width: 70px;
-    height: 89px;
+    /* width: 63px;
+    height: 89px; */
     color: white;
-    top: -30px;
-    
+    /* width: 60px; */
+    height: 60px;
+  
 }
 
 .nav_logo-name {
     position: absolute;
     width: 152px;
     height: 52px;
-    left: 50px;
-    top: 30px;
+    left: 68px;
+    top: 17px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 35px;
     line-height: 52px;
     color: #FFFCFC;
+ 
 }
 
 .nav_link {
@@ -74,14 +75,14 @@ body {
     text-decoration: none;
     width: 25px;
     height: 25px;
-    font-size: 25px;
+    font-size: 21px;
 }
 
 .nav_icon {
     font-size: 1.25rem;
 }
 
-.nav_link-conf {
+.nav_link-est {
     color: #FFFFFF;
     display: grid;
     grid-template-columns: max-content max-content;
@@ -98,7 +99,7 @@ body {
     font-size: 21px;
 }
 
-.nav_icon-conf {
+.nav_icon-est {
     font-size: 21px;
     color: #9ee2dd
 }
@@ -108,10 +109,7 @@ body {
     /*Altura da linha*/
     border-left: 11px solid;
     /* Adiciona borda esquerda na div como ser fosse uma linha.*/
-}
-.nav_list-resum{
-    position: absolute;
-    top: 80px;
+    
 }
 
 .box {
@@ -128,22 +126,25 @@ body {
     border-left: 0.5px solid;
     /* Adiciona borda esquerda na div como ser fosse uma linha.*/
     box-sizing: border-box;
+    height: 100%;
+    margin-left: 270px;
 }
 
-.configuracoes_box {
+.estatistica_box {
     position: absolute;
     width: 239px;
     height: 105px;
     left: 10px;
     right: 10px;
-    top: 280px;
+    top: 340px;
     background: rgba(157, 210, 238, 0.8);
     mix-blend-mode: normal;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+    margin-left: 10px;
 }
 
-.configuracoes_item {
+.estatistica_item {
     text-align: center;
     width: 204px;
     height: 15px;
@@ -155,11 +156,11 @@ body {
     color: #FFFFFF;
 }
 
-.configuracoes_item i, span {
+.estatistica_item i, span {
     font-size: 20px;
 }
 
-.configuracoes_item p {
+.estatistica_item p {
     font-size: 15px;
 }
 
@@ -174,10 +175,11 @@ body {
     height: 250px;
     left: 10px;
     right: 10px;
-    top: 400px;
+    top: 480px;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
     border-radius: 15px;
+    margin-left: 10px;
 }
 
 .notificacao_item {
@@ -188,34 +190,30 @@ body {
     top: 475px;
     padding: 15px;
     font-family: Roboto, sans-serif;
-    color:rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.3);
     line-height: 15px;
-    z-index: 3;
 }
 
 .notificacao_item i {
-    
     width: 100px;
     height: 100px;
     left: 93px;
     top: 676px;
     font-size: 100px;
-   background-color: 0px 4px 4px rgba(255, 255, 255, 0);
-   z-index: 3;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .plano_box button {
     position: absolute;
     width: 239px;
     height: 79px;
-    left: 1090px;
-    right: 10px;
-    top: 18px;
+    /* left: 1090px; */
+    right: 150px;
+    top: 55px;
     background: #9dd2ee;
     mix-blend-mode: normal;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    cursor: pointer;
 }
 
 .plano_item button {
@@ -227,18 +225,300 @@ body {
     font-family: Roboto, sans-serif;
     line-height: 15px;
     color: #FFFFFF;
-    cursor: pointer;
 }
 
-
+.plano_item i {
+    position: absolute;
+    font-size: 40px;
+    left: 190px;
+    text-align: center;
+    top: 0px;
+    color: #FFFFFF;
+}
 
 .plano_item span {
-    font-size: 22px;
+    font-size: 15px;
     color: #FFFFFF;
-    cursor: pointer;
- 
 }
 
+/*CPONTAINER BODY */
+
+.container {
+    position: absolute;
+    width: 650px;
+    height: 10px;
+    left: 314px;
+    top: 50px;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container span {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 700px;
+}
+
+.configuracao_box {
+    position: absolute;
+    width: 240px;
+    height: 71px;
+    top: 100px;
+    left: 255px;
+    float: left;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+
+.avatar_item span {
+    position: absolute;
+    width: 139px;
+    height: 60px;
+    left: 400px;
+    top: 115px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+
+#img{
+        
+    position: absolute;
+    width: 158px;
+    height: 158px;
+    left: 380px;
+    top: 185px;
+    border-radius: 256px;
+}
+
+#img img{
+    position: absolute;
+    width: 100%;
+}
+
+.icons img{
+    width: 20px;
+    height: 20px;
+}
+
+ #linkedin{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    left: 530px;
+    top: 220px;
+
+}
+
+#google{
+    position: absolute;
+    left: 540px;
+    top: 252px;
+    
+}
+
+#face{
+    position: absolute;
+    left: 540px;
+    top: 282px;
+    
+}
+
+#x{
+    position: absolute;
+    left: 500px;
+    right: 35.63%;
+    top: 190px;
+    bottom: 100%;
+    width: 26px;
+    height: 24px;
+    font-size: 25px;
+    color: #FF0000;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+#upload{
+    position: absolute;
+    width: 142px;
+    height: 33px;
+    left: 390px;
+    top: 360px;
+    color: #FFFFFF;
+    background: rgba(157, 210, 238, 0.2);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#nome{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 426px;
+    top: 480px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF;
+
+}
+
+.nome_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 426px;
+top: 510px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+#emailp{
+    position: absolute;
+width: 218px;
+height: 38px;
+left: 426px;
+top: 560px;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 31px;
+color: #FFFFFF;
+
+}
+
+.emailp_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 426px;
+top: 590px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+#tele{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 426px;
+    top: 650px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.tele_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 426px;
+top: 680px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+#nomeemp{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 860px;
+    top: 480px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF; 
+}
+
+.nomeemp_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 860px;
+top: 510px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+#emailemp{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 860px;
+    top: 560px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF; 
+}
+
+.emailemp_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 860px;
+top: 590px;;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+#Endereco{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 860px;
+    top: 650px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF; 
+}
+
+.endereco_box{
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 860px;
+    top: 680px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+
+/*BOTAO LUZ*/
 main{
     text-align: center;
     font-size: 8em;
@@ -255,8 +535,8 @@ main{
     position: relative;
     cursor: pointer;
     position: absolute;
-    top: 80px;
-    right: 10px;
+    top: 112px;
+    right: 207px;
 }
 
 .liga-desliga_botao::before,
@@ -290,278 +570,4 @@ background: #FFFFFF;
 
 .liga-desliga_checkbox:checked + .liga-desliga_botao::after{
     left: 0.60em;
-}
-
-.container {
-    position: absolute;
-    width: 650px;
-    height: 10px;
-    left: 314px;
-    top: 50px;
-    font-family: roboto, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 60px;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.container span {
-    font-size: 40px;
-    top: -20px;
-    position: absolute;
-    top: -40px;
-}
-
-.configuracao_box {
-    position: absolute;
-    width: 240px;
-    height: 71px;
-    top: 100px;
-    left: 255px;
-    float: left;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-
-.avatar_item span {
-    position: absolute;
-    width: 139px;
-    height: 60px;
-    left: 400px;
-    top: 50px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 60px;
-    color: #FFFFFF;
-}
-
-#img{
-    
-position: absolute;
-width: 158px;
-height: 158px;
-left: 380px;
-top: 110px;
-border-radius: 256px;
-}
-
-#img img{
-    position: absolute;
-    width: 100%;
-}
-
-.icons img{
-    width: 20px;
-    height: 20px;
-}
-
- #linkedin{
-    position: absolute;
-width: 40px;
-height: 20px;
-left: 530px;
-top: 142px;
-
-}
-
-#google{
-    position: absolute;
-    left: 540px;
-    top: 172px;
-    
-}
-
-#face{
-    position: absolute;
-    left: 540px;
-    top: 202px;
-    
-}
-
-#x{
-    position: absolute;
-left: 500px;
-right: 35.63%;
-top: 115px;
-bottom: 100%;
-width: 26px;
-height: 24px;
-font-size: 25px;
-color: #FF0000;
-background-color: transparent;
-border: transparent;
-cursor: pointer;
-}
-
-#upload{
-    position: absolute;
-width: 142px;
-height: 33px;
-left: 390px;
-top: 280px;
-color: #FFFFFF;
-background: rgba(157, 210, 238, 0.2);
-border-radius: 15px;
-cursor: pointer;
-}
-
-#nome{
-    position: absolute;
-width: 218px;
-height: 38px;
-left: 426px;
-top: 388px;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 31px;
-color: #FFFFFF;
-
-}
-
-.nome_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 426px;
-top: 420px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-
-#emailp{
-    position: absolute;
-width: 218px;
-height: 38px;
-left: 426px;
-top: 470px;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 31px;
-color: #FFFFFF;
-
-}
-
-.emailp_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 426px;
-top: 500px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-#tele{
-    position: absolute;
-width: 218px;
-height: 38px;
-left: 426px;
-top: 550px;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 31px;
-color: #FFFFFF;
-
-}
-
-.tele_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 426px;
-top: 580px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-#nomeemp{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 796px;
-    top: 388px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF; 
-}
-
-.nomeemp_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 796px;
-top: 420px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-
-#emailemp{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 796px;
-    top: 470px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF; 
-}
-
-.emailemp_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 796px;
-top: 500px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-#Endereco{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 796px;
-    top: 550px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF; 
-}
-
-.endereco_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 796px;
-top: 580px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
 }

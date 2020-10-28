@@ -162,6 +162,14 @@ body{
     padding-top: 40px;
     padding-left: 500px;
   }
+  
+  .plano_fundo input{
+    border-radius: 10px;
+    background-color: rgba(87, 87, 87, 0.904);
+    color: white;
+    font-family: monospace;
+    padding: 2px;
+  }
 
   .exibicao .texto_exibicao {
     font-size: 20px;

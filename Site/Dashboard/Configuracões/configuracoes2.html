@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório - Vaccinus</title>
-    <link rel="stylesheet" href="css/relatorio.css">
-    <!-- LINK do FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-
-  
+    <title>  Configurações - Vaccinus</title>
 </head>
+
 <body>
     <header class="header" id="header">
         <div class="l-navbar" id="nav-bar">
@@ -22,26 +28,26 @@
                         <span class="nav_logo-name">accinus</span>
                     </a>
                     <div class="nav_list">
-                        <a href="../NODE4.1/dashboard2.html" class="nav_link">
+                        <a href="../../NODE4.1/dashboard2.html" class="nav_link">
                             <i class='bx bx-grid-alt nav_icon'></i>
                             <span class="nav_name">Resumo</span>
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="estatistica.html" class="nav_link">
+                        <a href="../../estatistica.html" class="nav_link">
                             <i class='bx bx-stats nav_icon'></i></i>
                             <span-um class="nav_name">Estatisticas</span>
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="#" class="nav_link-est">
-                            <i class='bx bx-folder nav_icon-est'></i></i>
+                        <a href="../../relatorio.html" class="nav_link">
+                            <i class='bx bx-folder nav_icon'></i></i>
                             <span class="nav_name">Relátorio</span>
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="Dashboard/Configuracões/configuracoes2.html" class="nav_link">
-                            <i class='bx bxs-cog nav_icon'></i></i>
+                        <a href="configuracoes2.html" class="nav_link-est">
+                            <i class='bx bxs-cog nav_icon-est'></i></i>
                             <span class="nav_name">Configurações</span>
                         </a>
                         <section class="section">
@@ -70,9 +76,8 @@
         <div class="box linha-vertical"></div>
     </header>
 
-    <!-- button UPGRADE -->
     <section class="section-plano">
-        <a href='planos.html'>
+
         <div class="plano_box">
             <button class="plano_box">
                 <div class="plano_item">
@@ -81,61 +86,55 @@
                 </div>
             </button>
         </div>
-        </a>
-    </section>
 
-    <!-- CONTAINER CONTEUDO RELATORIO-->
-    <section>
-        <div class="container">
-            <span>Imprima o seu Relatório</span>
-            <!-- button IMPRIMIR -->
-            <section class="section-plano">
-
-                <div class="plano_box2">
-                    <button class="plano_box2">
-                        <div class="plano_item2">
-                            <p>Imprimir</p>
-                        </div>
-                    </button>
-                </div>
-
-            </section>
+        <main>
+            <div class="liga-desliga">
+                <input type="checkbox" name="" id="liga-desliga" class="liga-desliga_checkbox">
+                <label for="liga-desliga" name="" class="liga-desliga_botao"></label>
+            </div>
+        </main>
 
 
 
-            <section class="section-data">
-                <div class="data_item">
-                    <span>Rotas</span>
-                    <img src="img/rotas.png" alt="">
-                </div>
-                <div class="data_box">Cada detalhe pronto na sua tela.
-                    <div class="data_item2">
-                        <b>Vacina:</b>  Febre Amarela <br>
-                        <b>Lote:</b>  1508LVP <br>
-                        <b>Data:</b>  15/10/2020 <br>
-                        <b>Destino:</b>  Hospital São Paulo
-                    </div>
-                </div>
-
-                <div class="data_box1">Todos os seus passos.
-                    <div class="data_item2">
-                        <b>Início:</b> Rua Haddock Lobo, 595 - Cerqueira César, São Paulo <br>
-                        <b>Localização Atual:</b> Avenioda Gal Manoel Rabelo, 5746 - Paraíso, São Paulo <br>
-                        <b>Final:</b> Rua Napoleão de Barros, 715 - Vila Clementina, São Paulo
-                    </div>
-                </div>
-
-                <div class="data_box2">Sobre as vacinas agora.
-                    <div class="data_item2">
-                        <b>Temperatura atual:</b> 4°C
-                    </div>
-                </div>
-        </div>
-    </section>
-    <!-- Relatórios Conteudo -->
+        <section>
+            <div class="container">
+                <span>Configure para melhor desempenho</span>
     
- 
-
-
+                <section class="section-conf">
+    
+               
+                        <div class="avatar_item">
+                            <span>Avatar</span>
+                            <img id="img" src="img/User.png" alt="">
+                            <button id="x">X</button>
+                            <div class="icons">
+                               <a href="#"> <img id="linkedin" src="img/Linkedin.png" alt=""></a>
+                               <a href=""> <img id="google" src="img/google.png" alt=""></a>
+                                <a href=""><img id="face" src="img/facebook.png" alt=""></a>
+                            </div>
+                            <div class="up">
+                                        <button id="upload">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+    
+        </section>
+    
+        <div>
+            <span id="nome">Seu nome:</span>
+        <input class="nome_box" placeholder="Coloque seu nome completo"></input>
+        <span id="nomeemp">Nome da empresa:</span>
+        <input class="nomeemp_box" placeholder="Coloque o nome da sua empresa"></input>
+        <span id="tele">Telefone:</span>
+        <input class="tele_box" placeholder="Coloque seu telefone"></input>
+        <span id=emailp>Email pessoal:</span>
+        <input class="emailp_box" placeholder="Coloque seu email pessoal"></input>
+        <span id="emailemp">Email da empresa:</span>
+        <input class="emailemp_box" placeholder="Coloque o email da sua empresa"></input>
+        <span id="Endereco">Endereço:</span>
+        <input class="endereco_box" placeholder="Coloque seu endereço"></input>
+        </div>
+        </section>
+    
 </body>
 </html>

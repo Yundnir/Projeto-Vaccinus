@@ -116,139 +116,164 @@ body{
 }
 
 
-
-
-/* André LinkedIn LOGO */
-.equipe img{    
-    position: absolute;
-    height: 25px;
-    padding-top: 110px;
-    padding-left: 205px;
+/*EQUIPE*/
+.equipe a{
+    color: black;
+    font-size: 40px;
 }
-/* André LinkedIn LOGO */
-
-/* Fotos da Equipe */
-.membros img{
-    height: 535px;
-    padding-top: 30px;
-    padding-left: 110px;
-    margin-bottom: 200px;
-    position: absolute;
+.equipe a:hover{
+    color: #9DD2EE;
 }
-/* Fotos da Equipe */
 
-/* André GitHub LOGO */
-.github img{
+.andre{
     position: absolute;
-    height: 25px;
-    padding-top: 110px;
-    padding-left: 165px;
-    margin-bottom: 200px;
+    top: 1480px;
+    width: 500px;
 }
-/* André GitHub LOGO */
-
 .andre p{
-    float: left;
-    padding-top: 70px;
-    padding-left: 180px;
-    text-align: center;
-    color: whitesmoke;
     position: absolute;
-}
-.guilherme p{
-    margin: 0;
-    float: right;
-    padding-top: 85px;
-    padding-left: 560px;
-    color: whitesmoke;
-    position: absolute;
+    left: 236px;
+    top: 45px;
+    font-size: 30px;
 }
 
-.guilhermelinked img{
+.andre .linked{
     position: absolute;
-    padding-left: 590px;
+    left: 300px;
+    top: 90px;
+}
+.andre .git{
+    position: absolute;
+    left: 250px;
+    top: 90px;
 }
 
-.guilhermegit img{
+.gui{
     position: absolute;
-    padding-left: 550px;
+    top: 1480px;
+    width: 800px;
+    left: 700px;
+}
+.gui p{
+    position: absolute;
+    left: 236px;
+    top: 45px;
+    font-size: 30px;
 }
 
-.matheus p{
+.gui .linked{
     position: absolute;
-    padding-left: 945px;
-    padding-top: 70px;
-    color: whitesmoke;
-    text-align: justify;
+    left: 300px;
+    top: 90px;
+}
+.gui .git{
+    position: absolute;
+    left: 250px;
+    top: 90px;
+    
 }
 
-.matheuslinked img{
+.mat{
     position: absolute;
-    padding-left: 970px;
+    top: 1480px;
+    width: 500px;
+    left: 1280px;
+}
+.mat p{
+    position: absolute;
+    left: 236px;
+    top: 45px;
+    font-size: 30px;
 }
 
-.matheusgit img{
+.mat .linked{
     position: absolute;
-    padding-left: 930px;
+    left: 300px;
+    top: 90px;
+}
+.mat .git{
+    position: absolute;
+    left: 250px;
+    top: 90px;
+    
 }
 
-.nicolas p{
+.nic{
     position: absolute;
-    padding-top: 360px;
-    padding-left: 350px;
-    color: whitesmoke;
+    top: 1755px;
+    width: 500px;
+}
+.nic p{
+    position: absolute;
+    left: 236px;
+    top: 45px;
+    font-size: 30px;
 }
 
-.nicolaslinked img{
+.nic .linked{
     position: absolute;
-    padding-top: 340px;
-    padding-left: 205px;
+    left: 300px;
+    top: 90px;
+}
+.nic .git{
+    position: absolute;
+    left: 250px;
+    top: 90px;
 }
 
-.nicolasgit img{
+.pri{
     position: absolute;
-    padding-top: 340px;
-    padding-left: 165px;
+    top: 1755px;
+    width: 800px;
+    left: 700px;
+}
+.pri p{
+    position: absolute;
+    left: 236px;
+    top: 45px;
+    font-size: 30px;
 }
 
-.priscila p{
+.pri .linked{
     position: absolute;
-    padding-top: 300px;
-    padding-left: 565px;
-    color: whitesmoke;
+    left: 300px;
+    top: 90px;
+}
+.pri .git{
+    position: absolute;
+    left: 250px;
+    top: 90px;
+    
 }
 
-.priscilalinked img{
+.ren{
     position: absolute;
-    padding-top: 340px;
-    padding-left: 590px;
+    top: 1755px;
+    width: 500px;
+    left: 1280px;
+}
+.ren p{
+    position: absolute;
+    left: 236px;
+    top: 45px;
+    font-size: 30px;
 }
 
-.priscilagit img{
+.ren .linked{
     position: absolute;
-    padding-top: 340px;
-    padding-left: 550px;
+    left: 300px;
+    top: 90px;
+}
+.ren .git{
+    position: absolute;
+    left: 250px;
+    top: 90px;
+    
 }
 
-.renato p{
-    position: absolute;
-    padding-top: 300px;
-    padding-left: 945px;
-    color: whitesmoke;
-}
+/*FIM EQUIPE*/
 
-.renatolinked img{
-    position: absolute;
-    padding-top: 340px;
-    padding-left: 970px;
-}
-
-.renatogit img{
-    position: absolute;
-    padding-top: 340px;
-    padding-left: 930px;
-}
-
+/*FOOTER*/
 footer{
     margin-top: 700px;
     background-color: #393b44;
