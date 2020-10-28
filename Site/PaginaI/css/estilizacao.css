@@ -1,0 +1,399 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #363636; 
+    padding: 0;
+}
+
+/* .membros a{
+    color: white;
+}
+
+.membros a:hover{
+    color: #9DD2EE;
+    text-decoration: none;
+} */
+
+.cabecalho{
+    background-color: #393b44;
+    height: 50px;
+}
+
+.enquadramento{
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.enquadramento h1{
+    color: whitesmoke;
+    font-weight: 100;
+}
+
+.texto p{
+    position: absolute;
+    padding-top: 91px;
+    padding-left: 775px;
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 38px;
+    color: whitesmoke;
+    font-size: 25px;
+    font-style: italic;
+    width: 75%;
+    text-align: justify;
+}
+
+.titulo{
+    height: 40px;
+}
+
+.titulo h2{
+    margin: 0;
+    padding-top: 12px;
+    height: 38px;
+}
+
+.logo {
+    float: left;
+    padding-top: 13px;
+    padding-bottom: 0px;
+    height: 25px;
+}
+
+.lista ul{
+    float: right;
+    margin-top: 0%;
+    padding-top: 13px;
+    list-style: none;
+}
+
+.lista li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.lista img{
+    height: 20px;
+}
+
+.lista a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #9DD2EE;
+    font-size: 12px;
+}
+
+.banner h1{
+    margin-top: 150px;
+    padding-left: 220px;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 110px;
+    /* position: absolute; */
+    text-align: -webkit-center;
+    padding-left: 20px;
+    padding-top: 188px;
+}
+
+.banner img{
+    margin: 0;
+    height: 480px;
+    padding-top: 50px;
+    position: absolute;
+}
+ 
+.equipe h1{
+    padding-top: 825px;
+    /* padding-left: 50px; */
+    font-size: 95px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.membros p{
+    font-size: 25px;
+}
+
+
+
+
+/* André LinkedIn LOGO */
+.equipe img{    
+    position: absolute;
+    height: 25px;
+    padding-top: 110px;
+    padding-left: 205px;
+}
+/* André LinkedIn LOGO */
+
+/* Fotos da Equipe */
+.membros img{
+    height: 535px;
+    padding-top: 30px;
+    padding-left: 110px;
+    margin-bottom: 200px;
+    position: absolute;
+}
+/* Fotos da Equipe */
+
+/* André GitHub LOGO */
+.github img{
+    position: absolute;
+    height: 25px;
+    padding-top: 110px;
+    padding-left: 165px;
+    margin-bottom: 200px;
+}
+/* André GitHub LOGO */
+
+.andre p{
+    float: left;
+    padding-top: 70px;
+    padding-left: 180px;
+    text-align: center;
+    color: whitesmoke;
+    position: absolute;
+}
+.guilherme p{
+    margin: 0;
+    float: right;
+    padding-top: 85px;
+    padding-left: 560px;
+    color: whitesmoke;
+    position: absolute;
+}
+
+.guilhermelinked img{
+    position: absolute;
+    padding-left: 590px;
+}
+
+.guilhermegit img{
+    position: absolute;
+    padding-left: 550px;
+}
+
+.matheus p{
+    position: absolute;
+    padding-left: 945px;
+    padding-top: 70px;
+    color: whitesmoke;
+    text-align: justify;
+}
+
+.matheuslinked img{
+    position: absolute;
+    padding-left: 970px;
+}
+
+.matheusgit img{
+    position: absolute;
+    padding-left: 930px;
+}
+
+.nicolas p{
+    position: absolute;
+    padding-top: 360px;
+    padding-left: 350px;
+    color: whitesmoke;
+}
+
+.nicolaslinked img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 205px;
+}
+
+.nicolasgit img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 165px;
+}
+
+.priscila p{
+    position: absolute;
+    padding-top: 300px;
+    padding-left: 565px;
+    color: whitesmoke;
+}
+
+.priscilalinked img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 590px;
+}
+
+.priscilagit img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 550px;
+}
+
+.renato p{
+    position: absolute;
+    padding-top: 300px;
+    padding-left: 945px;
+    color: whitesmoke;
+}
+
+.renatolinked img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 970px;
+}
+
+.renatogit img{
+    position: absolute;
+    padding-top: 340px;
+    padding-left: 930px;
+}
+
+footer{
+    margin-top: 700px;
+    background-color: #393b44;
+    height: 60px;
+}
+
+footer h4{
+    font-weight: 100;
+    color: whitesmoke;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 22px;
+}
+
+/* .banner img{
+    background-image: url(Imagens/fundo_nos.png);
+    background-repeat: repeat-y;
+    padding-left: 0px;
+    opacity: 0.4;
+    padding-top: 200px;
+    text-align: center ;
+    margin-top: 0;
+    height: 800px;
+} */
+
+
+
+
+/* .enquadramento h1{
+    margin: 0%;
+    padding-top: 0px;
+    padding-left: 250px;
+    font-size: 45px;
+    color: whitesmoke;
+}  */
+
+
+
+.header{
+    background-color: #393B44;
+    height: 110px;
+    padding-top: 25px;
+}
+
+.header .nav .current a,
+.header span{
+    color: #9DD2EE;
+}
+
+.header a:hover{
+    text-decoration: none;
+    color: #9DD2EE;
+}
+
+.container{
+    /* Largura do elemento */ 
+    width: 80%;
+    margin: auto;
+
+    /* height: 50px; */
+}
+
+.container img{
+    width: 12%;
+    float: left;
+}
+
+
+.title-header h1,
+.nav ul
+{
+    margin: 0;
+}
+
+.title-header{
+    float: left;
+    color: #ffffff;
+}
+
+.title-header h2{
+    padding-top: 15px;
+}
+
+.nav{
+    float: right;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 20px;
+    padding: 10px 20px 0px 20px;
+    margin-right: 30px;
+    
+}
+
+/* Posicionamento Login Icone */
+.header .icon_login img{
+    width: 35px;
+    margin-top: 10px;
+    float: right;
+}
+/* FIM Global */
+
+/*boddy color*/
+.showcase {
+    background-color: #363636; 
+    background-image: url(../img/fundo_nos.png);
+    background-repeat: no-repeat;
+    height: 2053px;
+    margin-top: -150px;
+}
+
+/* FOOTER */
+.footer{
+    background-color: #363636;
+    width: 100%;
+    height: 220px;
+    background-image: url(../img/onda3.png);
+    background-size: cover;
+}
+
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    padding-top: 165px;
+    margin-bottom: -15px;
+}
+
+.footer a{
+    padding-left: 20px;
+    color: white;
+}
+
+.footer a:hover{
+    color: #9DD2EE;
+    text-decoration: none;
+}
+
+/* Fim FOOTER */
+

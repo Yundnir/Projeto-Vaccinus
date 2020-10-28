@@ -459,7 +459,7 @@ body {
 }
 
 .section-prof .suport{
-    background-image: url(conversation.png);
+    background-image: url(img/conversation.png);
     background-color: #00000010;
     background-position: center;
     background-repeat: no-repeat;
@@ -471,7 +471,7 @@ body {
 }
 
 .section-prof .plano_profile .settings{
-    background-image: url(member.png);
+    background-image: url(img/member.png);
     background-color: #00000010;
     background-position: center;
     background-repeat: no-repeat;
