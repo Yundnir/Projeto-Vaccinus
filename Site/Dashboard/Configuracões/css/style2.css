@@ -203,6 +203,10 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.plano_box a{
+    text-decoration: none;
+}
+
 .plano_box button {
     position: absolute;
     width: 239px;
