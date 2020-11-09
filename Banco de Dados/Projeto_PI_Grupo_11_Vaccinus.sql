@@ -47,8 +47,9 @@ create table tbVacinas (
     nomeVacina varchar(60),
     loteVacina varchar(20),
     temp_min decimal(4,2),
-    temp_max decimal(4,2)
-
+    check (temp_min >= 2),
+    temp_max decimal(4,2),
+    check (temp_max <= 8)
 );
 
 insert into tbVacinas(nomeVacina, loteVacina,temp_min, temp_max) values
@@ -67,14 +68,14 @@ insert into tbSensor  values (null, 'sSRGTj2L'),
 
 
 create table tbContainer (
-idContainer int primary key auto_increment,
-nomeContainer varchar(50), -- Ex: CD1
-fkEmpresa int,
-fkVacina int,
-fkSensor int,
-foreign key (fkEmpresa) references tbEmpresa (idEmpresa),
-foreign key (fkVacina) references tbVacinas (idVacina),
-foreign key (fkSensor) references tbSensor (idSensor)
+	idContainer int primary key auto_increment,
+	nomeContainer varchar(50), -- Ex: CD1
+	fkEmpresa int,
+	fkVacina int,
+	fkSensor int,
+	foreign key (fkEmpresa) references tbEmpresa (idEmpresa),
+	foreign key (fkVacina) references tbVacinas (idVacina),
+	foreign key (fkSensor) references tbSensor (idSensor)
 );
 
 select * from tbContainer;
@@ -84,27 +85,26 @@ insert into tbContainer (nomeContainer, fkEmpresa, fkVacina, fkSensor) values
                             
 -- Tabela de transporte/destino para onde a vacina está sendo encaminhada
 create table tbRota (
-idRota int primary key auto_increment,
-hrInicio datetime,
-hrFim datetime,
-partida varchar (50),
-destino varchar (50),
-fkContainer int,
-foreign key (fkContainer) references tbContainer (idContainer)
-
+	idRota int primary key auto_increment,
+	hrInicio datetime,
+	hrFim datetime,
+	partida varchar (50),
+	destino varchar (50),
+	fkContainer int,
+	foreign key (fkContainer) references tbContainer (idContainer)
 );
+
 insert into tbRota (hrInicio, hrFim,partida, destino, fkContainer) values 
 ('2020/10/12 12:00:00', '2020/10/12 14:00:00', 'Vila Prudente', 'Av Paulista', 1);
 
 
 
 create table tbLeitura (
-idLeitura int primary key auto_increment,
-temp_atual decimal (4,2),
-hr_temp datetime,
-fkSensor int,
-foreign key (fkSensor) references tbSensor (idSensor)
-						
+	idLeitura int primary key auto_increment,
+	temp_atual decimal (4,2),
+	hr_temp datetime,
+	fkSensor int,
+	foreign key (fkSensor) references tbSensor (idSensor)
 );
 insert into tbLeitura(temp_atual, hr_temp, fkSensor) values (10.00, '2020/10/12 12:00', 1);
 
@@ -112,13 +112,7 @@ insert into tbLeitura(temp_atual, hr_temp, fkSensor) values (10.00, '2020/10/12 
     
 select * from tbVacinas;
 
--- Tabela de Relatório - Registro (máxima e mínima)
-
-
 -- Tabela de temperatura no tempo real dentro do Container
-
-
-
 select * from tbSensor;
 					
 select * from tbUsuario;
