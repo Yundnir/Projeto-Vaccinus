@@ -1,0 +1,18 @@
+Reunião realizada quarta-feira dia 18.11.2020 durante aula de T.I. tendo início às 11h com término às 13h15
+
+Participaram da reunião os integrantes:
+André Santos
+Guilherme Nascimento
+Matheus Daniel
+Nicolas Carvalho
+Renato Paulino
+
+Na reunião foi abordado o fluxograma de processo o qual foi revisado pelo professor Thiago, tendo este sugerido melhorias ao documento. As melhorias são:
+- Criar um documeto de FAQ 
+- No sintezir o fluxograma com a condicional de "consultar FAQ/FAQ consultado?"
+- Não deixar o cliente sem resposta no fluxograma, tem que ter uma etapa que conste com o feedback do cliente, se ele disse que o problema foi solucionado ou não
+- Mudar o sinal de fim do fluxograma
+
+Também foi abordado a ferramenta de suporte ao usuário Zendesk que está corretamente implantada ao projeto, aprovado pelo Thiago, tendo como melhoria o emprego do chat no projeto.
+
+Ficou acordado a realização de reunião na biblioteca após o horário de aula.
