@@ -1,0 +1,11 @@
+Reunião realizada na quarta-feira, na faculdade, após horário de aula, no dia 18.11.2020 com início às 16h20 e término às h
+
+Participantes
+André Santos
+Guilherme Nascimento
+Matheus Daniel
+Nicolas Carvalho
+Priscila Choi
+Renato Paulino
+
+Foi conversado sobre as pendências do projeto tais como o documento final, aperfeiçoamento da dashboard com a possível inclusão da API de Google Maps, aperfeiçoamento da calculadora financeira e concluir manual de instalação

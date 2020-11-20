@@ -1,0 +1,29 @@
+Frequently Asked Questions - FAQ
+
+Problemas de Internet
+1) Há conexão de internet no computador do cliente?
+- Executar solução de problemas do sistema operacional
+- Reiniciar o modem
+- Ligar para a operadora de internet
+
+Hardware
+1) O Arduino não está inicializando
+- Conferir se o led de alimentação está aceso
+- Checar as conexões de alimentação do Arduino
+- Checar se as baterias estão com carga
+- Checar se o Arduino está danificado
+
+2) Arduino está ligando, mas os dados não estão sendo visualizados no dashboard/site 
+- Conferir se o sensor está operacional
+- Conferir cabeamento de conexão do sensor ao Arduino
+- 
+
+Container
+1) Container não está mantendo a temperatura
+- Enviar o container à Vaccinus para análise
+
+2) Container está danificado
+- Enviar o container à Vaccinus para análise 
+
+
+
