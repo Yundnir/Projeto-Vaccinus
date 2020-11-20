@@ -1,0 +1,8 @@
+1. Entre na pasta "app". Leia e siga as instruções do "COMO-USAR.txt" de lá
+2. Após fazer o passo #1, abra um git bash nesta pasta 
+3. Execute um "npm i" e aguarde
+4. Execute um "npm start" e aguarde
+5. Vá no browser e acesse o endereço http://localhost:9000/api/sendData
+   Se aparecer "OK" indica que foi feito 1 (um) insert no banco
+   Para fazer outro insert, chame e endereço http://localhost:9000/api/sendData novamente, sempre que quiser
+   

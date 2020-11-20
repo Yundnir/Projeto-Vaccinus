@@ -1,0 +1,2 @@
+1. Ajuste suas configurações de acesso ao banco no arquivo "database.js"
+2. Ajuste suas regras e instruções de insert e/ou update e/ou delete no arquivo "controller.js"
