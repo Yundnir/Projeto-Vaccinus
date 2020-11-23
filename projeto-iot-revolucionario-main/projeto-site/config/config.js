@@ -3,7 +3,7 @@ module.exports = {
     username: 'Vaccinus',
     password: '#Gfgrupo11',
     database: 'bd-grupo11',
-    host: '202-1b-grupo11@bandtec.com.br',
+    host: 'dbvaccinus.database.windows.net',
     dialect: 'mssql',
     xuse_env_variable: 'DATABASE_URL',
     dialectOptions: {
