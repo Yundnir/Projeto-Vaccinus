@@ -1,0 +1,17 @@
+Sequência de Apresentação
+
+Apresentação inicial,
+Visão geral do projeto (contexto, solução e justificativa),
+Planejamento do Projeto,
+Demonstração da Equipe,
+Metodologia usada/gestão,
+Backlog/sprints (importância de organização),
+Gestão de riscos (como lidou),
+Desenvolvimento (LLD - Aplicação),
+Modelo de dados (lógico, workbench),
+Parâmetros  dos Analytics,
+Demonstração (Venda, elementos, produtos, para o cliente se interessar),
+Site - Navegação,
+Calculadora Financeira, 
+Login, 
+Suporte (Atendimento p/ cliente (zendesk), 
