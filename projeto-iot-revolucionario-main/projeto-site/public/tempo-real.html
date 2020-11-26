@@ -55,7 +55,7 @@
 
 
             <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="idcaminhao" value="1">1</span></h4>
+                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="1">1</span></h4>
                 <div class="valores">
                     <div class="valor" id="div_temperatura">Temperatura sendo obtida...</div>
                     <div class="valor" id="div_umidade">Umidade sendo obtida...</div>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="idcaminhao" value="2">2</span></h4>
+                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="2">2</span></h4>
                 <div class="valores">
                     <div class="valor" id="div_temperatura2">Temperatura sendo obtida...</div>
                     <div class="valor" id="div_umidade2">Umidade sendo obtida...</div>
@@ -80,7 +80,7 @@
             </div>
 
             <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="idcaminhao" value="3">3</span></h4>
+                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="3">3</span></h4>
                 <div class="valores">
                     <div class="valor" id="div_temperatura3">Temperatura sendo obtida...</div>
                     <div class="valor" id="div_umidade3">Umidade sendo obtida...</div>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="idcaminhao" value="4">4</span></h4>
+                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="4">4</span></h4>
                 <div class="valores">
                     <div class="valor" id="div_temperatura4">Temperatura sendo obtida...</div>
                     <div class="valor" id="div_umidade4">Umidade sendo obtida...</div>
@@ -132,9 +132,9 @@
 
     
 
-    function obterdadosporcaminhao(idcaminhao) {
+    function obterdadosporcaminhao(fkSensor) {
         //aguardar();
-        fetch(`/leituras/tempo-real/${idcaminhao}`)
+        fetch(`/leituras/tempo-real/${fkSensor}`)
         .then(resposta => {
 
             if (resposta.ok) {
@@ -146,11 +146,11 @@
                     // dos atributos que vem no JSON 
                     var dados = {
                         temperatura: resposta.temperatura,
-                        umidade: resposta.umidade
+                        // umidade: resposta.umidade
                     }
 
-                    alertar(resposta.temperatura, resposta.umidade, idcaminhao);
-                    atualizarTela(dados, idcaminhao);
+                    alertar(resposta.temperatura, fkSensor);
+                    atualizarTela(dados, fkSensor);
                 });
             } else {
 
@@ -162,90 +162,90 @@
             });
     }
 
-    function alertar(temperatura, umidade, idcaminhao) {
+    function alertar(temperatura, fkSensor) {
         // padrão para meu alerta
         var limites = {
-            max_temperatura: 40,
-            min_temperatura: 20,
-            max_umidade: 80,
-            min_umidade: 50,
+            max_temperatura: 8,
+            min_temperatura: 2,
+            // max_umidade: 80,
+            // min_umidade: 50,
         };
 
         // zerar aviso de mensagem
         var mensagem_temperatura = '';
-        var mensagem_umidade = '';
+        // var mensagem_umidade = '';
         var classe_temperatura = 'alerta';
-        var classe_umidade = 'alerta_umidd';
+        // var classe_umidade = 'alerta_umidd';
 
         // comparando
         if (temperatura > limites.max_temperatura) {
             mensagem_temperatura += 'Temperatura alta demais! <br>';
             classe_temperatura = 'alerta alerta-alto';
         }
-        if (umidade > limites.max_umidade) {
-            mensagem_umidade += 'Umidade alta demais! <br>';
-            classe_umidade = 'alerta_umidd alerta-alto';
-        }
+        // if (umidade > limites.max_umidade) {
+        //     mensagem_umidade += 'Umidade alta demais! <br>';
+        //     classe_umidade = 'alerta_umidd alerta-alto';
+        // }
         if (temperatura < limites.min_temperatura) {
             mensagem_temperatura = 'Temperatura baixa demais! <br>';
             classe_temperatura = 'alerta alerta-baixo';
         }
-        if (umidade < limites.min_umidade) {
-            mensagem_umidade = 'Umidade baixa demais! <br>';
-            classe_umidade = 'alerta_umidd alerta-baixo';
-        }
+        // if (umidade < limites.min_umidade) {
+        //     mensagem_umidade = 'Umidade baixa demais! <br>';
+        //     classe_umidade = 'alerta_umidd alerta-baixo';
+        // }
 
         // escolhendo qual alterar
         var div_temperatura_alterar
-        var div_umidade_alterar
+        // var div_umidade_alterar
 
-        if (idcaminhao == 1) {
+        if (fkSensor == 1) {
             div_temperatura_alterar = div_alerta_temperatura
-            div_umidade_alterar = div_alerta_umidade
-        } else if (idcaminhao == 2) {
+            // div_umidade_alterar = div_alerta_umidade
+        } else if (fkSensor == 2) {
             div_temperatura_alterar = div_alerta_temperatura2
-            div_umidade_alterar = div_alerta_umidade2
-        } else if (idcaminhao == 3) {
+            // div_umidade_alterar = div_alerta_umidade2
+        } else if (fkSensor == 3) {
             div_temperatura_alterar = div_alerta_temperatura3
-            div_umidade_alterar = div_alerta_umidade3
-        } else if (idcaminhao == 4) {
+            // div_umidade_alterar = div_alerta_umidade3
+        } else if (fkSensor == 4) {
             div_temperatura_alterar = div_alerta_temperatura4
-            div_umidade_alterar = div_alerta_umidade4
+            // div_umidade_alterar = div_alerta_umidade4
         }
 
         // alterando
         div_temperatura_alterar.innerHTML = mensagem_temperatura;
         div_temperatura_alterar.className = classe_temperatura;
 
-        div_umidade_alterar.innerHTML = mensagem_umidade;
-        div_umidade_alterar.className = classe_umidade;
+        // div_umidade_alterar.innerHTML = mensagem_umidade;
+        // div_umidade_alterar.className = classe_umidade;
     }
 
     // só altere aqui se souber o que está fazendo!
-    function atualizarTela(dados, idcaminhao) {
+    function atualizarTela(dados, fkSensor) {
         console.log('iniciando atualização da tela...');
 
         // escolhendo qual alterar
         var div_temperatura_alterar
-        var div_umidade_alterar
+        // var div_umidade_alterar
 
-        if (idcaminhao == 1) {
+        if (fkSensor == 1) {
             div_temperatura_alterar = div_temperatura
-            div_umidade_alterar = div_umidade
-        } else if (idcaminhao == 2) {
+            // div_umidade_alterar = div_umidade
+        } else if (fkSensor == 2) {
             div_temperatura_alterar = div_temperatura2
-            div_umidade_alterar = div_umidade2
-        } else if (idcaminhao == 3) {
+            // div_umidade_alterar = div_umidade2
+        } else if (fkSensor == 3) {
             div_temperatura_alterar = div_temperatura3
-            div_umidade_alterar = div_umidade3
-        } else if (idcaminhao == 4) {
+            // div_umidade_alterar = div_umidade3
+        } else if (fkSensor == 4) {
             div_temperatura_alterar = div_temperatura4
-            div_umidade_alterar = div_umidade4
+            // div_umidade_alterar = div_umidade4
         }
 
         div_temperatura_alterar.innerHTML = `Temperatura: ${dados.temperatura}º`;
 
-        div_umidade_alterar.innerHTML = `Umidade: ${dados.umidade}%`;
+        // div_umidade_alterar.innerHTML = `Umidade: ${dados.umidade}%`;
 
         
 

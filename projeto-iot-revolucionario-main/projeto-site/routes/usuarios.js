@@ -83,18 +83,18 @@ router.get('/sessao/:login', function(req, res, next) {
 
 
 /* Logoff de usuário */
-router.get('/sair/:login', function(req, res, next) {
-	let login = req.params.login;
-	console.log(`Finalizando a sessão do usuário ${login}`);
-	let nova_sessoes = []
-	for (let u=0; u<sessoes.length; u++) {
-		if (sessoes[u] != login) {
-			nova_sessoes.push(sessoes[u]);
-		}
-	}
-	sessoes = nova_sessoes;
-	res.send(`Sessão do usuário ${login} finalizada com sucesso!`);
-});
+// router.get('/sair/:login', function(req, res, next) {
+// 	let login = req.params.login;
+// 	console.log(`Finalizando a sessão do usuário ${login}`);
+// 	let nova_sessoes = []
+// 	for (let u=0; u<sessoes.length; u++) {
+// 		if (sessoes[u] != login) {
+// 			nova_sessoes.push(sessoes[u]);
+// 		}
+// 	}
+// 	sessoes = nova_sessoes;
+// 	res.send(`Sessão do usuário ${login} finalizada com sucesso!`);
+// });
 
 
 /* Recuperar todos os usuários */
