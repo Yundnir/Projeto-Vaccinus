@@ -145,11 +145,11 @@
                     // aqui, após registro. use os nomes 
                     // dos atributos que vem no JSON 
                     var dados = {
-                        temperatura: resposta.temperatura,
+                        temperatura: resposta.temp_atual,
                         // umidade: resposta.umidade
                     }
 
-                    alertar(resposta.temperatura, fkSensor);
+                    alertar(resposta.temp_atual, fkSensor);
                     atualizarTela(dados, fkSensor);
                 });
             } else {
@@ -224,6 +224,7 @@
     // só altere aqui se souber o que está fazendo!
     function atualizarTela(dados, fkSensor) {
         console.log('iniciando atualização da tela...');
+        console.log('Temperatura', dados.temperatura);
 
         // escolhendo qual alterar
         var div_temperatura_alterar
