@@ -57,7 +57,6 @@ insert into tbVacinas(nomeVacina, loteVacina,temp_min, temp_max) values
 	('H1N1', '150VPOO', 2.00, 8.00),
 	('Sarampo',  '151VPOO', 2.00, 8.00);
 
-
 create table tbSensor (
 	idSensor int primary key auto_increment,
 	serialNumber char(8)
@@ -65,7 +64,6 @@ create table tbSensor (
 
 insert into tbSensor  values (null, 'sSRGTj2L'),
 (null, '3BqUgr58');
-
 
 create table tbContainer (
 	idContainer int primary key auto_increment,

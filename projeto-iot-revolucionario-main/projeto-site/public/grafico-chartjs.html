@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT - Gráficos</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboards.css">
 
     <!-- script do google charts -->
@@ -73,10 +73,10 @@
     window.onload = obterDadosGraficoPrimeiraVez(1);
 
 
-    function chamargraficos(idcaminhao) {
+    function chamargraficos(fkSensor) {
 
-        obterDadosGraficoPrimeiraVez(idcaminhao)
-        //atualizarGrafico(idcaminhao)
+        obterDadosGraficoPrimeiraVez(fkSensor)
+        //atualizarGrafico(fkSensor)
 
     }
 
@@ -124,13 +124,13 @@
 
     // altere aqui como os dados serão exibidos
     // e como são recuperados do BackEnd
-    function obterDadosGraficoPrimeiraVez(idcaminhao) {
+    function obterDadosGraficoPrimeiraVez(fkSensor) {
 
         if (proximaAtualizacao!=undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/leituras/ultimas/${idcaminhao}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/leituras/ultimas/${fkSensor}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -159,14 +159,16 @@
                     };
                     for (i = 0; i < resposta.length; i++) {
                         var registro = resposta[i];
-                        dados.labels.push(registro.momento_grafico);
-                        dados.datasets[0].data.push(registro.temperatura);
-                        dados.datasets[1].data.push(registro.umidade);
+                        // dados.labels.push(registro.momento_grafico);
+                        dados.labels.push(registro.hr_temp);
+                        dados.datasets[0].data.push(registro.temp_atual);
+                        // dados.datasets[0].data.push(registro.temperatura);
+                        // dados.datasets[1].data.push(registro.umidade);
 
                     }
                     console.log(JSON.stringify(dados));
                     div_aguarde.style.display = 'none';
-                    plotarGrafico(dados, idcaminhao);
+                    plotarGrafico(dados, fkSensor);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -182,10 +184,10 @@
 
     // só mexer se quiser alterar o tempo de atualização
     // ou se souber o que está fazendo!
-    function atualizarGrafico(idcaminhao, dados) {
+    function atualizarGrafico(fkSensor, dados) {
 
-        fetch(`/leituras/tempo-real/${idcaminhao}`, { cache: 'no-store' }).then(function (response) {
-            console.log("Estou tentando pegar idcaminhao = ", idcaminhao)
+        fetch(`/leituras/tempo-real/${fkSensor}`, { cache: 'no-store' }).then(function (response) {
+            console.log("Estou tentando pegar fkSensor = ", fkSensor)
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
@@ -194,22 +196,24 @@
 
                     // tirando e colocando valores no gráfico
                     dados.labels.shift(); // apagar o primeiro
-                    dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
+                    // dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
+                    dados.labels.push(novoRegistro.hr_atual);
                     dados.datasets[0].data.shift();  // apagar o primeiro de temperatura
-                    dados.datasets[1].data.shift();  // apagar o primeiro de umidade
-                    dados.datasets[0].data.push(novoRegistro.temperatura); // incluir uma nova leitura de temperatura
-                    dados.datasets[1].data.push(novoRegistro.umidade); // incluir uma nova leitura de umidade
+                    // dados.datasets[1].data.shift();  // apagar o primeiro de umidade
+                    dados.datasets[0].data.push(novoRegistro.temp_atual);
+                    // dados.datasets[0].data.push(novoRegistro.temperatura); // incluir uma nova leitura de temperatura
+                    // dados.datasets[1].data.push(novoRegistro.umidade); // incluir uma nova leitura de umidade
 
-                    console.log("meu caminhão é o " + idcaminhao)
+                    console.log("meu caminhão é o " + fkSensor)
 
                     window.grafico_linha.update();
 
 
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idcaminhao, dados), 5000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(fkSensor, dados), 5000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idcaminhao, dados), 5000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(fkSensor, dados), 5000);
             }
         })
             .catch(function (error) {
@@ -219,7 +223,7 @@
     }
 
     // só altere aqui se souber o que está fazendo!
-    function plotarGrafico(dados, idcaminhao) {
+    function plotarGrafico(dados, fkSensor) {
         console.log('iniciando plotagem do gráfico...');
 
         var ctx = canvas_grafico.getContext('2d');
@@ -228,7 +232,7 @@
             options: configurarGrafico()
         });
 
-        setTimeout(() => atualizarGrafico(idcaminhao, dados), 2000);
+        setTimeout(() => atualizarGrafico(fkSensor, dados), 2000);
     }
 
 
