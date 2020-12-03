@@ -4,61 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT - Sobre</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contato-e-login.css">
+
+    <title>Login - Vaccinus</title>
+
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style_login.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 
 <body>
+    <div class="content">
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="meu_cadastro.html">Cadastro</a></li>
-                    <li><a href="" class="current">Login</a></li>
-                </ul>
+            <div class="title-header">
+                <a href="index.html">
+                    <img src="img/logo_sem.png" alt="">
+                </a>
+                <h1 class="texto-header"> Bem vindo de <span>volta!</span></h1>
             </div>
+
+            <div class="planos">
+                <h3 class="texto-header">Não tem uma conta?<a href="planos.html"><span> Veja os planos disponivéis agora!</span></a></h3>
+            <div class="retangulo_azul"></div>
+            </div>
+            
         </div>
     </div>
     <!--header fim-->
 
-    <div class="pag-login">
-        <div class="container">
-            <div class="box-login">
-                <h1>Login</h1>
-
-
+    <div class="showcase">
+        <div class="conteudo">
+            <img src="img/user-profile.png" alt="" width="10%">
+            <br><br>
 
                 <form id="form_login" method="post" onsubmit="return entrar()">
-                    Usuário:
-                    <input type="text" class="input-padrao" name="email">
-                    <br>
-                    Senha:
-                    <input type="password" class="input-padrao" name="senha">
-                    <br>
-                    <button id="btn_entrar" class="btn-green">Entrar</button>
+                    <div class="corpo_texto">
+                        <p>Email:</p>
+                        <input type="text" class="input-padrao" name="email">
+                        <br>
+                        <p>Senha:</p>
+                        <input type="password" class="input-padrao" name="senha">
+                        <br><br>
+                        <p>Esqueceu sua senha? <span>Recupere.</span></p>
+                        <p>Não é cadastrado? <span> <a href="cadastro.html">Clique aqui</a></span></p>
+                        <button id="btn_entrar" class="btn-green">Entrar</button>
+                    </div>
                 </form>
 
                 <div class="extra">
-                    <div id="div_erro" class="msg_erro">
-                    </div>
-
-                    <img src="aguarde-orange.gif" id="img_aguarde"  > <!--style="display: none;"-->
-                    
+                    <div id="div_erro" class="msg_erro"></div>
+                    <!-- <img src="aguarde-orange.gif" id="img_aguarde"  > style="display: none;" -->
                 </div>
-            </div>
         </div>
+
+            <div class="imagem">
+                <img src="img/undraw_medicine_b1ol.svg" alt="" style="height: 500px;">
+            </div>    
+             
     </div>
+
+</div>
 
     <!--footer inicio-->
     <div class="footer">
-        <div class="container">
-            <h4>Feito com carinho por um aluno BandTec. Copyright © 2020</h4>
-        </div>
+        <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i>  Todos os direitos reservados. <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p> <br>
+        
     </div>
     <!--footer fim-->
 
@@ -101,13 +113,13 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.visibility = 'visible';
+        // img_aguarde.style.visibility = 'visible';
         div_erro.style.visibility = 'hidden';
     }
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
-        img_aguarde.style.visibility = 'hidden';
+        // img_aguarde.style.visibility = 'hidden';
         div_erro.style.visibility = 'visible';
         div_erro.innerHTML = resposta;
     }

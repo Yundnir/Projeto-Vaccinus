@@ -5,34 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página com exemplo de Cadastro de usuário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style_cadastro.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>Cadastro - Vaccinus</title>
 
 </head>
 
 <body>
 
-    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-        Nome: <input type="text" name="nome" required minlength="4">
-        <br>
-        email: <input type="text" name="email" required minlength="4">
-        <br>
-        Tel_Residencial: <input type="text" name="Tel_Residencial" required minlength="4">
-        <br>
-        Celular: <input type="text" name="Celular" required minlength="4">
-        <br>
-        CPF: <input type="text" name="CPF" required minlength="4">
-        <br>
-        Senha: <input type="password" name="senha" required minlength="4">
-        <br>
-        fkEmpresa: <input type="number" name="fkEmpresa" required minlength="4">
-        <button id="btn_entrar">Cadastrar</button>
-    </form>
-    
-    <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
-    
-    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
-        Erro no cadastro
+<div class="content">
+
+    <!-- Header -->
+
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <a href="index.html">
+                    <img src="img/logo_sem.png" alt="">
+                </a>
+                <h1 class="texto-header"> Bem vindo de <span>volta!</span></h1>
+            </div>
+
+            <div class="planos">
+                <h3 class="texto-header">Já possui uma conta?<a href="login.html"><span> Entre agora!</span></a></h3>
+            <div class="retangulo_azul"></div>
+            </div>
+            
+        </div>
     </div>
+
+    <!-- Fim Header -->
+
+    <!-- Showcase -->
+    <div class="showcase">
+        <div class="conteudo">
+            <div class="corpo_texto">
+
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
+                    <div class="primeiro_lado"> 
+                        <p>Nome:</p>
+                        <input type="text" name="nome" required minlength="4">
+                        <br>
+                        <p>CPF:</p>
+                        <input type="text" name="CPF" required minlength="4">
+                        <br>
+                        <p>Código da Empresa:</p> 
+                        <input type="number" name="fkEmpresa" required minlength="1">
+                        <br>
+                        <p>Senha:</p>
+                        <input type="password" name="senha" required minlength="8">
+
+                    </div>
+
+                    <div class="segundo_lado">
+                        <br>
+                        <p>Telefone Residencial:</p>
+                        <input type="text" name="Tel_Residencial" required minlength="4">
+                        <br>
+                        <p>Celular:</p>
+                        <input type="text" name="Celular" required minlength="4">
+                        <br>
+                        <p>Email:</p> 
+                        <input type="text" name="email" required minlength="4">
+                        <br>
+                        <p>Confirme sua senha:</p>
+                        <input id="Senha2" type="password" required minlength="8">
+                        
+                    </div>
+
+                    <button id="btn_entrar">Cadastrar</button>
+                    <br>
+                    <p>
+                        Ao cadastrar você está automaticamente aceitando os <br><span>Termos de Serviço</span> e <span>Política de Privacidade</span>
+                    </p>
+                </form>
+            </div>
+                
+                <!-- <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px"> -->
+                
+                <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+                    Erro no cadastro
+                </div>  
+        </div>
+
+            <div class="imagem">
+                <img src="img/add.svg" alt="" style="height: 500px;">
+            </div>
+
+    </div>
+</div>
+
+ <!-- Footer/Rodapé -->
+
+<div class="footer">
+    <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i>  Todos os direitos reservados. <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p> <br>
+    
+</div>
+
+<!-- Fim Footer -->
+
 
 </body>
 
@@ -66,13 +139,13 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
+        // img_aguarde.style.display='block';
         div_erro.style.display='none';
     }
 
     function finalizar_aguardar() {
         btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
+        // img_aguarde.style.display='none';
         div_erro.style.display='block';
     }
 

@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estatísticas</title>
-    <link rel="stylesheet" href="css/dashboards.css">
+    <title>Estatistica - Vaccinus</title>
+
+    <link rel="stylesheet" href="css/style_est.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 
     <!-- script do google charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -33,7 +36,64 @@
 <body onload="atualizacaoPeriodica()">
     <!--header inicio-->
 
-    <div class="header">
+    <header class="header" id="header">
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="index.html" class="nav_logo">
+                        <img src="img/logo_sem.png" class='nav_logo-icon'>
+                        <span class="nav_logo-name">accinus</span>
+                    </a>
+                    <div class="nav_list">
+                        <a href="../NODE4.1/dashboard2.html" class="nav_link">
+                            <i class='bx bx-grid-alt nav_icon'></i>
+                            <span class="nav_name">Resumo</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="#" class="nav_link-est">
+                            <i class='bx bx-stats nav_icon-est'></i></i>
+                            <span-um class="nav_name">Estatisticas</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="relatorio.html" class="nav_link">
+                            <i class='bx bx-folder nav_icon'></i></i>
+                            <span class="nav_name">Relátorio</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="Dashboard/Configuracões/configuracoes2.html" class="nav_link">
+                            <i class='bx bxs-cog nav_icon'></i></i>
+                            <span class="nav_name">Configurações</span>
+                        </a>
+                        <section class="section">
+                            <div class="estatistica_box">
+                                <div class="estatistica_item">
+                                    <i class='bx bx-wifi-off'></i>
+                                    <span>Conexão perdida</span>
+                                    <p>Se conecte para visualizar seus dados</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section-not">
+                            <div class="notificacao-box">
+                                <div class="notificacao_item">
+                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);"></i> <br><br> <br>
+                                    <span style="color: rgb(151, 151, 151);">Notificações</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="box"></div>
+        <div class="box linha-vertical"></div>
+    </header>
+
+    <!-- <div class="header">
         <div class="container">
             <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
             <div class="usuario">
@@ -46,68 +106,204 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--header fim-->
 
-    <div class="dashboard">
+    <section class="section-plano">
+
+        <div class="plano_box">
+            <button class="plano_box">
+                <div class="plano_item">
+                    <i class='bx bx-right-arrow-alt'></i> <br>
+                    <span>Faça um upgrade do seu plano!</span>
+                </div>
+            </button>
+        </div>
+
+    </section>
+
+    <section>
         <div class="container">
+            <span>O que está acontecendo?</span>
 
-
-
-            <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="1">1</span></h4>
-                <div class="valores">
-                    <div class="valor" id="div_temperatura">Temperatura sendo obtida...</div>
-                    <div class="valor" id="div_umidade">Umidade sendo obtida...</div>
+            <section class="section-data">
+                <div class="data_item">
+                    <span>Container 1</span>
                 </div>
-                <div class="alertas">
-                    <div class="alerta" id="div_alerta_temperatura"> </div>
-                    <div class="alerta_umidd" id="div_alerta_umidade"></div>
+                <div class="data_box">
+                    <p>Febre Amarela</p>
                 </div>
+
+                <div class="data_box1">
+                    <div class="data_item1">
+                        <span>Container 2</span>
+                    </div>
+                    <p>Dengue</p>
+                </div>
+
+                <div class="data_box2">
+                    <div class="data_item2">
+                        <span>Container 3</span>
+                    </div>
+                    <p>Covid-19</p>
+                </div>
+
+                <div class="data_box3">
+                    <div class="data_item3">
+                        <span>Container 4</span>
+                    </div>
+                    <p>Raiva</p>
+                </div>
+        </div>
+    </section>
+
+    <section class="section-graficos">
+
+        <div class="grafico_box">
+        <div class="grafico_item1">
+            <span name="namecaminhao" id="fkSensor" value="1"></span>
+
+            <div class="valores">
+                <div class="valor" id="div_temperatura">Temperatura sendo obtida...</div>
+                <!-- <div class="valor" id="div_umidade">Umidade sendo obtida...</div> -->
+            </div>
+            <div class="alertas">
+                <div class="alerta" id="div_alerta_temperatura"> </div>
+                <!-- <div class="alerta_umidd" id="div_alerta_umidade"></div> -->
             </div>
 
-            <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="2">2</span></h4>
+        </div>
+    </div>
+        
+
+        <div class="grafico_box1">
+            <div class="grafico_item1">
+                <span name="namecaminhao" id="fkSensor" value="2"></span>
                 <div class="valores">
                     <div class="valor" id="div_temperatura2">Temperatura sendo obtida...</div>
-                    <div class="valor" id="div_umidade2">Umidade sendo obtida...</div>
+                    <!-- <div class="valor" id="div_umidade2">Umidade sendo obtida...</div> -->
                 </div>
 
                 <div class="alertas">
                     <div class="alerta" id="div_alerta_temperatura2"></div>
-                    <div class="alerta_umidd" id="div_alerta_umidade2"></div>
+                    <!-- <div class="alerta_umidd" id="div_alerta_umidade2"></div> -->
                 </div>
             </div>
+        </div>
 
-            <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="3">3</span></h4>
+        <div class="grafico_box2">
+            <div class="grafico_item2">
+                <span name="namecaminhao" id="fkSensor" value="3"></span>
                 <div class="valores">
                     <div class="valor" id="div_temperatura3">Temperatura sendo obtida...</div>
-                    <div class="valor" id="div_umidade3">Umidade sendo obtida...</div>
+                    <!-- <div class="valor" id="div_umidade3">Umidade sendo obtida...</div> -->
                 </div>
                 <div class="alertas">
                     <div class="alerta" id="div_alerta_temperatura3"></div>
-                    <div class="alerta_umidd" id="div_alerta_umidade3"></div>
+                    <!-- <div class="alerta_umidd" id="div_alerta_umidade3"></div> -->
                 </div>
             </div>
+        </div>
 
-            <div class="caminhao">
-                <h4>Caminhão <span name="namecaminhao" id="fkSensor" value="4">4</span></h4>
+        <div class="grafico_box3">
+            <div class="grafico_item3">
+                <span name="namecaminhao" id="fkSensor" value="4"></span>
                 <div class="valores">
                     <div class="valor" id="div_temperatura4">Temperatura sendo obtida...</div>
-                    <div class="valor" id="div_umidade4">Umidade sendo obtida...</div>
+                    <!-- <div class="valor" id="div_umidade4">Umidade sendo obtida...</div> -->
                 </div>
 
                 <div class="alertas">
                     <div class="alerta" id="div_alerta_temperatura4"></div>
-                    <div class="alerta_umidd" id="div_alerta_umidade4"></div>
+                    <!-- <div class="alerta_umidd" id="div_alerta_umidade4"></div> -->
                 </div>
             </div>
-
-
-
         </div>
-    </div>
+
+    </section>
+
+    <section class="section-numeros">
+        <div class="numero_box">
+            <div class="numero_item">
+                <i class='bx bx-test-tube'></i>
+                <span>Febre Amarela</span>
+                <p>Container 1</p>
+
+                <div class="situacao">
+                
+                    <p>Situação</p>
+                    <span>Ativo</span>
+                    <i class='bx bx-trending-down' ></i>
+                </div>
+                <div class="Aumento">
+                
+                    <p>Aumento</p>
+                    <span>50%</span>
+                    <i class='bx bx-trending-down' ></i>
+                </div>
+                <div class="Quantidade">
+                
+                    <p>Quantidade</p>
+                    <span>300</span>
+                    <i class='bx bx-trending-down' ></i>
+                </div>
+                <div class="Perdidas">
+                
+                    <p>Perdidas</p>
+                    <span>6</span>
+                    <i class='bx bx-trending-down' ></i>
+                </div>
+                <div class="Utilizaveis">
+                
+                    <p>Utilizaveis</p>
+                    <span>293</span>
+                    <i class='bx bx-trending-down' ></i>
+                </div>
+            </div>
+            
+            <div class="numero_item-dengue">
+                
+                <i class='bx bx-test-tube'></i>
+                <span>Dengue</span>
+                <p>Container 1</p>
+
+                <div class="situacao-d">
+                
+                    <p>Situação</p>
+                    <span>Ativo</span>
+                    <i class='bx bx-trending-up'></i>
+                    
+                </div>
+                <div class="Aumento-d">
+                
+                    <p>Aumento</p>
+                    <span>40%</span>
+                    <i class='bx bx-trending-up'></i>
+                    
+                </div>
+                <div class="Quantidade-d">
+                
+                    <p>Quantidade</p>
+                    <span>560</span>
+                    <i class='bx bx-trending-up'></i>
+                </div>
+                <div class="Perdidas-d">
+                
+                    <p>Perdidas</p>
+                    <span>1</span>
+                    <i class='bx bx-trending-up'></i>
+                </div>
+                <div class="Utilizaveis-d">
+                
+                    <p>Utilizaveis</p>
+                    <span>567 </span>
+                    <i class='bx bx-trending-up'></i>
+                </div>
+            </div>
+          
+        
+        </div>
+    </section>
 
 
 
@@ -179,7 +375,7 @@
 
         // comparando
         if (temperatura > limites.max_temperatura) {
-            mensagem_temperatura += 'Temperatura alta demais! <br>';
+            mensagem_temperatura += 'Temperatura alta demais! <br> <img src="img/atencao.gif" alt="" width="35%">';
             classe_temperatura = 'alerta alerta-alto';
         }
         // if (umidade > limites.max_umidade) {
@@ -187,7 +383,7 @@
         //     classe_umidade = 'alerta_umidd alerta-alto';
         // }
         if (temperatura < limites.min_temperatura) {
-            mensagem_temperatura = 'Temperatura baixa demais! <br>';
+            mensagem_temperatura = 'Temperatura baixa demais! <br> <img src="img/atencao.gif" alt="" width="35%">';
             classe_temperatura = 'alerta alerta-baixo';
         }
         // if (umidade < limites.min_umidade) {
@@ -215,6 +411,7 @@
 
         // alterando
         div_temperatura_alterar.innerHTML = mensagem_temperatura;
+        div_temperatura_alterar.style = 'text-align: center';
         div_temperatura_alterar.className = classe_temperatura;
 
         // div_umidade_alterar.innerHTML = mensagem_umidade;
