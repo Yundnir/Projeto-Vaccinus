@@ -22,13 +22,18 @@
         }
 
         .alerta-alto {
-            color: tomato;
-            
+            color: #FF1616;            
         }
 
         .alerta-baixo {
-            color: rgb(38, 0, 255);
-            
+            color: #86EAE9;            
+        }
+        .risco-alto {
+            color: #F45D00;            
+        }
+
+        .risco-baixo {
+            color: #2C92D5;            
         }
     </style>
 </head>
@@ -45,7 +50,7 @@
                         <span class="nav_logo-name">accinus</span>
                     </a>
                     <div class="nav_list">
-                        <a href="../NODE4.1/dashboard2.html" class="nav_link">
+                        <a href="grafico-chartjs.html" class="nav_link">
                             <i class='bx bx-grid-alt nav_icon'></i>
                             <span class="nav_name">Resumo</span>
                         </a>
@@ -124,6 +129,7 @@
 
     <section>
         <div class="container">
+            <h3>Olá, <b id="b_usuario"></b></h3>
             <span>O que está acontecendo?</span>
 
             <section class="section-data">
@@ -363,8 +369,8 @@
         var limites = {
             max_temperatura: 8,
             min_temperatura: 2,
-            // max_umidade: 80,
-            // min_umidade: 50,
+            risco_frio: 3,
+            risco_quente: 7,
         };
 
         // zerar aviso de mensagem
@@ -374,22 +380,22 @@
         // var classe_umidade = 'alerta_umidd';
 
         // comparando
-        if (temperatura > limites.max_temperatura) {
+        if (temperatura >= limites.max_temperatura) {
             mensagem_temperatura += 'Temperatura alta demais! <br> <img src="img/atencao.gif" alt="" width="35%">';
             classe_temperatura = 'alerta alerta-alto';
         }
-        // if (umidade > limites.max_umidade) {
-        //     mensagem_umidade += 'Umidade alta demais! <br>';
-        //     classe_umidade = 'alerta_umidd alerta-alto';
-        // }
-        if (temperatura < limites.min_temperatura) {
+        if (temperatura >= limites.risco_quente) {
+            mensagem_temperatura = 'Temperatura próxima ao limite máximo! <br> <img src="img/atencao.gif" alt="" width="35%">';
+            classe_temperatura = 'alerta risco-alto';
+        }
+        if (temperatura <= limites.min_temperatura) {
             mensagem_temperatura = 'Temperatura baixa demais! <br> <img src="img/atencao.gif" alt="" width="35%">';
             classe_temperatura = 'alerta alerta-baixo';
         }
-        // if (umidade < limites.min_umidade) {
-        //     mensagem_umidade = 'Umidade baixa demais! <br>';
-        //     classe_umidade = 'alerta_umidd alerta-baixo';
-        // }
+        if (temperatura <= limites.risco_frio) {
+            mensagem_temperatura = 'Temperatura próxima ao limite mínimo! <br> <img src="img/atencao.gif" alt="" width="35%">';
+            classe_temperatura = 'alerta risco-baixo';
+        }
 
         // escolhendo qual alterar
         var div_temperatura_alterar

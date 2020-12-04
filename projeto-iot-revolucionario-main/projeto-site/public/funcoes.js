@@ -13,6 +13,7 @@ function verificar_autenticacao() {
         redirecionar_login();
     } else {
         b_usuario.innerHTML = nome_usuario;
+        b_usuario2.innerHTML = nome_usuario;
         validar_sessao();
     }
     

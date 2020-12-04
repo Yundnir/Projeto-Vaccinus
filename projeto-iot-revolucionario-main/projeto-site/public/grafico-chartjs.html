@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboards.css">
+    <!-- LINK do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 
     <!-- script do google charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -14,7 +20,7 @@
     <!-- scripts do Chart.js -->
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
-    <script type="text/javascript" src="funcoes.js"></script>
+    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
 
     <style>
         /* Classes CSS para exemplos de alertas */
@@ -33,30 +39,134 @@
     </style>
 </head>
 
-<body>
+<body onload="atualizacaoPeriodica()">
     <!--header inicio-->
+    <header class="header" id="header">
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="index.html" class="nav_logo">
+                        <img src="img/logo_sem.png" class='nav_logo-icon'>
+                        <span class="nav_logo-name">accinus</span>
+                    </a>
+                    <div class="nav_list">
+                        <a href="../NODE4.1/dashboard2.html" class="nav_link-est">
+                            <i class='bx bx-grid-alt nav_icon-est'></i>
+                            <span class="nav_name">Resumo</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="../estatistica.html" class="nav_link">
+                            <i class='bx bx-stats nav_icon'></i></i>
+                            <span-um class="nav_name">Estatisticas</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="../relatorio.html" class="nav_link">
+                            <i class='bx bx-folder nav_icon'></i></i>
+                            <span class="nav_name">Relátorio</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="../Dashboard/Configuracões/configuracoes2.html" class="nav_link">
+                            <i class='bx bxs-cog nav_icon'></i></i>
+                            <span class="nav_name">Configurações</span>
+                        </a>
+                        <section class="section">
+                            <div class="estatistica_box">
+                                <div class="estatistica_item">
+                                    <i class='bx bx-wifi-off'></i>
+                                    <span>Conexão perdida</span>
+                                    <p>Se conecte para visualizar seus dados</p>
+                                </div>
+                            </div>
+                        </section>
 
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="usuario">
-                <h3>Olá, <b id="b_usuario"></b></h3>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li> <a href="tempo-real.html">Tempo Real</a></li>
-                    <li><a href="#" class="highlight" onclick="logoff()">LOGOUT</a></li>
-                </ul>
-            </div>
+                        <section class="section-not">
+                            <div class="notificacao-box">
+                                <div class="notificacao_item">
+                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);"></i> <br><br> <br>
+                                    <span style="color: rgb(151, 151, 151);">Notificações</span>
+                                    
+                                </div>
+                                <!-- ARRUMAR CSS LOGOFF -->
+                                <ul>
+                                    <li><a href="#" class="highlight" onclick="logoff()">LOGOUT</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                    </div>
+                </div>
+            </nav>
+
         </div>
-    </div>
+        <div class="box"></div>
+        <div class="box linha-vertical"></div>
+    </header>
+
     <!--header fim-->
 
-    <div class="dashboard">
-        <button class="btn" onclick="chamargraficos(1)">Caminhão 1</button>
-        <button class="btn" onclick="chamargraficos(2)">Caminhão 2</button>
-        <button class="btn" onclick="chamargraficos(3)">Caminhão 3</button>
-        <button class="btn" onclick="chamargraficos(4)">Caminhão 4</button>
+    <!-- TOP SHJOWCASE-->
+    <section>
+        <div class="container">
+            <div class="search">
+                <input id="pesquisa" type="text" placeholder="Pesquisar"><i class="fas fa-search fa-xs"></i>
+            </div>
+            <span>Olá, <b id="b_usuario"></b>. Bem vindo de volta!</span>
+
+           <!-- Hora/TEMPO -->
+        <section class="section-plano">
+            <a href='planos.html'>
+            <div class="plano_box">
+                <button class="plano_box">
+                    <div class="plano_item">
+                        <img src="img/day-and-night.svg" alt="">
+                    </div>
+                    <div class="plano_item2">
+                        <img src="img/notify.svg" alt="">
+                    </div>
+                    <p id="horario"> <br></p>
+                    <p id="dia"></p>
+                </button>
+            </div>
+            </a>
+        </section>
+
+        <section class="section-prof">
+            <div class="user">
+                <div class="plano_profile">
+                    <img src="img/person.svg" alt="icon user">
+                    <p><b id="b_usuario2"></b></p>
+                    <a class="suport" onclick="logoff()"></a>
+                    <h5 class="texto_sair" onclick="logoff()">Sair</h5>
+
+                    <!-- <button class="settings" onclick="config()"></button> -->
+                    
+                    <div class="lite">
+                        <h3>Planos Lite</h3>
+                        <span>Pagamento dia 05/05 <i class="fas fa-check"></i> <br>
+                        Pagamento dia 10/06 <i class="fas fa-check"></i> <br>    
+                        Pagamento dia 22/07 <i class="fas fa-check"></i>    <br>
+                        Pagamento dia 25/09 <i class="fas fa-check"></i>  <br>  
+                        Pagamento dia 21/10 <i class="fas fa-check"></i> </span>    
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </section>
+    <!-- FIM TOP SHOWCASE-->
+
+    <div class="graphic" style="
+    padding-top: 60px;">
+    <div class="menu_botoes">
+        <button class="btn" onclick="chamargraficos(1)">Contêiner 01</button>
+        <button class="btn" onclick="chamargraficos(2)">Contêiner 02</button>
+        <button class="btn" onclick="chamargraficos(3)">Contêiner 03</button>
+        <button class="btn" onclick="chamargraficos(4)">Contêiner 04</button>
+    </div>
         <div style="width:75%; margin: auto">
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
@@ -71,7 +181,14 @@
     let proximaAtualizacao;
 
     window.onload = obterDadosGraficoPrimeiraVez(1);
+    
+    horario.innerHTML = agora();
+    dia.innerHTML = getDay()
 
+    function agora() {
+        const agora_d = new Date();
+        return `${agora_d.getDate()}-${agora_d.getMonth()+1}-${agora_d.getFullYear()}`;
+    }
 
     function chamargraficos(fkSensor) {
 
@@ -90,6 +207,7 @@
     // altere aqui as configurações do gráfico
     // (tamanhos, cores, textos, etc)
     function configurarGrafico() {
+
         var configuracoes = {
             responsive: true,
             animation: { duration: 500 },
@@ -97,7 +215,14 @@
             stacked: false,
             title: {
                 display: true,
-                text: 'Histórico recente de temperatura e umidade'
+                text: 'Histórico Recente de Temperatura'
+            },
+            legend:{ // modificando style da legenda, ver qual que pode mudar posição dela
+                labels: {
+                    fontColor: 'pink',
+                    fontSize: 10,
+                    position: 'top'
+                }
             },
             scales: {
                 yAxes: [{
@@ -105,6 +230,9 @@
                     display: true,
                     position: 'left',
                     id: 'y-temperatura',
+                        ticks: {
+                    fontSize: 30 //tamanhoda fonte do eixo Y
+                }
                 }, {
                     type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
                     display: true,
@@ -114,8 +242,14 @@
                     // grid line settings
                     gridLines: {
                         drawOnChartArea: false, // only want the grid lines for one axis to show up
+                        
                     },
                 }],
+                xAxes: [{
+                    ticks: {
+                fontSize: 20 //tamanhoda fonte do eixo X
+            }
+                }]
             }
         };
 
@@ -136,26 +270,70 @@
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
+                    var context = document.getElementById("canvas_grafico").getContext("2d");
+                    // context.canvas.width = 1250;
+                    // context.canvas.height = 600;
+            
+                    Chart.defaults.global.defaultFontColor = 'white';
+                    // Chart.defaults.global.defaultFontSize = '15';
+    
+
                     var dados = {
                         labels: [],
                         datasets: [
                             {
                                 yAxisID: 'y-temperatura',
                                 label: 'Temperatura',
-                                borderColor: window.chartColors.red,
+                                borderColor: ['#8C52FF'],
+                                fontSize: 40,
+
                                 backgroundColor: window.chartColors.red,
                                 fill: false,
                                 data: []
+                                
+                            },
+                            { // linhas de temperatura de alertas, min, max, alertas
+                                label: "Temperatura Mínima",
+                                type: 'line',
+                                borderColor: ['#86EAE9'],
+                                // backgroundColor: ['#e1ecec']
+                                fill: 'false',  
+                                data: [2,2,2,2,2,2,2,2,2,2],
+                                defaultFontSize: '15'
                             },
                             {
-                                yAxisID: 'y-umidade',
-                                label: 'Umidade',
-                                borderColor: window.chartColors.blue,
-                                backgroundColor: window.chartColors.blue,
-                                fill: false,
-                                data: []
-                            }
-                        ]
+                                label: "Alerta FRIO",
+                                type: 'line',
+                                borderColor: ['#2C92D5'],
+                                // backgroundColor: ['#e1ecec']
+                                fill: 'false',
+                                data: [3,3,3,3,3,3,3,3,3,3]
+                            },
+                            {
+                                label: "Temperatura Ideal",
+                                type: 'line',
+                                borderColor: ['#008037'],
+                                // backgroundColor: ['#e1ecec']
+                                fill: 'false',
+                                data: [5,5,5,5,5,5,5,5,5,5]
+                            },
+                            {
+                                label: "Alerta QUENTE",
+                                type: 'line',
+                                borderColor: ['#F45D00'],
+                                // backgroundColor: ['#e1ecec']
+                                fill: 'false',
+                                data: [7,7,7,7,7,7,7,7,7,7]
+                            },
+                            {
+                                label: "Temperatura Máxima",
+                                type: 'line',
+                                borderColor: ['#FF1616'],
+                                // backgroundColor: ['#e1ecec']
+                                fill: 'false',
+                                data: [8,8,8,8,8,8,8,8,8,8]
+                            }			
+                                ]
                     };
                     for (i = 0; i < resposta.length; i++) {
                         var registro = resposta[i];
@@ -226,7 +404,9 @@
     function plotarGrafico(dados, fkSensor) {
         console.log('iniciando plotagem do gráfico...');
 
-        var ctx = canvas_grafico.getContext('2d');
+        var ctx = document.getElementById("canvas_grafico").getContext("2d");
+        ctx.canvas.width = 1500;
+        ctx.canvas.height = 900;
         window.grafico_linha = Chart.Line(ctx, {
             data: dados,
             options: configurarGrafico()
@@ -246,4 +426,7 @@
         sendData();
     }, 2000);
 
+    let usuario;
+
+    verificar_autenticacao();
 </script>

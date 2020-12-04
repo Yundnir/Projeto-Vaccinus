@@ -84,7 +84,7 @@ db.conectar()
     .then(() => {
         const sql = `
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)
-        values (${temperature+10}, '${agora()}', 1);
+        values (${temperature}, '${agora()}', 1);
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)
         values (${temperature-10}, '${agora()}', 2);
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)
@@ -94,7 +94,7 @@ db.conectar()
         console.log(sql);
     return db.sql.query(sql).then(()=>{
         console.log("Registro inserido com sucesso! \n");
-    });;
+    });
     })
     .catch((erro) => {
     console.error(`Erro ao tentar registrar aquisição na base: ${erro}`);

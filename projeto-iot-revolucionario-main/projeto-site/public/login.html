@@ -55,7 +55,7 @@
 
                 <div class="extra">
                     <div id="div_erro" class="msg_erro"></div>
-                    <!-- <img src="aguarde-orange.gif" id="img_aguarde"  > style="display: none;" -->
+                    <img src="img/loading.gif" id="img_aguarde" style="display: none;" > 
                 </div>
         </div>
 
@@ -113,13 +113,13 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        // img_aguarde.style.visibility = 'visible';
+        img_aguarde.style.visibility = 'visible';
         div_erro.style.visibility = 'hidden';
     }
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
-        // img_aguarde.style.visibility = 'hidden';
+        img_aguarde.style.visibility = 'hidden';
         div_erro.style.visibility = 'visible';
         div_erro.innerHTML = resposta;
     }
