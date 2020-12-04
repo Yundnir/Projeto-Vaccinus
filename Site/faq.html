@@ -5,45 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
+    <link rel="stylesheet" href="css/faq.css">
 </head>
+
 <body>
-    <div id="container">
-    <h1>FAQ</h1>
-    <div id="internet">
-    <h2>Problemas de Internet:</h2>
-    <h3>Há conexão de internet no computador do cliente?</h3>
-    <ul>
-        <li>Executar solução de problema do sistema operacional</li>
-        <li>Reiniciar o modem</li>
-        <li>Ligar para a operadora de internet</li>
-    </ul>
+    <button onclick="abrir()" id="myBtn">Abrir</button>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="container">
+                <h1>FAQ</h1>
+                <div id="internet">
+                    <h2>Problemas de Internet:</h2>
+                    <h3>Há conexão de internet no computador do cliente?</h3>
+                    <ul>
+                        <li>Executar solução de problema do sistema operacional</li>
+                        <li>Reiniciar o modem</li>
+                        <li>Ligar para a operadora de internet</li>
+                    </ul>
+                </div>
+                <div id="hardware">
+                    <h2>Hardware:</h2>
+                    <h3>Existe algum dano externo na instalação?</h3>
+                    <ul>
+                        <li>Conferir se o led de alimentação está aceso</li>
+                        <li>Checar as conexões de alimentação do Arduino</li>
+                        <li>Checar se as baterias estão com carga</li>
+                        <li>Checar se o Arduino está danificado</li>
+                    </ul>
+                    <h3>Arduino está ligando, mas os dados não estão sendo visualizados no dashboard/site</h3>
+                    <ul>
+                        <li>Conferir se o sensor está operacional</li>
+                        <li>Conferir cabeamento de conexão do sensor do Arduino</li>
+                    </ul>
+                </div>
+                <div id="temperatura"></div>
+                <h2>Container: </h2>
+                <h3>Container não está mantendo a temperatura?</h3>
+                <ul>
+                    <li>Enviar o container à Vaccinus para análise</li>
+                </ul>
+                <h3>Container está danificado?</h3>
+                <ul>
+                    <li>Enviar o container à Vaccinus para análise</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div id="hardware">
-    <h2>Hardware:</h2>
-    <h3>Existe algum dano externo na instalação?</h3>
-    <ul>
-        <li>Conferir se o led de alimentação está aceso</li>
-        <li>Checar as conexões de alimentação do Arduino</li>
-        <li>Checar se as baterias estão com carga</li>
-        <li>Checar se o Arduino está danificado</li>
-    </ul>
-    <h3>Arduino está ligando, mas os dados não estão sendo visualizados no dashboard/site</h3>
-    <ul>
-        <li>Conferir se o sensor está operacional</li>
-        <li>Conferir cabeamento de conexão do sensor do Arduino</li>
-    </ul>
-</div>
-<div id="temperatura"></div>
-    <h2>Container: </h2>
-    <h3>Container não está mantendo a temperatura?</h3>
-    <ul>
-        <li>Enviar o container à Vaccinus para análise</li>
-    </ul>
-    <h3>Container está danificado?</h3>
-    <ul>
-        <li>Enviar o container à Vaccinus para análise</li>
-    </ul>
     </div>
-</div>
 </body>
+
 </html>
+
+<script>
+    function abrir() {
+        // Modal
+        const modal = document.getElementById("myModal");
+
+        // Botão do Modal
+        let btn = document.getElementById("myBtn");
+
+        // Span para o X que fecha o modal 
+        var span = document.getElementsByClassName("close")[0];
+
+        // Abrir o Modal no Click Button
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Função do Span X que fecha o modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Função para quando clicar em qualquer local fora da caixa do modal, fechar o modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+</script>
