@@ -212,7 +212,7 @@ body {
     width: 541px;
     height: 10px;
     left: 314px;
-    top: 50px;
+    top: 0;
     font-family: roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -438,6 +438,8 @@ body {
     padding-left: 100px;
     padding-left: 67px;
     margin-left: 355px;
+    position: absolute;
+    top: 155px;    
 }
 
 .menu_botoes .btn {
@@ -447,20 +449,21 @@ body {
     margin: 0px 20px 1px 1px;
     border-radius: 10px;
     border-color: #9DD2EE;
+    border-width: 5px;
 }
 
 .graphic{
     width: 1280px;
-    height: 700px;
+    height: 680px;
     background-color:rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    margin-top: 120px;
+    margin-top: 153px;
 }
 
 #canvas_grafico{
     display: block;
-    width: 5000px;
-    height: 460px;
+    /* width: 5000px; */
+    /* height: 460px; */
 }
 
 /*END LM35*/
@@ -557,4 +560,10 @@ body {
 
 .lite i{
     color: #9DD2EE;
+}
+
+.graphic h4{
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
 }

@@ -18,7 +18,7 @@
         /* Classes CSS para exemplos de alertas */
 
         .normal {
-            background-color: white;
+            color: #00c555;
         }
 
         .alerta-alto {
@@ -381,20 +381,24 @@
 
         // comparando
         if (temperatura >= limites.max_temperatura) {
-            mensagem_temperatura += 'Temperatura alta demais! <br> <img src="img/atencao.gif" alt="" width="35%">';
+            mensagem_temperatura += 'Temperatura alta demais! <br> <img src="img/alert_max.gif" alt="" width="55%">';
             classe_temperatura = 'alerta alerta-alto';
         }
-        if (temperatura >= limites.risco_quente) {
-            mensagem_temperatura = 'Temperatura próxima ao limite máximo! <br> <img src="img/atencao.gif" alt="" width="35%">';
+        if (temperatura >= limites.risco_quente && temperatura < limites.max_temperatura) {
+            mensagem_temperatura = 'Temperatura alta! <br> <img src="img/alert_risco2.gif" alt="" width="55%">';
             classe_temperatura = 'alerta risco-alto';
         }
         if (temperatura <= limites.min_temperatura) {
-            mensagem_temperatura = 'Temperatura baixa demais! <br> <img src="img/atencao.gif" alt="" width="35%">';
+            mensagem_temperatura = 'Temperatura muito baixa! <br> <img src="img/alert_min.gif" alt="" width="55%">';
             classe_temperatura = 'alerta alerta-baixo';
         }
-        if (temperatura <= limites.risco_frio) {
-            mensagem_temperatura = 'Temperatura próxima ao limite mínimo! <br> <img src="img/atencao.gif" alt="" width="35%">';
+        if (temperatura <= limites.risco_frio && temperatura > limites.min_temperatura) {
+            mensagem_temperatura = 'Temperatura baixa! <br> <img src="img/alert_risco1.gif" alt="" width="55%">';
             classe_temperatura = 'alerta risco-baixo';
+        }
+        if (temperatura > limites.risco_frio && temperatura < limites.risco_quente) {
+            mensagem_temperatura = 'Temperatura ideal <br> <img src="img/ok.png" alt="" width="35%">';
+            classe_temperatura = 'alerta normal';
         }
 
         // escolhendo qual alterar

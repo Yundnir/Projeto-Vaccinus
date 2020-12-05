@@ -86,7 +86,7 @@ db.conectar()
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)
         values (${temperature}, '${agora()}', 1);
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)
-        values (${temperature-10}, '${agora()}', 2);
+        values (${temperature-2}, '${agora()}', 2);
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)
         values (${temperature+5}, '${agora()}', 3);
         INSERT into tbLeitura (temp_atual, hr_temp, fkSensor)

@@ -89,10 +89,6 @@
                                     <span style="color: rgb(151, 151, 151);">Notificações</span>
                                     
                                 </div>
-                                <!-- ARRUMAR CSS LOGOFF -->
-                                <ul>
-                                    <li><a href="#" class="highlight" onclick="logoff()">LOGOUT</a></li>
-                                </ul>
                             </div>
                         </section>
                         
@@ -117,7 +113,7 @@
 
            <!-- Hora/TEMPO -->
         <section class="section-plano">
-            <a href='planos.html'>
+            <!-- <a href='planos.html'> -->
             <div class="plano_box">
                 <button class="plano_box">
                     <div class="plano_item">
@@ -130,7 +126,7 @@
                     <p id="dia"></p>
                 </button>
             </div>
-            </a>
+            <!-- </a> -->
         </section>
 
         <section class="section-prof">
@@ -158,16 +154,22 @@
 
         </section>
     <!-- FIM TOP SHOWCASE-->
-
-    <div class="graphic" style="
-    padding-top: 60px;">
     <div class="menu_botoes">
         <button class="btn" onclick="chamargraficos(1)">Contêiner 01</button>
         <button class="btn" onclick="chamargraficos(2)">Contêiner 02</button>
         <button class="btn" onclick="chamargraficos(3)">Contêiner 03</button>
         <button class="btn" onclick="chamargraficos(4)">Contêiner 04</button>
     </div>
-        <div style="width:75%; margin: auto">
+    
+    <div class="graphic">
+        <h4>Gráfico de Temperatura</h4>
+    <!-- <div class="menu_botoes">
+        <button class="btn" onclick="chamargraficos(1)">Contêiner 01</button>
+        <button class="btn" onclick="chamargraficos(2)">Contêiner 02</button>
+        <button class="btn" onclick="chamargraficos(3)">Contêiner 03</button>
+        <button class="btn" onclick="chamargraficos(4)">Contêiner 04</button>
+    </div> -->
+        <div style="width:95%; padding-left: 30px; padding-top: 30px">
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
         </div>
@@ -214,14 +216,19 @@
             hoverMode: 'index',
             stacked: false,
             title: {
-                display: true,
-                text: 'Histórico Recente de Temperatura'
+                display: false,
+                text: 'Histórico Recente de Temperatura',
+                fontSize: 25
             },
-            legend:{ // modificando style da legenda, ver qual que pode mudar posição dela
+            legend:{
+                position: 'bottom',
+                 // modificando style da legenda, ver qual que pode mudar posição dela
                 labels: {
-                    fontColor: 'pink',
-                    fontSize: 10,
-                    position: 'top'
+                    // fontColor: 'pink',
+                    fontSize: 23,
+                    id: 'y-temperatura'
+                    
+
                 }
             },
             scales: {
@@ -231,24 +238,13 @@
                     position: 'left',
                     id: 'y-temperatura',
                         ticks: {
-                    fontSize: 30 //tamanhoda fonte do eixo Y
+                    fontSize: 20 //tamanho da fonte do eixo Y
                 }
-                }, {
-                    type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-                    display: true,
-                    position: 'right',
-                    id: 'y-umidade',
-
-                    // grid line settings
-                    gridLines: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
-                        
-                    },
                 }],
                 xAxes: [{
                     ticks: {
-                fontSize: 20 //tamanhoda fonte do eixo X
-            }
+                        fontSize: 20 //tamanho da fonte do eixo X
+                    }
                 }]
             }
         };
@@ -285,15 +281,13 @@
                                 yAxisID: 'y-temperatura',
                                 label: 'Temperatura',
                                 borderColor: ['#8C52FF'],
-                                fontSize: 40,
-
-                                backgroundColor: window.chartColors.red,
+                                // backgroundColor: window.chartColors.red,
                                 fill: false,
                                 data: []
                                 
                             },
                             { // linhas de temperatura de alertas, min, max, alertas
-                                label: "Temperatura Mínima",
+                                label: "Temp. Mínima",
                                 type: 'line',
                                 borderColor: ['#86EAE9'],
                                 // backgroundColor: ['#e1ecec']
@@ -302,7 +296,7 @@
                                 defaultFontSize: '15'
                             },
                             {
-                                label: "Alerta FRIO",
+                                label: "Alerta Frio",
                                 type: 'line',
                                 borderColor: ['#2C92D5'],
                                 // backgroundColor: ['#e1ecec']
@@ -310,7 +304,7 @@
                                 data: [3,3,3,3,3,3,3,3,3,3]
                             },
                             {
-                                label: "Temperatura Ideal",
+                                label: "Temp. Ideal",
                                 type: 'line',
                                 borderColor: ['#008037'],
                                 // backgroundColor: ['#e1ecec']
@@ -318,7 +312,7 @@
                                 data: [5,5,5,5,5,5,5,5,5,5]
                             },
                             {
-                                label: "Alerta QUENTE",
+                                label: "Alerta Quente",
                                 type: 'line',
                                 borderColor: ['#F45D00'],
                                 // backgroundColor: ['#e1ecec']
@@ -326,7 +320,7 @@
                                 data: [7,7,7,7,7,7,7,7,7,7]
                             },
                             {
-                                label: "Temperatura Máxima",
+                                label: "Temp. Máxima",
                                 type: 'line',
                                 borderColor: ['#FF1616'],
                                 // backgroundColor: ['#e1ecec']
@@ -405,7 +399,7 @@
         console.log('iniciando plotagem do gráfico...');
 
         var ctx = document.getElementById("canvas_grafico").getContext("2d");
-        ctx.canvas.width = 1500;
+        ctx.canvas.width = 2000;
         ctx.canvas.height = 900;
         window.grafico_linha = Chart.Line(ctx, {
             data: dados,
