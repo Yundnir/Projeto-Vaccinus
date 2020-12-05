@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/planos.css">
-    <!-- LINK do FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 
 </head>
 
@@ -99,74 +97,81 @@
                             </select>
                         </div> <br>
                         <div id="preco_unitario">
-                            <hr>
+
                         </div>
+                        <hr id="precohr">
                         <div class="escolhavac">
                             <h2 class="textvac">Insira a <span style="color: #9dd2ee;">quantidade</span> de vacinas que
                                 você costuma transportar!</h2>
-                           
-                                    <input id="num_vacinas" type="number" oninput="numero()"><br>
-                                    <div id="preco_total"><hr></div>                
-                              
-                   
-                                <div class="vacinas_perdidas"><br>
-                                    <h2 class="textperd">Insira a <span style="color: #9dd2ee;">quantidade</span> de vacinas que
-                                        você perde durante o transporte!</h2>
-                 
+
+                            <input id="num_vacinas" type="number" oninput="numero()"><br>
+                            <div id="preco_total">
+
+                            </div>
+                            <hr id="numerohr">
+
+
+                            <div class="vacinas_perdidas"><br>
+                                <h2 class="textperd">Insira a <span style="color: #9dd2ee;">quantidade</span> de vacinas
+                                    que você perde durante o transporte!</h2>
+
                                 <div class="all_select"></div>
-                                    <input id="perdidas" type="number" oninput="perdas()" >
-                             
-                                </div>
-                    <br>
-                                
-                            
-                    <br>    
-                                    <div id="valor_total_perdas" class="prejuizo"></div>
+                                <input id="perdidas" type="number" oninput="perdas()">
+
+                            </div>
+                            <br>
+
+
+                            <br>
+                            <div id="valor_total_perdas" class="prejuizo"></div>
                         </div>
                     </div>
                 </section>
 
 
-
                 <div id="showcase">
+                    <div class="veja">
+                        <h1>Veja os planos disponivéis!
+                            <hr id="hr">
+                        </h1>
 
-                    <div class="slide1"></div>
-                    <span class="slide1salve">Salve seu dinheiro agora!</span>
-                    <img src="img/slide1.PNG" class="imagemslide1">
-                    <div class="comeceagora">Comece <span style="color: #9DD2EE;">agora</span> pagando <span
-                            style="color: rgb(8, 233, 8);text-shadow: 2px 4px 12px rgba(8, 255, 8, 0.50);">1,00
-                            R$</span> por dia!</div>
-                    <div class="slide2">
-                        <h1>Lite</h1>
-                        <ul class="listalite">
-                            <li>&#9989 Entrega Rápida</li>
-                            <li>&#9989 Qualidade Garantida</li>
-                            <li>&#9989 Contato com Suporte</li>
-                            <li>&#10060 Alertas mais precisos</li>
-                            <li>&#10060 Suporte Presencial</li>
-                            <li>&#10060 Verificações Diarias</li>
-
-                        </ul>
                     </div>
-                    <span class="litereais">30.00 R$</span>
-                    <span class="litepormes">/ Mês</span>
-                    <div class="buttonslide2"></div>
-                    <span class="comecar2">COMEÇAR AGORA!</span>
-                    <div class="slide3">
-                        <h1 class="premium">Premium</h1>
-                        <ul class="listapremium">
-                            <li>&#9989 Entrega Rápida</li>
-                            <li>&#9989 Qualidade Garantida</li>
-                            <li>&#9989 Alertas mais precisos</li>
-                            <li>&#9989 Contato com Suporte</li>
-                            <li>&#9989 Suporte Presencial</li>
-                            <li>&#9989 Verificações Diarias</li>
-                        </ul>
+                    <div class="chamada">
+                        <h1 id="monitore">Monitore 24 horas <br> por dia o seu container!</h1>
+                        <img src="img/slide1.PNG" alt="" id="slide1">
                     </div>
-                    <span class="premiumreais">300.00 R$</span>
-                    <span class="premiumporano">/ Ano</span>
-                    <div class="buttonslide3"></div>
-                    <span class="comecar3">COMEÇAR AGORA!</span>
+                    <div class="lite">
+                        <h1 id="litetext">Lite</h1>
+                        <h1 id="preco">R$297,00 <br>
+                            <span style="color:rgba(86, 79, 79, 0.2);">.........</span> /MÊS</h1>
+                        <h3 id="planosinc">Planos inclusos</h3>
+                        <div class="oqtem">
+                            <span><img src="img/certo.png" alt="">Entrega Rápida</span><br><br><br>
+                            <span><img src="img/certo.png" alt=""> Qualidade Garantida</span><br><br><br>
+                            <span><img src="img/certo.png" alt=""> Contato com Suporte</span><br><br><br>
+                            <span><img src="img/x.png" alt=""> Alertas mais precisos</span><br><br><br>
+                            <span><img src="img/x.png" alt=""> Suporte Presencial</span> <br><br><br>
+                            <span><img src="img/x.png" alt=""> Verificações Diarias</span> <br><br><br>
+                        </div>
+                        <button class="buttonplanos">Começar agora!</button>
+                    </div>
+                    <div class="premium">
+                        <h1 id="premiumtext">Premium</h1>
+                        <h1 id="precodois">R$1997 <br>
+                            <span style="color:#9DD2EE;">...</span>/MÊS</h1>
+                        <h3 id="planosinc2">Planos inclusos</h3>
+                        <div class="oqtem2">
+                            <span><img src="img/certopreto.png" alt="">Entrega Rápida</span><br><br><br>
+                            <span><img src="img/certopreto.png" alt=""> Qualidade Garantida</span><br><br><br>
+                            <span><img src="img/certopreto.png" alt=""> Contato com Suporte</span><br><br><br>
+                            <span><img src="img/certopreto.png" alt="">Alertas mais precisos</span><br><br><br>
+                            <span><img src="img/certopreto.png" alt="">Suporte Presencial</span> <br><br><br>
+                            <span><img src="img/certopreto.png" alt="">Verificações Diarias</span> <br><br><br>
+                        </div>
+                        <button class="buttonplanospr">Começar agora!</button>
+                    </div>
+                    <div class="comeceagora">Comece <span style="color: #9DD2EE;">agora</span> pagando R$9,9
+                        <span style="color: #9DD2EE;">por dia!</span></div>
                 </div>
             </div>
         </div>
@@ -181,3 +186,24 @@
 </body>
 
 </html>
+
+<script>
+    function tipo() {
+        preco_unitario.innerHTML = `O valor unitário estimado para essa vacina é: R$${inp_vacina.value}`;
+    }
+    function numero() {
+        var total = num_vacinas.value * inp_vacina.value;
+        preco_total.innerHTML = `O valor total do lote desta vacina é: R$ ${total}`;
+    }
+    function perdas() {
+        var total = num_vacinas.value * inp_vacina.value;
+        var perdas_totais = perdidas.value * inp_vacina.value;
+        var perda_percentual = (perdas_totais * 100) / total;
+        valor_total_perdas.innerHTML = `<br>Você teve um <span style="color:red;">prejuízo</span> de <span style="color:red;">R$${perdas_totais}</span> referente às vacinas que foram estragadas
+                                        no processo de transporte.<br>
+                                        O que corresponde a um prejuízo de <span style="color:red;">${perda_percentual.toFixed(2)}%</span> do investimento inicial.<br><br>
+                                        Porém, com o serviço <span style="color:#9dd2ee;">Vaccinus</span>, você terá um lucro de 
+                                        <span style="color:green;">R$1000</span> referente às vacinas que não seriam estragadas com o nosso monitoramento no processo de transporte!
+                                        Onde corresponde a um aumento de <span style="color:green;">43,86%</span>  do investimento inicial em apenas um container!`;
+    }
+</script>
