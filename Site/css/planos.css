@@ -157,7 +157,7 @@ body {
 
 .conteudotres {
     position: absolute;
-    top: 1750px;
+    top: 1650px;
     left: 350px;
     color: #ffffff;
     width: 746px;
@@ -226,7 +226,7 @@ body {
 
 .simulador {
     position: absolute;
-    top: 2600px;
+    top: 2500px;
     left: 520px;
     font-family: Roboto;
     font-style: normal;
@@ -246,6 +246,18 @@ body {
 .textvac {
     position: absolute;
     left: 150px;
+    top: 180px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+}
+
+.textvac2 {
+    position: absolute;
+    left: 150px;
+    top: -240px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -258,7 +270,7 @@ body {
     width: 384px;
     height: 53px;
     left: 180px;
-    top: 450px;
+    top: 300px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -272,23 +284,23 @@ body {
 #preco_unitario {
     position: absolute;
     left: 80px;
-    top: 550px;
+    top: 360px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 25px;
     line-height: 37px;
     text-align: center;
 }
 
-#precohr{
+#precohr {
     position: absolute;
-    top: 560px;
+    top: 370px;
 }
 
-#numerohr{
+#numerohr {
     position: absolute;
-    top: 350px;
+    top: 30px;
     left: 100px;
 }
 
@@ -305,7 +317,7 @@ body {
     width: 246px;
     height: 51px;
     left: 340px;
-    top: 200px;
+    top: -50px;
     font-size: 50px;
     color: #ffffff;
     background: #545151;
@@ -315,12 +327,12 @@ body {
 
 #preco_total {
     position: absolute;
-    top: 330px;
-    left: 200px;
+    top: 25px;
+    left: 230px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 25px;
     line-height: 37px;
     text-align: center;
 }
@@ -328,7 +340,7 @@ body {
 .textperd {
     position: absolute;
     left: 70px;
-    top: 400px;
+    top: 50px;
     width: 833px;
     font-family: Roboto;
     font-style: normal;
@@ -342,8 +354,8 @@ body {
     position: absolute;
     width: 246px;
     height: 51px;
-    left: 340px;
-    top: 600px;
+    left: 360px;
+    top: 260px;
     font-size: 50px;
     color: #ffffff;
     background: #545151;
@@ -353,21 +365,84 @@ body {
 
 .prejuizo {
     position: absolute;
-    top: 700px;
-    left: 100px;
+    top: 5px;
+    left: 50px;
     width: 846px;
     font-size: 35px;
     text-align: left;
     font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-
-line-height: 41px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 41px;
+    color: #ffffff;
 }
+
+.botaocalc {
+    position: absolute;
+    width: 240px;
+    height: 64px;
+    left: 365px;
+    top: 350px;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 47px;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.53);
+    border-radius: 50px;
+}
+
+.modal {
+    position: absolute;;
+    top: -600px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    font-family: roboto;
+    border-radius: 50px;
+  }
+
+  .modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal  {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #000000;
+  }
+
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    top: -20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8d0000;
+    cursor: pointer;
+  }
 
 #showcase {
     position: absolute;
-    top: 4600px;
+    top: 3800px;
     left: -70px;
 }
 
@@ -384,7 +459,7 @@ line-height: 41px;
 .chamada {
     position: absolute;
     width: 480px;
-    height: 787px;
+    height: 657px;
     left: 183px;
     top: 100px;
     background: rgba(157, 210, 238, 0.7);
@@ -393,7 +468,7 @@ line-height: 41px;
 
 #monitore {
     position: absolute;
-    top: 60px;
+    top: 40px;
     font-style: bold;
     font-weight: normal;
     font-size: 50px;
@@ -413,17 +488,18 @@ line-height: 41px;
 
 #slide1 {
     position: absolute;
-    top: 360px;
+    top: 300px;
+    left: 20px;
     width: 453px;
-    height: 365px;
+    height: 325px;
 }
 
 .lite {
     position: absolute;
     width: 458px;
-    height: 693px;
+    height:633px;
     left: 720px;
-    top: 200px;
+    top: 120px;
     background: rgba(86, 79, 79, 0.2);
     border-radius: 50px;
 }
@@ -466,7 +542,7 @@ line-height: 41px;
 
 #planosinc {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 45px;
     color: #FFFFFF;
     font-family: Poppins;
@@ -478,7 +554,7 @@ line-height: 41px;
 
 #planosinc2 {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 45px;
     color: #363636;
     font-family: Poppins;
@@ -493,7 +569,7 @@ line-height: 41px;
     width: 960px;
     height: 60px;
     left: 780px;
-    top: 109px;
+    top: 49px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -505,7 +581,7 @@ line-height: 41px;
 
 .oqtem {
     position: absolute;
-    top: 220px;
+    top: 190px;
     left: 40px;
 }
 
@@ -523,7 +599,7 @@ line-height: 41px;
     width: 310px;
     height: 81px;
     left: 80px;
-    top: 653px;
+    top: 593px;
     background: rgba(196, 196, 196, 0.1);
     border-radius: 50px;
     color: #9DD2EE;
@@ -538,7 +614,7 @@ line-height: 41px;
     width: 310px;
     height: 81px;
     left: 80px;
-    top: 653px;
+    top: 583px;
     background: #ffffff;
     border-radius: 50px;
     color: #363636;
@@ -553,9 +629,9 @@ line-height: 41px;
 .premium {
     position: absolute;
     width: 458px;
-    height: 693px;
+    height: 633px;
     left: 1220px;
-    top: 200px;
+    top: 125px;
     background: #9DD2EE;
     border-radius: 50px;
     color: #363636;
@@ -575,7 +651,7 @@ line-height: 41px;
 
 .oqtem2 {
     position: absolute;
-    top: 220px;
+    top: 190px;
     left: 40px;
 }
 
@@ -592,7 +668,7 @@ line-height: 41px;
 
 .footer {
     position: absolute;
-    top: 5615px;
+    top: 4805px;
     background-color: #363636;
     width: 100%;
     height: 210px;

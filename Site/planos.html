@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/planos.css">
+  
 
 
 </head>
@@ -101,7 +102,7 @@
                         </div>
                         <hr id="precohr">
                         <div class="escolhavac">
-                            <h2 class="textvac">Insira a <span style="color: #9dd2ee;">quantidade</span> de vacinas que
+                            <h2 class="textvac2">Insira a <span style="color: #9dd2ee;">quantidade</span> de vacinas que
                                 você costuma transportar!</h2>
 
                             <input id="num_vacinas" type="number" oninput="numero()"><br>
@@ -116,16 +117,27 @@
                                     que você perde durante o transporte!</h2>
 
                                 <div class="all_select"></div>
-                                <input id="perdidas" type="number" oninput="perdas()">
-
+                                <input id="perdidas" type="number">
+                                <a href="#abrirModal"><button id="button" class="botaocalc" onclick="perdas()">Calcular</button></a>
                             </div>
                             <br>
+                            <div id="abrirModal" class="modal">
+                                <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                <div id="valor_total_perdas" class="prejuizo"></div>
+                               
+                            </div>
 
+                       
 
                             <br>
-                            <div id="valor_total_perdas" class="prejuizo"></div>
+                        
                         </div>
                     </div>
+
+    
+
+
+              
                 </section>
 
 
