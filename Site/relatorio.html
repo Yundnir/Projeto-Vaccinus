@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+
 
   
 </head>
-<body>
+<body onload="indicador()">
     <header class="header" id="header">
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
@@ -92,7 +94,7 @@
             <section class="section-plano">
 
                 <div class="plano_box2">
-                    <button class="plano_box2">
+                    <button class="plano_box2" onclick="imprimir()">
                         <div class="plano_item2">
                             <p>Imprimir</p>
                         </div>
@@ -106,28 +108,42 @@
             <section class="section-data">
                 <div class="data_item">
                     <span>Rotas</span>
-                    <img src="img/rotas.png" alt="">
+                    <div>
+                        <img src="img/seta.png" alt="" width="50px" class="seta_indicador" id="seta_indicador">
+                        <br>
+                        <div class="rota_trajeto">
+                            <div id="partida"><br><br>Vila Prudente</div>
+                            <div class="parada_rota"></div>
+                            <div id="decorrer"><br><br>Paulista</div>
+                            <div class="parada_rota"></div>
+                            <div id="destino"><br><br>Vila Madalena</div>
+                        </div>
+                        <!-- <img src="img/rotas.png" alt="" width="50%" class="img_rota"> -->
+                    </div>
+                   
+                    
                 </div>
+                
                 <div class="data_box">Cada detalhe pronto na sua tela.
-                    <div class="data_item2">
-                        <b>Vacina:</b>  Febre Amarela <br>
-                        <b>Lote:</b>  1508LVP <br>
-                        <b>Data:</b>  15/10/2020 <br>
-                        <b>Destino:</b>  Hospital São Paulo
+                    <div class="data_item2" id="campo_um">
+                        Vacina:  Febre Amarela 
+                        Lote:  1508LVP 
+                        Data:  15/10/2020 
+                        Destino:  Hospital São Paulo
                     </div>
                 </div>
 
                 <div class="data_box1">Todos os seus passos.
-                    <div class="data_item2">
-                        <b>Início:</b> Rua Haddock Lobo, 595 - Cerqueira César, São Paulo <br>
-                        <b>Localização Atual:</b> Avenioda Gal Manoel Rabelo, 5746 - Paraíso, São Paulo <br>
-                        <b>Final:</b> Rua Napoleão de Barros, 715 - Vila Clementina, São Paulo
+                    <div class="data_item2" id="campo_dois">
+                        Início: Rua Haddock Lobo, 595 - Cerqueira César, São Paulo 
+                        Localização Atual: Avenida Gal Manoel Rabelo, 5746 - Paraíso, São Paulo 
+                        Final: Rua Napoleão de Barros, 715 - Vila Clementina, São Paulo
                     </div>
                 </div>
 
                 <div class="data_box2">Sobre as vacinas agora.
-                    <div class="data_item2">
-                        <b>Temperatura atual:</b> 4°C
+                    <div class="data_item2" id="campo_tres">
+                        Temperatura atual: 4°C
                     </div>
                 </div>
         </div>
@@ -136,6 +152,49 @@
     
  
 
+    <script>
+        var cont = 0;
+        var teste;
+
+        function indicador() {
+
+
+                setInterval(function (){ seta_indicador.style = `margin-left: ${cont}px`
+                if (cont < 1200) {
+                    cont+= 5;
+                    if (cont >= 350) {
+                        partida.style = 'background-color: rgb(11, 182, 11)';
+
+                        if (cont >= 847) {
+                        decorrer.style = 'background-color: rgb(11, 182, 11)';
+                        }
+                    }
+                } else {
+                    destino.style = 'background-color: rgb(11, 182, 11)';
+                    return parar
+                    function parar() {
+                    clearInterval()
+                }
+                }
+
+                }, 200);
+        }
+
+        function imprimir() {
+
+            var camp_um = campo_um.innerHTML;
+            var camp_dois = campo_dois.innerHTML;
+            var camp_tres = campo_tres.innerHTML;
+            var doc = new jsPDF()
+            doc.setTextColor('#9dd2ee');
+            doc.text("Relatório VACCINUS", 80, 20, 0, 20)
+            doc.setTextColor('#000');
+            doc.text(`${camp_um} ${camp_dois} ${camp_tres}`, -25, 30)
+            doc.save('relatorio.pdf')
+            
+        }
+        
+    </script>
 
 </body>
 </html>

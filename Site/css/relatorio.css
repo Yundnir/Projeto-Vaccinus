@@ -231,12 +231,72 @@ body {
     mix-blend-mode: normal;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .plano_item2 p{
     margin: 0;
     font-size: 25px;
     color: white;
+}
+
+.rota_trajeto {
+    width: 1300px;
+    margin-top: 2px;
+}
+
+#partida {
+    float: left;
+    margin-left: 45px;
+    width: 325px;
+    margin-top: 11px;
+    height: 12px;
+    border-radius: 20px;
+    background-color:  #656565bb;
+}
+.parada_rota {
+    float: left;
+    width: 12px;
+    height: 36px;
+    background-color: white;
+    border-radius: 20px;
+}
+#decorrer {
+    float: left;
+    width: 486px;
+    margin-top: 11px;
+    height: 12px;
+    border-radius: 20px;
+    background-color:  #656565bb;
+}
+#destino {
+    float: left;
+    width: 385px;
+    margin-top: 11px;
+    height: 12px;
+    border-radius: 20px;
+    background-color:  #656565bb;
+}
+
+
+.primeiro_local {
+    position: absolute;
+}
+
+.segundo_local {
+    position: absolute;
+    left: 300px;
+    
+}
+
+.terceiro_local {
+    position: absolute;
+    left: 900px;
+    
+}
+
+.locais_trajeto p {
+    display: inline;
 }
 
 
@@ -339,10 +399,15 @@ body {
     color: #FFFFFF;
 }
 
-.data_item img{
-    margin-top: 189px;
+.data_item .img_rota{
     margin-left: 27px;
     width: 1260px;
+}
+
+.data_item .seta_indicador{
+    margin-top: 189px;
+    margin-left: 1200px;
+    transform: rotate(90deg);
 }
 
 
