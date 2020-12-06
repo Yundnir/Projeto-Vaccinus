@@ -67,7 +67,7 @@ body{
     display: inline-block;
     padding: 20px;
     padding: 10px 20px 0px 20px;
-    position: absolute;
+    /* position: absolute; */
     margin-right: 30px;
     left: 50px;
     

@@ -20,7 +20,7 @@
     <!-- scripts do Chart.js -->
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
-    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
+    <script type="text/javascript" src="funcoes.js"></script>
 
     <style>
         /* Classes CSS para exemplos de alertas */
@@ -189,7 +189,7 @@
 
     function agora() {
         const agora_d = new Date();
-        return `${agora_d.getDate()}-${agora_d.getMonth()+1}-${agora_d.getFullYear()}`;
+        return `${agora_d.getDate()}/${agora_d.getMonth()+1}/${agora_d.getFullYear()}`;
     }
 
     function chamargraficos(fkSensor) {
