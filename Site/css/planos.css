@@ -105,11 +105,12 @@ body {
 .container {
     display: flex;
     justify-content: center;
+  
 }
 
 .venda {
     position: absolute;
-    top: 200px;
+    top: 250px;
     font-size: 24px;
     color: #FFFCFC;
     font-family: Roboto;
@@ -183,7 +184,7 @@ body {
 #dois {
     width: 736px;
     position: absolute;
-    left: 410px;
+    left: 460px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -268,7 +269,7 @@ body {
 #inp_vacina {
     position: absolute;
     width: 384px;
-    height: 53px;
+    height: 51px;
     left: 180px;
     top: 230px;
     font-family: Roboto;
@@ -358,7 +359,7 @@ body {
     height: 51px;
     left: 340px;
     top: 170px;
-    font-size: 50px;
+    font-size: 35px;
     color: #ffffff;
     background: #545151;
     border-radius: 50px;
