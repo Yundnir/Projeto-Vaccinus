@@ -1,0 +1,62 @@
+
+      Planos
+ 
+-- No início, conteudo abaixo está muito 
+   separado verticalmente do "A saúde nacional..."
+   (texto e imagens muito longe do título).
+
+-- Conteúdo do "Entretanto a 
+   complexidade...":
+   (Texto e imagem muito colados).
+
+-- Faça sua simulação: conteúdo
+   muito grande;
+   inputs com textos de tamanhos diferentes;
+   
+
+-- Veja os Planos:
+
+-- "Comece agora" muito colada com
+   o conteúdo de preços;
+
+-- Botão melhorou, mas borda pode melhorar
+   (tentar com borda diferente).
+
+----------------------------------------------------------------
+
+      Cadastro
+
+-- inputs:
+   textos por dentro ficam estranhos
+   ao digitar (letra preta com fundo cinza);
+
+-- formato do input (finos);
+
+-- Botão com letra estranha 
+   (detalhes não-compatíveis com os inputs);
+
+-- Muito distante do centro da página.
+
+----------------------------------------------------------------
+
+      Login
+
+-- textos por dentro ficam estranhos
+   ao digitar (letra preta com fundo cinza);
+
+-- formato do input (finos).
+
+----------------------------------------------------------------
+
+     Relatório
+
+-- Espaçamento entre os conteúdos abaixo
+   está muito grande verticalmente
+   (textos muito separados);
+
+-- espaçamento entre "Todos os seus passos"
+   e "Sobre as vacinas" está muito grande 
+   horizontalmente (muito separados um do outro);
+
+-- Um "vazio" vertical no final da página
+   deixa o site estranho.

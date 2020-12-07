@@ -105,11 +105,12 @@ body {
 .container {
     display: flex;
     justify-content: center;
+  
 }
 
 .venda {
     position: absolute;
-    top: 200px;
+    top: 250px;
     font-size: 24px;
     color: #FFFCFC;
     font-family: Roboto;
@@ -142,7 +143,7 @@ body {
 
 .conteudodois {
     position: absolute;
-    top: 1150px;
+    top: 1050px;
     left: 300px;
     color: #ffffff;
     width: 746px;
@@ -157,7 +158,7 @@ body {
 
 .conteudotres {
     position: absolute;
-    top: 1650px;
+    top: 1500px;
     left: 350px;
     color: #ffffff;
     width: 746px;
@@ -183,7 +184,7 @@ body {
 #dois {
     width: 736px;
     position: absolute;
-    left: 410px;
+    left: 460px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -212,7 +213,7 @@ body {
 
 #imgdois {
     position: absolute;
-    left: 40px;
+    left: -10px;
     top: -130px;
 }
 
@@ -226,65 +227,67 @@ body {
 
 .simulador {
     position: absolute;
-    top: 2500px;
+    top: 2300px;
     left: 520px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 54px;
+    font-size: 34px;
     line-height: 105px;
     color: #ffffff;
 }
 
-.simulador hr {
-    background-color: #9DD2EE;
-    color: #9DD2EE;
-    width: 766px;
-    height: 3px;
+.simulador h1 {
+    position: absolute;
+    left: 140px;
+    width: 600px;
 }
 
 .textvac {
     position: absolute;
-    left: 150px;
-    top: 180px;
+    left: 200px;
+    top: 120px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 70px;
+    width: 600px;
 }
 
 .textvac2 {
     position: absolute;
-    left: 150px;
-    top: -240px;
+    left: 230px;
+    top: -270px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 70px;
 }
 
 #inp_vacina {
     position: absolute;
     width: 384px;
-    height: 53px;
+    height: 51px;
     left: 180px;
-    top: 300px;
+    top: 230px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 25px;
     line-height: 47px;
     color: #FFFCFC;
     background: #545151;
     border-radius: 50px;
+    text-align: center;
 }
 
 #preco_unitario {
     position: absolute;
     left: 80px;
-    top: 360px;
+    top: 300px;
+    width: 600px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -317,8 +320,8 @@ body {
     width: 246px;
     height: 51px;
     left: 340px;
-    top: -50px;
-    font-size: 50px;
+    top: -100px;
+    font-size: 35px;
     color: #ffffff;
     background: #545151;
     border-radius: 50px;
@@ -327,7 +330,7 @@ body {
 
 #preco_total {
     position: absolute;
-    top: 25px;
+    top: -30px;
     left: 230px;
     font-family: Roboto;
     font-style: normal;
@@ -340,12 +343,12 @@ body {
 .textperd {
     position: absolute;
     left: 70px;
-    top: 50px;
+    top: 0px;
     width: 833px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 70px;
     text-align: center;
 }
@@ -354,9 +357,9 @@ body {
     position: absolute;
     width: 246px;
     height: 51px;
-    left: 360px;
-    top: 260px;
-    font-size: 50px;
+    left: 340px;
+    top: 170px;
+    font-size: 35px;
     color: #ffffff;
     background: #545151;
     border-radius: 50px;
@@ -381,8 +384,8 @@ body {
     position: absolute;
     width: 240px;
     height: 64px;
-    left: 365px;
-    top: 350px;
+    left: 345px;
+    top: 250px;
     cursor: pointer;
     font-family: Roboto;
     font-style: normal;
@@ -396,7 +399,7 @@ body {
 
 .modal {
     position: absolute;;
-    top: -600px;
+    top: -800px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -442,17 +445,17 @@ body {
 
 #showcase {
     position: absolute;
-    top: 3800px;
+    top: 3450px;
     left: -70px;
 }
 
 .veja {
     position: absolute;
-    top: -140px;
-    left: 490px;
+    top: -100px;
+    left: 670px;
     width: 1233px;
     height: 89px;
-    font-size: 40px;
+    font-size: 25px;
     color: #9DD2EE;
 }
 
@@ -479,9 +482,9 @@ body {
 
 #hr {
     position: absolute;
-    left: 50px;
-    top: 110px;
-    width: 843px;
+    left: 80px;
+    top: 80px;
+    width: 443px;
     height: 8px;
     background: #FFFFFF;
 }
@@ -568,12 +571,12 @@ body {
     position: absolute;
     width: 960px;
     height: 60px;
-    left: 780px;
-    top: 49px;
+    left: 870px;
+    top: 39px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
     color: #FFFFFF;
     text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
@@ -600,7 +603,7 @@ body {
     height: 81px;
     left: 80px;
     top: 593px;
-    background: rgba(196, 196, 196, 0.1);
+    background: #363636;
     border-radius: 50px;
     color: #9DD2EE;
     font-size: 21px;
@@ -668,7 +671,7 @@ body {
 
 .footer {
     position: absolute;
-    top: 4805px;
+    top: 4405px;
     background-color: #363636;
     width: 100%;
     height: 210px;
