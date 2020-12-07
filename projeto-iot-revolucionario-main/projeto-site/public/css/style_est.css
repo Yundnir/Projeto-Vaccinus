@@ -126,7 +126,7 @@ body {
     border-left: 0.5px solid;
     /* Adiciona borda esquerda na div como ser fosse uma linha.*/
     box-sizing: border-box;
-    height: 90%;
+    height: 100%;
     margin-left: 270px;
 }
 
@@ -263,6 +263,12 @@ body {
     left: 20px;
 }
 
+.container h3{
+    padding-top: 40px;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
 .data_box {
     position: absolute;
     width: 280px;
@@ -397,6 +403,7 @@ body {
     margin: 0;
     text-align: center;
     padding-top: 5px;
+    font-size: 30px;
 }
 
 .grafico_item span {
@@ -466,7 +473,7 @@ body {
 .grafico_box {
     position: absolute;
     width: 280px;
-    height: 221px;
+    height: 250px;
     left: 345px;
     top: 350px;
     background: rgba(0, 0, 0, 0.2);
@@ -477,7 +484,7 @@ body {
 .grafico_box1 {
     position: absolute;
     width: 280px;
-    height: 221px;
+    height: 250px;
     left: 669px;
     top: 350px;
     background: rgba(0, 0, 0, 0.2);
@@ -488,7 +495,7 @@ body {
 .grafico_box2 {
     position: absolute;
     width: 280px;
-    height: 221px;
+    height: 250px;
     left: 995px;
     top: 350px;
     background: rgba(0, 0, 0, 0.2);
@@ -499,7 +506,7 @@ body {
 .grafico_box3 {
     position: absolute;
     width: 280px;
-    height: 221px;
+    height: 250px;
     left: 1315px;
     top: 350px;
     background: rgba(0, 0, 0, 0.2);
@@ -559,11 +566,11 @@ body {
 .situacao span {
     position: absolute;
     left: 280px;
-    top: 15px;
+    top: 25px;
     font-family: roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 31px;
     color: #FFFFFF;
 }
@@ -652,7 +659,7 @@ body {
 
 .Perdidas p {
     position: absolute;
-    left: 783px;
+    left: 755px;
     top: -10px;
     font-family: roboto;
     font-style: normal;
@@ -940,3 +947,44 @@ body {
     margin-top: 25px;
 }
 
+.temp_spandiv{
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-size: 25px;
+
+}
+
+/* Estatísticas - comparação de temperaturas dos containers,
+Atual, Anterior, MIn, Max */
+#temp_agora{
+    position: absolute;
+    font-size: 23px;
+    left: 426px;
+    top: 28px;
+    color: white;
+}
+
+#temp_anterior{
+    position: absolute;
+    font-size: 23px;
+    left: 590px;
+    top: 28px;
+    color: white;
+}
+
+#temp_min{
+    position: absolute;
+    font-size: 23px;
+    left: 740px;
+    top: 28px;
+    color: white;
+}
+
+#temp_max{
+    position: absolute;
+    font-size: 23px;
+    left: 905px;
+    top: 28px;
+    color: white;
+}
