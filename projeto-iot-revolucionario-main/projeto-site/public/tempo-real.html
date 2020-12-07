@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body onload="atualizacaoPeriodica(), obterMedia()">
+<body onload="atualizacaoPeriodica()">
     <!--header inicio-->
 
     <header class="header" id="header">
@@ -254,7 +254,6 @@
                 
                     <p>Situação</p>
                     <span>Ativo</span>
-                    <!-- <i class='bx bx-trending-down' ></i> -->
                 </div>
 
                 <div class="Aumento">                
@@ -288,9 +287,52 @@
                         <div id="temp_max">Aguarde...</div>
                     </div>
                 </div>
-            </div>     
-                    
-        
+            </div> 
+            <!-- estatistica 2 -->
+            <div class="numero_item2">
+                <i class='bx bx-test-tube'></i>
+                <span>Febre Amarela</span>
+                <p>Container 1</p>
+
+                <div class="situacao">
+                
+                    <p>Situação</p>
+                    <span>Ativo</span>
+                </div>
+
+                <div class="Aumento">                
+                    <p>Agora</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <div class="valores">
+                        <div id="temp_agora2">Aguarde...</div>
+                    </div>
+                </div>
+
+                <div class="Quantidade">                
+                    <p>Anterior</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <div class="valores">
+                        <div id="temp_anterior2">Aguarde...</div>
+                    </div>
+                </div>
+
+                <div class="Perdidas">                
+                    <p>Mínima</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <div class="valores">
+                        <div id="temp_min2">Aguarde...</div>
+                    </div>
+                </div>
+
+                <div class="Utilizaveis">                
+                    <p>Máxima</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <div class="valores">
+                        <div id="temp_max2">Aguarde...</div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -312,6 +354,10 @@
         obterdadosporcaminhao(2);
         obterdadosporcaminhao(3);
         obterdadosporcaminhao(4);
+        obterExtremos(1);
+        obterExtremos(2);
+        // obterExtremos(3);
+        // obterExtremos(4);
         setTimeout(atualizacaoPeriodica, 5000);
     }
 
@@ -330,8 +376,7 @@
                     // aqui, após registro. use os nomes 
                     // dos atributos que vem no JSON 
                     var dados = {
-                        temperatura: resposta.temp_atual,
-                        // umidade: resposta.umidade
+                        temperatura: resposta.temp_atual
                     }
 
                     alertar(resposta.temp_atual, fkSensor);
@@ -347,24 +392,24 @@
             });
     }
 
-    function obterMedia() {
+    function obterExtremos(fkSensor) {
         //aguardar();
-        fetch(`/leituras/estatisticas`)
+        fetch(`/leituras/estatisticas/${fkSensor}`)
         .then(resposta => {
 
             if (resposta.ok) {
                 resposta.json().then(function (resposta) {
 
                     console.log(`Dados recebidos Estatísticas: ${JSON.stringify(resposta)}`);
-                    temp_max.innerHTML = resposta.temp_maxima
+                    // temp_max.innerHTML = resposta.temp_maxima
+                    // temp_min.innerHTML = resposta.temp_minimo
                     // aqui, após registro. use os nomes 
                     // dos atributos que vem no JSON 
-                    // var dados = {
-                    //     temperatura: resposta.temp_maxima,
-                    //     // umidade: resposta.umidade
-                    // }
-                    // alertar(resposta.temp_maxima, fkSensor);
-                    // atualizarTela(dados, fkSensor);
+                    var min_max = {
+                        max: resposta.temp_maxima,
+                        min: resposta.temp_minimo
+                    }
+                    atualizarTela2(min_max, fkSensor);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -445,37 +490,56 @@
         var div_temperatura_alterar
 
         if (fkSensor == 1) {
-            div_temperatura_alterar = div_temperatura
+            div_temperatura_alterar = div_temperatura;
+            
         } else if (fkSensor == 2) {
-            div_temperatura_alterar = div_temperatura2
+            div_temperatura_alterar = div_temperatura2;
+            
         } else if (fkSensor == 3) {
-            div_temperatura_alterar = div_temperatura3
+            div_temperatura_alterar = div_temperatura3;
+            
         } else if (fkSensor == 4) {
-            div_temperatura_alterar = div_temperatura4
+            div_temperatura_alterar = div_temperatura4;
+            
         }
 
         div_temperatura_alterar.innerHTML = ` ${dados.temperatura}º`;
         temp_agora.innerHTML = div_temperatura.innerHTML;
-        // temp_min.innerHTML = div_temperatura.innerHTML;
+        temp_agora2.innerHTML = div_temperatura2.innerHTML;
+        // temp_agora3.innerHTML = div_temperatura3.innerHTML;
+        // temp_agora4.innerHTML = div_temperatura4.innerHTML;
+        
         
         setInterval(() => {
             temp_anterior.innerHTML = div_temperatura.innerHTML;
-        }, 4500);
+            temp_anterior2.innerHTML = div_temperatura2.innerHTML;
+            // temp_anterior3.innerHTML = div_temperatura3.innerHTML;
+            // temp_anterior4.innerHTML = div_temperatura4.innerHTML;
+        }, 4800);
+    }
 
-        if (temp_min.innerHTML < temp_agora.innerHTML) {
-            temp_min.innerHTML = temp_agora.innerHTML;
+    // só altere aqui se souber o que está fazendo!
+    function atualizarTela2(min_max, fkSensor) {
+        console.log('iniciando atualização da tela...');
+        // console.log('Temperatura', min_max.min);
+
+        // escolhendo qual alterar
+        var temp_max_alterar
+        var temp_min_alterar
+
+        if (fkSensor == 1) {
+            temp_min.innerHTML = ` ${min_max.min}º`;
+            temp_max.innerHTML = ` ${min_max.max}º`;
+        } else if (fkSensor == 2) {
+            temp_min2.innerHTML = ` ${min_max.min}º`;
+            temp_max2.innerHTML = ` ${min_max.max}º`;
+        } else if (fkSensor == 3) {
+            temp_min3.innerHTML = ` ${min_max.min}º`;
+            temp_max3.innerHTML = ` ${min_max.max}º`;
+        } else if (fkSensor == 4) {
+            temp_min4.innerHTML = ` ${min_max.min}º`;
+            temp_max4.innerHTML = ` ${min_max.max}º`;
         }
-
-        if (temp_max.innerHTML > temp_agora.innerHTML) {
-            temp_max.innerHTML = temp_agora.innerHTML;
-        }
-
-        
-        // temp_min.innerHTML = 
-        // temp_agora2.innerHTML = div_temperatura.innerHTML;
-        // temp_agora3.innerHTML = div_temperatura3.innerHTML;
-        // temp_agora4.innerHTML = div_temperatura4.innerHTML;
-
     }
 
 

@@ -988,3 +988,41 @@ Atual, Anterior, MIn, Max */
     top: 28px;
     color: white;
 }
+
+/* est 2 - bottom*/
+.numero_item2{
+    /* position: absolute; */
+    display: flex;
+}
+
+.numero_item2 i{
+    font-size: 50px;
+    color: #FFFFFF;
+}
+.numero_item2 .valores{
+    display: flex;
+    color: white;
+    font-size: 23px;
+    padding: 30px 10px 0px 51px;
+}
+
+.numero_item2 p{
+    display: flex;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+/* .numero_item2 span{
+    position: absolute;
+    width: 140px;
+    left: 70px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 31px;
+    color: #FFFFFF;
+} */
+

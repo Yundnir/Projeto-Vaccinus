@@ -1,5 +1,4 @@
 var express = require('express');
-const { DataTypes } = require('sequelize/types');
 var router = express.Router();
 var sequelize = require('../models').sequelize;
 var Leitura = require('../models').Leitura;
@@ -97,18 +96,20 @@ router.get('/min-temp', function(req, res, next) {
 });
 
 // estatísticas (max, min, média, mediana, quartis etc)
-router.get('/estatisticas', function (req, res, next) {
-	
+router.get('/estatisticas/:fkSensor', function (req, res, next) {
+
+	var fkSensor = req.params.fkSensor;
 	console.log(`Recuperando as estatísticas atuais`);
 
 	const instrucaoSql = `select 
-							max(temperatura) as temp_maxima, 
-							min(temperatura) as temp_minima, 
-							avg(temperatura) as temp_media,
-							max(umidade) as umidade_maxima, 
-							min(umidade) as umidade_minima, 
-							avg(umidade) as umidade_media 
-						from tbLeitura`;
+							max(temp_atual) as temp_maxima,
+							min(temp_atual) as temp_minimo
+						from tbLeitura where fkSensor = ${fkSensor}`;
+						// `select 
+						// 	max(temperatura) as temp_maxima, 
+						// 	min(temperatura) as temp_minima, 
+						// 	avg(temperatura) as temp_media
+						// from tbLeitura`;
 
 	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
 		.then(resultado => {
