@@ -3,9 +3,7 @@ body {
     padding: 0 1rem;
     font-family: 'Roboto', sans-serif;
     background-color: #363636;
-    
 }
-
 
 .l-navbar {
     top: 0;
@@ -37,7 +35,6 @@ body {
     margin-bottom: 2rem;
     padding: 0 20px 0 10px;
     text-decoration: none;
-   
 }
 
 .nav_logo-icon {
@@ -46,7 +43,6 @@ body {
     color: white;
     /* width: 60px; */
     height: 60px;
-  
 }
 
 .nav_logo-name {
@@ -61,7 +57,6 @@ body {
     font-size: 35px;
     line-height: 52px;
     color: #FFFCFC;
- 
 }
 
 .nav_link {
@@ -109,7 +104,6 @@ body {
     /*Altura da linha*/
     border-left: 11px solid;
     /* Adiciona borda esquerda na div como ser fosse uma linha.*/
-    
 }
 
 .box {
@@ -203,18 +197,18 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.plano_box a{
+.plano_box a {
     text-decoration: none;
 }
 
 .plano_box button {
     position: absolute;
-    width: 239px;
-    height: 79px;
-    /* left: 1090px; */
+    width: 290px;
+    height: 60px;
+    left: 30px;
     right: 150px;
-    top: 55px;
-    background: #9dd2ee;
+    top: 125px;
+    background: rgba(157, 210, 238, 0.8);
     mix-blend-mode: normal;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -224,7 +218,7 @@ body {
     text-align: center;
     width: 204px;
     height: 15px;
-    left: 49px;
+    left: 39px;
     padding: 15px;
     font-family: Roboto, sans-serif;
     line-height: 15px;
@@ -241,8 +235,12 @@ body {
 }
 
 .plano_item span {
-    font-size: 15px;
     color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 39px;
 }
 
 /*CPONTAINER BODY */
@@ -252,7 +250,7 @@ body {
     width: 650px;
     height: 10px;
     left: 314px;
-    top: 50px;
+    top: 10px;
     font-family: roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -263,11 +261,11 @@ body {
 }
 
 .container span {
-    font-size: 40px;
+    font-size: 60px;
     position: absolute;
     top: 20px;
-    left: 20px;
-    width: 700px;
+    left: 70px;
+    width: 1000px;
 }
 
 .configuracao_box {
@@ -282,14 +280,21 @@ body {
     border-radius: 15px;
 }
 
-
-.avatar_item span {
+.inputs {
     position: absolute;
-    width: 139px;
-    height: 60px;
-    left: 400px;
-    top: 115px;
-    font-family: roboto;
+    top: 130px;
+    left: 350px;
+    width: 704px;
+    height: 583px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.inputs h1 {
+    position: absolute;
+    left: 50px;
+    top: 17px;
+    font-family:poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -297,281 +302,334 @@ body {
     color: #FFFFFF;
 }
 
-#img{
-        
+#linha {
     position: absolute;
-    width: 158px;
-    height: 158px;
-    left: 380px;
-    top: 185px;
-    border-radius: 256px;
+    width: 154px;
+    height: 5px;
+    left: 50px;
+    top: 100px;
+    background: #9DD2EE;
 }
 
-#img img{
+.inps {
     position: absolute;
-    width: 100%;
+    top: -300px;
+    left: -400px;
 }
 
-.icons img{
-    width: 20px;
-    height: 20px;
-}
-
- #linkedin{
+#nome {
     position: absolute;
-    width: 40px;
-    height: 20px;
-    left: 530px;
-    top: 220px;
-
-}
-
-#google{
-    position: absolute;
-    left: 540px;
-    top: 252px;
-    
-}
-
-#face{
-    position: absolute;
-    left: 540px;
-    top: 282px;
-    
-}
-
-#x{
-    position: absolute;
-    left: 500px;
-    right: 35.63%;
-    top: 190px;
-    bottom: 100%;
-    width: 26px;
-    height: 24px;
+    width: 218px;
+    height: 38px;
+    left: 450px;
+    top: 440px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
     font-size: 25px;
-    color: #FF0000;
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
-}
-
-#upload{
-    position: absolute;
-    width: 142px;
-    height: 33px;
-    left: 390px;
-    top: 360px;
-    color: #FFFFFF;
-    background: rgba(157, 210, 238, 0.2);
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-#nome{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 426px;
-    top: 480px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF;
-
-}
-
-.nome_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 426px;
-top: 510px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-
-#emailp{
-    position: absolute;
-width: 218px;
-height: 38px;
-left: 426px;
-top: 560px;
-font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 31px;
-color: #FFFFFF;
-
-}
-
-.emailp_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 426px;
-top: 590px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-#tele{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 426px;
-    top: 650px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
+    line-height: 37px;
     color: #FFFFFF;
 }
 
-.tele_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 426px;
-top: 680px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-#nomeemp{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 860px;
-    top: 480px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF; 
-}
-
-.nomeemp_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 860px;
-top: 510px;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-
-#emailemp{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 860px;
-    top: 560px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF; 
-}
-
-.emailemp_box{
-    position: absolute;
-width: 295px;
-height: 31px;
-left: 860px;
-top: 590px;;
-background: rgba(0, 0, 0, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-color: #FFFFFF;
-}
-
-#Endereco{
-    position: absolute;
-    width: 218px;
-    height: 38px;
-    left: 860px;
-    top: 650px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 31px;
-    color: #FFFFFF; 
-}
-
-.endereco_box{
+.nome_box {
     position: absolute;
     width: 295px;
     height: 31px;
-    left: 860px;
-    top: 680px;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    left: 726px;
+    top: 440px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+#emailp {
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 450px;
+    top: 510px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
     color: #FFFFFF;
 }
 
+.emailp_box {
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 726px;
+    top: 500px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+#tele {
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 450px;
+    top: 580px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+
+.tele_box {
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 726px;
+    top: 570px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+#cel {
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 450px;
+    top: 650px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+
+.cel_box {
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 726px;
+    top: 640px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+#senha {
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 450px;
+    top: 720px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+
+.senha_box {
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 726px;
+    top: 710px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+#confirme {
+    position: absolute;
+    width: 518px;
+    height: 38px;
+    left: 450px;
+    top: 790px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+
+.confirme_box {
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 726px;
+    top: 780px;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+.inputs button {
+    position: absolute;
+    width: 210px;
+    height: 54px;
+    left: 826px;
+    top: 840px;
+    background: #6796AF;
+    border-radius: 50px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFCFC;
+    cursor: pointer;
+}
+
+.plano {
+    position: absolute;
+    width: 351px;
+    height: 311px;
+    left: 1069px;
+    top: 130px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.plano h1 {
+    position: absolute;
+    left: 35px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+
+.plano h3 {
+    position: absolute;
+    width: 95px;
+    height: 30px;
+    left: 120px;
+    top: 60px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.plano img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 115px;
+    top: 218px;
+}
+
+.plano h2 {
+    position: absolute;
+    width: 66px;
+    height: 53px;
+    left: 165px;
+    top: 185px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 52px;
+    color: #FFFFFF;
+}
+
+.contato {
+    position: absolute;
+    width: 351px;
+    height: 271px;
+    left: 1069px;
+    top: 448px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    font-style: bold;
+}
+
+.contato h1 {
+    position: absolute;
+    width: 500px;
+    left: 35px;
+    font-family: poppins;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+
+#linhacon {
+    position: absolute;
+    width: 280px;
+    height: 5px;
+    left: 35px;
+    top: 60px;
+    background: #9DD2EE;
+}
+
+.contato h2 {
+    position: absolute;
+    top: 80px;
+    left: 90px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.contato h3 {
+    position: absolute;
+    top: 120px;
+    left: 90px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+#imgemail {
+    position: absolute;
+    left: 45px;
+    top: 140px;
+}
+
+#imgtel {
+    position: absolute;
+    left: 45px;
+    top: 100px;
+}
+
+.contato button {
+    position: absolute;
+    width: 110px;
+    height: 42px;
+    left: 120px;
+    top: 190px;
+    font-family: poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 35px;
+    color: #FFFCFC;
+    background: #567180;
+    border-radius: 50px;
+    cursor: pointer;
+}
 
 /*BOTAO LUZ*/
-main{
-    text-align: center;
-    font-size: 8em;
-}
 
-.liga-desliga_checkbox{
-    position: absolute;
-    left: -999999px;
-}
-
-.liga-desliga_botao{
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    cursor: pointer;
-    position: absolute;
-    top: 112px;
-    right: 207px;
-}
-
-.liga-desliga_botao::before,
-.liga-desliga_botao::after{
-    content: "";
-    transition: all 0.2s ease;
-
-}
-
-.liga-desliga_botao::before{
-    display: inline-block;
-    width: 0.95em;
-    height: 0.35em;
-    background: #9ee2dd;
-    border-radius: 1em;
-}
-
-.liga-desliga_botao::after{
-    position: absolute;
-    top: 65px;
-    left: 0.025em;
-    width: 0.30em;
-    height: 0.30em;
-    background: #000000;
-    border-radius: 100%;
-}
-
-.liga-desliga_checkbox:checked + .liga-desliga_botao::before{
-background: #FFFFFF;
-}
-
-.liga-desliga_checkbox:checked + .liga-desliga_botao::after{
-    left: 0.60em;
-}
