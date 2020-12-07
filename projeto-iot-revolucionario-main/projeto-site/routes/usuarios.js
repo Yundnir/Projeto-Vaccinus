@@ -57,6 +57,60 @@ router.post('/cadastrar', function(req, res, next) {
   	});
 });
 
+// Update usuario
+
+router.post('/alterar', function(req, res, next) {
+	console.log('Recuperando usuário por login e senha');
+	
+	var nome = req.body.nome;
+	var telefone = req.body.telefone;
+	var celular = req.body.celular;
+	var senha = req.body.senha
+	var login = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
+	// var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
+	
+	let instrucaoSql = `select idUsuario from tbUsuario where email='${login}'`;
+	// let instrucaoSql = `update tbUsuario set nome = '${nome}' where idUsuario = 7`;
+	console.log(instrucaoSql);
+
+	sequelize.query(instrucaoSql, {
+		model: Usuario
+	}).then(resultado => {
+		console.log(`Encontrados: ${resultado[0].dataValues.idUsuario}`);
+
+		if (resultado.length == 1) {
+			// sessoes.push(resultado[0].dataValues.login);
+			console.log('ID: ',resultado[0].dataValues.idUsuario);
+			let id = resultado[0].dataValues.idUsuario;
+			if (nome != "") {
+				let update = `update tbUsuario set nome = '${nome}' where idUsuario = ${id}`;
+				sequelize.query(update)
+			}
+			if (telefone != "") {
+				let update = `update tbUsuario set Tel_Residencial = '${telefone}' where idUsuario = ${id}`;
+				sequelize.query(update)
+			}
+			if (celular != "") {
+				let update = `update tbUsuario set Celular = '${celular}' where idUsuario = ${id}`;
+				sequelize.query(update)
+			}
+			if (senha != "") {
+				let update = `update tbUsuario set senha = '${senha}' where idUsuario = ${id}`;
+				sequelize.query(update)
+			}
+			
+		} else if (resultado.length == 0) {
+			res.status(403).send('Email não encontrado');
+		} else {
+			res.status(403).send('Mais de um usuário com o mesmo login e senha!');
+		}
+
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send("Insira o seu email cadastrado");
+  	});
+});
+
 
 /* Verificação de usuário */
 router.get('/sessao/:login', function(req, res, next) {

@@ -1,9 +1,7 @@
-/*HEADER CSS*/
 body {
     position: relative;
     padding: 0 1rem;
     font-family: 'Roboto', sans-serif;
-    /* font-family: Arial, Helvetica, sans-serif; */
     background-color: #363636;
     
 }
@@ -205,7 +203,9 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-/*FIM HEADER */
+.plano_box a{
+    text-decoration: none;
+}
 
 .plano_box button {
     position: absolute;
@@ -219,87 +219,6 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
-
-.plano_box2 button {
-    position: absolute;
-    width: 150px;
-    height: 42px;
-    left: 480px;
-    /* right: 150px; */
-    top: 30px;
-    background: rgba(157, 210, 238,0.2);
-    mix-blend-mode: normal;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.plano_item2 p{
-    margin: 0;
-    font-size: 25px;
-    color: white;
-}
-
-.rota_trajeto {
-    width: 1300px;
-    margin-top: 2px;
-    font-size: 20pt;
-}
-
-#partida {
-    float: left;
-    margin-left: 45px;
-    width: 325px;
-    margin-top: 11px;
-    height: 12px;
-    border-radius: 20px;
-    background-color:  #656565bb;
-}
-.parada_rota {
-    float: left;
-    width: 12px;
-    height: 36px;
-    background-color: white;
-    border-radius: 20px;
-}
-#decorrer {
-    float: left;
-    width: 486px;
-    margin-top: 11px;
-    height: 12px;
-    border-radius: 20px;
-    background-color:  #656565bb;
-}
-#destino {
-    float: left;
-    width: 385px;
-    margin-top: 11px;
-    height: 12px;
-    border-radius: 20px;
-    background-color:  #656565bb;
-}
-
-
-.primeiro_local {
-    position: absolute;
-}
-
-.segundo_local {
-    position: absolute;
-    left: 300px;
-    
-}
-
-.terceiro_local {
-    position: absolute;
-    left: 900px;
-    
-}
-
-.locais_trajeto p {
-    display: inline;
-}
-
 
 .plano_item button {
     text-align: center;
@@ -326,9 +245,11 @@ body {
     color: #FFFFFF;
 }
 
+/*CPONTAINER BODY */
+
 .container {
     position: absolute;
-    width: 541px;
+    width: 650px;
     height: 10px;
     left: 314px;
     top: 50px;
@@ -343,110 +264,326 @@ body {
 
 .container span {
     font-size: 40px;
+    position: absolute;
     top: 20px;
-    position: absolute;
     left: 20px;
+    width: 700px;
 }
 
-.data_box {
+.configuracao_box {
     position: absolute;
-    width: 280px;
+    width: 240px;
     height: 71px;
-    top: 345px;
+    top: 100px;
+    left: 255px;
     float: left;
-    /* background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    left: 53px;
-    font-size: 30px;
 }
 
-.data_box1 {
+
+.avatar_item span {
     position: absolute;
-    width: 280px;
-    height: 71px;
-    top: 345px;
-    left: 470px;
-    float: left;
-    /* background: rgba(0, 0, 0, 0.2); */
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    border-radius: 15px;
-    font-size: 30px;
-}
-
-.data_box2 {
-    position: absolute;
-    width: 280px;
-    height: 71px;
-    top: 345px;
-    left: 930px;
-    float: left;
-    /* background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    border-radius: 15px;
-    font-size: 30px;
-}
-
-
-.data_item {
-    text-align: center;
-    width: 204px;
-    height: 15px;
-    left: 49px;
-    top: 475px;
-    padding: 15px;
-    font-family: roboto;
-    line-height: 15px;
-    color: #FFFFFF;
-}
-
-.data_item .img_rota{
-    margin-left: 27px;
-    width: 1260px;
-}
-
-.data_item .seta_indicador{
-    margin-top: 189px;
-    margin-left: 1200px;
-    transform: rotate(90deg);
-}
-
-
-.data_item span {
-    position: absolute;
-    width: 80px;
-    height: 32px;
-    left: 55px;
-    top: 150px;
+    width: 139px;
+    height: 60px;
+    left: 400px;
+    top: 115px;
     font-family: roboto;
     font-style: normal;
-    /* font-weight: bold; */
+    font-weight: normal;
     font-size: 40px;
-    line-height: 31px;
+    line-height: 60px;
     color: #FFFFFF;
-    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.data_item1 span {
+#img{
+        
     position: absolute;
-    width: 80px;
-    height: 32px;
-    left: 104px;
-    top: -38px;
-    font-family: roboto;
+    width: 158px;
+    height: 158px;
+    left: 380px;
+    top: 185px;
+    border-radius: 256px;
+}
+
+#img img{
+    position: absolute;
+    width: 100%;
+}
+
+.icons img{
+    width: 20px;
+    height: 20px;
+}
+
+ #linkedin{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    left: 530px;
+    top: 220px;
+
+}
+
+#google{
+    position: absolute;
+    left: 540px;
+    top: 252px;
+    
+}
+
+#face{
+    position: absolute;
+    left: 540px;
+    top: 282px;
+    
+}
+
+#x{
+    position: absolute;
+    left: 500px;
+    right: 35.63%;
+    top: 190px;
+    bottom: 100%;
+    width: 26px;
+    height: 24px;
+    font-size: 25px;
+    color: #FF0000;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+#upload{
+    position: absolute;
+    width: 142px;
+    height: 33px;
+    left: 390px;
+    top: 360px;
+    color: #FFFFFF;
+    background: rgba(157, 210, 238, 0.2);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#nome{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 426px;
+    top: 480px;
     font-style: normal;
     font-weight: bold;
-    font-size: 54px;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF;
+
+}
+
+.nome_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 426px;
+top: 510px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+#emailp{
+    position: absolute;
+width: 218px;
+height: 38px;
+left: 426px;
+top: 560px;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 31px;
+color: #FFFFFF;
+
+}
+
+.emailp_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 426px;
+top: 590px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+#tele{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 426px;
+    top: 650px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 31px;
     color: #FFFFFF;
 }
 
-.data_item2 {
-    width: 300px;
-    font-size: 18px;
+.tele_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 426px;
+top: 680px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
 }
 
-.data_item2 b{
-    color: #888787;
+#nomeemp{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 860px;
+    top: 480px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF; 
 }
 
+.nomeemp_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 860px;
+top: 510px;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+#emailemp{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 860px;
+    top: 560px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF; 
+}
+
+.emailemp_box{
+    position: absolute;
+width: 295px;
+height: 31px;
+left: 860px;
+top: 590px;;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+#Endereco{
+    position: absolute;
+    width: 218px;
+    height: 38px;
+    left: 860px;
+    top: 650px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 31px;
+    color: #FFFFFF; 
+}
+
+.endereco_box{
+    position: absolute;
+    width: 295px;
+    height: 31px;
+    left: 860px;
+    top: 680px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+
+/*BOTAO LUZ*/
+main{
+    text-align: center;
+    font-size: 8em;
+}
+
+.liga-desliga_checkbox{
+    position: absolute;
+    left: -999999px;
+}
+
+.liga-desliga_botao{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    top: 112px;
+    right: 207px;
+}
+
+.liga-desliga_botao::before,
+.liga-desliga_botao::after{
+    content: "";
+    transition: all 0.2s ease;
+
+}
+
+.liga-desliga_botao::before{
+    display: inline-block;
+    width: 0.95em;
+    height: 0.35em;
+    background: #9ee2dd;
+    border-radius: 1em;
+}
+
+.liga-desliga_botao::after{
+    position: absolute;
+    top: 65px;
+    left: 0.025em;
+    width: 0.30em;
+    height: 0.30em;
+    background: #000000;
+    border-radius: 100%;
+}
+
+#btn_entrar {
+    position: absolute;
+    width: 142px;
+    height: 33px;
+    left: 710px;
+    top: 750px;
+    color: #FFFFFF;
+    background: rgba(157, 210, 238, 0.2);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.liga-desliga_checkbox:checked + .liga-desliga_botao::before{
+background: #FFFFFF;
+}
+
+.liga-desliga_checkbox:checked + .liga-desliga_botao::after{
+    left: 0.60em;
+}

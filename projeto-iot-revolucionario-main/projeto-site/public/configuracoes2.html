@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_configuracao.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>  Configurações - Vaccinus</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="index.html" class="nav_logo">
+                        <img src="img/logo_v_a.png" class='nav_logo-icon'>
+                        <span class="nav_logo-name">accinus</span>
+                    </a>
+                    <div class="nav_list">
+                        <a href="grafico-chartjs.html" class="nav_link">
+                            <i class='bx bx-grid-alt nav_icon'></i>
+                            <span class="nav_name">Resumo</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="#" class="nav_link">
+                            <i class='bx bx-stats nav_icon'></i></i>
+                            <span-um class="nav_name">Estatisticas</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="#" class="nav_link">
+                            <i class='bx bx-folder nav_icon'></i></i>
+                            <span class="nav_name">Relátorio</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="#" class="nav_link-est">
+                            <i class='bx bxs-cog nav_icon-est'></i></i>
+                            <span class="nav_name">Configurações</span>
+                        </a>
+                        <section class="section">
+                            <div class="estatistica_box">
+                                <div class="estatistica_item">
+                                    <i class='bx bx-wifi-off'></i>
+                                    <span>Conexão perdida</span>
+                                    <p>Se conecte para visualizar seus dados</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section-not">
+                            <div class="notificacao-box">
+                                <div class="notificacao_item">
+                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);"></i> <br><br> <br>
+                                    <span style="color: rgb(151, 151, 151);">Notificações</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="box"></div>
+        <div class="box linha-vertical"></div>
+    </header>
+
+    <section class="section-plano">
+
+        <div class="plano_box">
+            <button class="plano_box">
+                <div class="plano_item">
+                    <a href="../../planos.html">
+                    <i class='bx bx-right-arrow-alt'></i> <br>
+                    <span>Faça um upgrade do seu plano!</span></a>
+                </div>
+            </button>
+        </div>
+
+        <!-- <main>
+            <div class="liga-desliga">
+                <input type="checkbox" name="" id="liga-desliga" class="liga-desliga_checkbox">
+                <label for="liga-desliga" name="" class="liga-desliga_botao"></label>
+            </div>
+        </main> -->
+
+
+
+        <section>
+            <div class="container">
+                <span>Altere suas informações cadastradas</span>
+    
+                <section class="section-conf">
+    
+               
+                        <div class="avatar_item">
+                            <span>Avatar</span>
+                            <img id="img" src="img/User.png" alt="">
+                            <button id="x">X</button>
+                            <div class="icons">
+                               <a href="#"> <img id="linkedin" src="img/Linkedin.png" alt=""></a>
+                               <a href=""> <img id="google" src="img/google.png" alt=""></a>
+                                <a href=""><img id="face" src="img/facebook.png" alt=""></a>
+                            </div>
+                            <div class="up">
+                                        <button id="upload">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+    
+        </section>
+    
+        <div>
+            <form id="form_update" method="post" onsubmit="return entrar()">
+                <span id="nome">Seu nome:</span>
+                <input class="nome_box" placeholder="Coloque seu nome completo" name="nome" required></input>
+                <span id="nomeemp">Alterar Senha:</span>
+                <input class="nomeemp_box" placeholder="Coloque sua nova senha" name="senha" type="password" required></input>
+                <span id="tele">Alterar Telefone:</span>
+                <input class="tele_box" placeholder="Coloque seu novo numero de telefone" name="telefone" required></input>
+                <span id=emailp>Alterar Celular:</span>
+                <input class="emailp_box" placeholder="Coloque o novo numero de celular" name="celular" required></input>
+                <span id="emailemp">Confirme a nova senha:</span>
+                <input class="emailemp_box" placeholder="Confirme sua nova senha" name="confirma_senha" type="password" required></input>
+                <span id="Endereco">Informe o email para confirmar:</span>
+                <input class="endereco_box" placeholder="Coloque seu email cadastrado" name="email" type="email" required></input>
+                <button id="btn_entrar">Alterar</button>
+                <br><br>
+            </form>
+            <div id="div_erro"></div>
+        </div>
+        </section>
+
+        <script>
+
+function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_update));
+        fetch("/usuarios/alterar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta == 1) {
+
+
+                    alert("informações alteradas com sucesso")
+                    nome.value = "";
+                    email.value = "";
+                    senha.value = "";
+                    telefone.value = "";
+                    celular.value = "";
+                    confirma_senha.value = "";
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+            return false;
+        }
+
+        function aguardar() {
+            btn_entrar.disabled = true;
+            // img_aguarde.style.visibility = 'visible';
+            div_erro.style.visibility = 'hidden';
+        }
+
+        function finalizar_aguardar(resposta) {
+            btn_entrar.disabled = false;
+            // img_aguarde.style.visibility = 'hidden';
+            div_erro.style.visibility = 'visible';
+            div_erro.innerHTML = resposta;
+        }
+
+        </script>
+    
+</body>
+</html>

@@ -71,6 +71,31 @@ router.get('/tempo-real/:fkSensor', function(req, res, next) {
 		});
 });
 
+// trazer a temperatura mais baixa
+router.get('/min-temp', function(req, res, next) {
+	
+	// quantas são as últimas leituras que quer? 8 está bom?
+	const limite_linhas = 7;
+
+	// var fkSensor = req.params.fkSensor;
+
+	console.log(`Recuperando as ultimas ${limite_linhas} leituras`);
+	
+	const instrucaoSql = `select min(temp_atual) from tbLeitura where fkSensor = 2`;
+
+	sequelize.query(instrucaoSql, {
+		model: Leitura,
+		mapToModel: true 
+	  })
+	  .then(resultado => {
+			console.log(`Encontrados: ${resultado.length}`);
+			res.json(resultado);
+	  }).catch(erro => {
+			console.error(erro);
+			res.status(500).send(erro.message);
+	  });
+});
+
 // estatísticas (max, min, média, mediana, quartis etc)
 router.get('/estatisticas', function (req, res, next) {
 	
