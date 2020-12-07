@@ -514,6 +514,8 @@ body {
     border-radius: 15px;
 }
 
+/*FEBRE Container 1 - estatistica*/
+
 .numero_box {
     position: absolute;
     width: 53px;
@@ -530,10 +532,7 @@ body {
 .numero_item span {
     position: absolute;
     width: 140px;
-    left: 70px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
+    left: 89px;
     font-size: 21px;
     line-height: 31px;
     color: #FFFFFF;
@@ -556,9 +555,6 @@ body {
     position: absolute;
     left: 280px;
     top: -10px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.3);
 }
@@ -567,24 +563,8 @@ body {
     position: absolute;
     left: 280px;
     top: 25px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 31px;
+    font-size: 23px;
     color: #FFFFFF;
-}
-
-.situacao i {
-    position: absolute;
-    left: 330px;
-    top: 15px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
-    color: #ff0000;
 }
 
 .Aumento p {
@@ -610,18 +590,6 @@ body {
     color: #FFFFFF;
 }
 
-.Aumento i {
-    position: absolute;
-    left: 470px;
-    top: 15px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
-    color: #ff0000;
-}
-
 .Quantidade p {
     position: absolute;
     left: 589px;
@@ -643,18 +611,6 @@ body {
     font-size: 18px;
     line-height: 31px;
     color: #FFFFFF;
-}
-
-.Quantidade i {
-    position: absolute;
-    left: 630px;
-    top: 15px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
-    color: #ff0000;
 }
 
 .Perdidas p {
@@ -680,18 +636,6 @@ body {
     color: #FFFFFF;
 }
 
-.Perdidas i {
-    position: absolute;
-    left: 800px;
-    top: 15px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
-    color: #ff0000;
-}
-
 .Utilizaveis p {
     position: absolute;
     left: 920px;
@@ -714,18 +658,9 @@ body {
     line-height: 31px;
     color: #FFFFFF;
 }
+/*FIM - FEBRE Container 1 - estatistica*/
 
-.Utilizaveis i {
-    position: absolute;
-    left: 960px;
-    top: 15px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
-    color: #ff0000;
-}
+/* Dengue container 2*/
 
 .numero_item-dengue i {
     font-size: 50px;
@@ -739,11 +674,7 @@ body {
     width: 140px;
     top: 70px;
     left: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
     font-size: 21px;
-    line-height: 31px;
     color: #FFFFFF;
 }
 
@@ -752,7 +683,7 @@ body {
     width: 80px;
     left: 90px;
     top: 80px;
-    font-family: Poppins;
+    font-family: roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -763,10 +694,7 @@ body {
 .situacao-d p {
     position: absolute;
     left: 280px;
-    top: 60px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
+    top: 55px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.3);
 }
@@ -775,68 +703,30 @@ body {
     position: absolute;
     left: 280px;
     top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
+    font-size: 23px;
     color: #FFFFFF;
-}
-
-.situacao-d i {
-    position: absolute;
-    left: 325px;
-    top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 31px;
-    color: #008000;
 }
 
 .Aumento-d p {
     position: absolute;
     left: 430px;
-    top: 60px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
+    top: 55px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.3);
 }
 
 .Aumento-d span {
     position: absolute;
-    left: 430px;
-    top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 31px;
+    left: 427px;
+    top: 95px;
+    font-size: 23px;
     color: #FFFFFF;
-}
-
-.Aumento-d i {
-    position: absolute;
-    left: 470px;
-    top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 31px;
-    color: #008000;
 }
 
 .Quantidade-d p {
     position: absolute;
     left: 589px;
-    top: 60px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
+    top: 55px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.3);
 }
@@ -845,65 +735,102 @@ body {
     position: absolute;
     left: 589px;
     top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 23px;
     line-height: 31px;
     color: #FFFFFF;
 }
 
-.Quantidade-d i {
-    position: absolute;
-    left: 630px;
-    top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 31px;
-    color: #008000;
-}
-
 .Perdidas-d p {
     position: absolute;
-    left: 783px;
-    top: 60px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
+    left: 755px;
+    top: 55px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.3);
 }
 
 .Perdidas-d span {
     position: absolute;
-    left: 783px;
+    left: 740px;
     top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 23px;
     line-height: 31px;
     color: #FFFFFF;
-}
-
-.Perdidas-d i {
-    position: absolute;
-    left: 800px;
-    top: 90px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 31px;
-    color: #008000;
 }
 
 .Utilizaveis-d p {
     position: absolute;
     left: 920px;
-    top: 60px;
+    top: 55px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Utilizaveis-d span {
+    position: absolute;
+    left: 905px;
+    top: 90px;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+/*FIM ESTATIOSTICA 2 - DENGUE*/
+
+/* RAIVA container 4*/
+
+.numero_item-raiva i {
+    font-size: 50px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 180px;
+}
+
+.numero_item-raiva span {
+    position: absolute;
+    width: 140px;
+    top: 185px;
+    left: 90px;
+    /* font-family: roboto;
+    font-style: normal;
+    font-weight: bold; */
+    font-size: 21px;
+    /* line-height: 31px; */
+    color: #FFFFFF;
+}
+
+.numero_item-raiva p {
+    position: absolute;
+    width: 80px;
+    left: 90px;
+    top: 195px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.situacao-r p {
+    position: absolute;
+    left: 280px;
+    top: 175px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.situacao-r span {
+    position: absolute;
+    left: 280px;
+    top: 210px;
+    font-size: 23px;
+    color: #FFFFFF;
+}
+
+.Aumento-r p {
+    position: absolute;
+    left: 430px;
+    top: 175px;
     font-family: roboto;
     font-style: normal;
     font-weight: bold;
@@ -911,29 +838,193 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.Utilizaveis-d span {
+.Aumento-r span {
     position: absolute;
-    left: 920px;
-    top: 90px;
-    font-family: roboto;
+    left: 427px;
+    top: 210px;
+    font-size: 23px;
+    color: #FFFFFF;
+}
+
+.Quantidade-r p {
+    position: absolute;
+    left: 589px;
+    top: 175px;
+    /* font-family: roboto;
     font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: bold; */
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Quantidade-r span {
+    position: absolute;
+    left: 589px;
+    top: 210px;
+    font-size: 23px;
     line-height: 31px;
     color: #FFFFFF;
 }
 
-.Utilizaveis-d i {
+.Perdidas-r p {
     position: absolute;
-    left: 960px;
-    top: 90px;
+    left: 755px;
+    top: 175px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Perdidas-r span {
+    position: absolute;
+    left: 740px;
+    top: 210px;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.Utilizaveis-r p {
+    position: absolute;
+    left: 920px;
+    top: 175px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Utilizaveis-r span {
+    position: absolute;
+    left: 905px;
+    top: 210px;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+/*FIM ESTATISTICA 3 - COVID*/
+
+/* Dengue container 2*/
+
+.numero_item-covid i {
+    font-size: 50px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 120px;
+}
+
+.numero_item-covid span {
+    position: absolute;
+    width: 140px;
+    top: 130px;
+    left: 90px;
+    /* font-family: roboto;
+    font-style: normal;
+    font-weight: bold; */
+    font-size: 21px;
+    /* line-height: 31px; */
+    color: #FFFFFF;
+}
+
+.numero_item-covid p {
+    position: absolute;
+    width: 80px;
+    left: 90px;
+    top: 140px;
     font-family: roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 31px;
-    color: #008000;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.3);
 }
+
+.situacao-19 p {
+    position: absolute;
+    left: 280px;
+    top: 115px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.situacao-19 span {
+    position: absolute;
+    left: 280px;
+    top: 150px;
+    font-size: 23px;
+    color: #FFFFFF;
+}
+
+.Aumento-19 p {
+    position: absolute;
+    left: 430px;
+    top: 115px;
+    font-family: roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Aumento-19 span {
+    position: absolute;
+    left: 427px;
+    top: 150px;
+    font-size: 23px;
+    color: #FFFFFF;
+}
+
+.Quantidade-19 p {
+    position: absolute;
+    left: 589px;
+    top: 115px;
+    /* font-family: roboto;
+    font-style: normal;
+    font-weight: bold; */
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Quantidade-19 span {
+    position: absolute;
+    left: 589px;
+    top: 150px;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.Perdidas-19 p {
+    position: absolute;
+    left: 755px;
+    top: 115px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Perdidas-19 span {
+    position: absolute;
+    left: 740px;
+    top: 150px;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.Utilizaveis-19 p {
+    position: absolute;
+    left: 920px;
+    top: 115px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.Utilizaveis-19 span {
+    position: absolute;
+    left: 905px;
+    top: 150px;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+/*FIM ESTATISTICA 4 - RAIVA*/
 
 .valor {
     color: white;
@@ -988,41 +1079,3 @@ Atual, Anterior, MIn, Max */
     top: 28px;
     color: white;
 }
-
-/* est 2 - bottom*/
-.numero_item2{
-    /* position: absolute; */
-    display: flex;
-}
-
-.numero_item2 i{
-    font-size: 50px;
-    color: #FFFFFF;
-}
-.numero_item2 .valores{
-    display: flex;
-    color: white;
-    font-size: 23px;
-    padding: 30px 10px 0px 51px;
-}
-
-.numero_item2 p{
-    display: flex;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.3);
-}
-/* .numero_item2 span{
-    position: absolute;
-    width: 140px;
-    left: 70px;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 31px;
-    color: #FFFFFF;
-} */
-

@@ -12,7 +12,7 @@
 
     <!-- script do google charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
+    <script type="text/javascript" src="funcoes.js"></script>
 
     <style>
         /* Classes CSS para exemplos de alertas */
@@ -98,24 +98,7 @@
         <div class="box linha-vertical"></div>
     </header>
 
-    <!-- <div class="header">
-        <div class="container">
-            <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="usuario">
-                <h3>Olá, <b id="b_usuario"></b></h3>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="grafico-chartjs.html">Gráfico de histórico recente</a></li>
-                    <li><a href="#" class="highlight" onclick="logoff()">LOGOUT</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-    <!--header fim-->
-
     <section class="section-plano">
-
         <div class="plano_box">
             <button class="plano_box">
                 <div class="plano_item">
@@ -124,7 +107,6 @@
                 </div>
             </button>
         </div>
-
     </section>
 
     <section>
@@ -287,49 +269,119 @@
                         <div id="temp_max">Aguarde...</div>
                     </div>
                 </div>
-            </div> 
+            </div>
+            
             <!-- estatistica 2 -->
-            <div class="numero_item2">
-                <i class='bx bx-test-tube'></i>
-                <span>Febre Amarela</span>
-                <p>Container 1</p>
-
-                <div class="situacao">
+            <div class="numero_item-dengue">
                 
+                <i class='bx bx-test-tube'></i>
+                <span>Dengue</span>
+                <p>Container 2</p>
+
+                <div class="situacao-d">                
+                    <p>Situação</p>
+                    <span>Ativo</span>
+
+                </div>
+
+                <div class="Aumento-d">                
+                    <p>Agora</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <span id="temp_agora2">Aguarde...</span>                    
+                </div>
+
+                <div class="Quantidade-d">                
+                    <p>Anterior</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <span id="temp_anterior2">Aguarde...</span>
+                </div>
+
+                <div class="Perdidas-d">                
+                    <p>Mínima</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <span id="temp_min2">Aguarde...</span>
+                </div>
+
+                <div class="Utilizaveis-d">                
+                    <p>Máxima</p>
+                    <span name="namecaminhao" id="fkSensor" value="2"></span>
+                    <span id="temp_max2">Aguarde... </span>
+                </div>
+            </div>
+
+            <!-- ESTATISTICA BOTTOM 3 -->
+            <div class="numero_item-covid">
+                
+                <i class='bx bx-test-tube'></i>
+                <span>Covid-19</span>
+                <p>Container 3</p>
+
+                <div class="situacao-19">                
                     <p>Situação</p>
                     <span>Ativo</span>
                 </div>
 
-                <div class="Aumento">                
+                <div class="Aumento-19">                
                     <p>Agora</p>
-                    <span name="namecaminhao" id="fkSensor" value="2"></span>
-                    <div class="valores">
-                        <div id="temp_agora2">Aguarde...</div>
-                    </div>
+                    <span name="namecaminhao" id="fkSensor" value="3"></span>
+                    <span id="temp_agora3">Aguarde...</span>
+                    
                 </div>
 
-                <div class="Quantidade">                
+                <div class="Quantidade-19">                
                     <p>Anterior</p>
-                    <span name="namecaminhao" id="fkSensor" value="2"></span>
-                    <div class="valores">
-                        <div id="temp_anterior2">Aguarde...</div>
-                    </div>
+                    <span name="namecaminhao" id="fkSensor" value="3"></span>
+                    <span id="temp_anterior3">Aguarde...</span>
                 </div>
 
-                <div class="Perdidas">                
+                <div class="Perdidas-19">                
                     <p>Mínima</p>
-                    <span name="namecaminhao" id="fkSensor" value="2"></span>
-                    <div class="valores">
-                        <div id="temp_min2">Aguarde...</div>
-                    </div>
+                    <span name="namecaminhao" id="fkSensor" value="3"></span>
+                    <span id="temp_min3">Aguarde...</span>
                 </div>
 
-                <div class="Utilizaveis">                
+                <div class="Utilizaveis-19">                
                     <p>Máxima</p>
-                    <span name="namecaminhao" id="fkSensor" value="2"></span>
-                    <div class="valores">
-                        <div id="temp_max2">Aguarde...</div>
-                    </div>
+                    <span name="namecaminhao" id="fkSensor" value="3"></span>
+                    <span id="temp_max3">Aguarde... </span>
+                </div>
+            </div>
+
+             <!-- ESTATISTICA BOTTOM 4 -->
+             <div class="numero_item-raiva">
+                
+                <i class='bx bx-test-tube'></i>
+                <span>Raiva</span>
+                <p>Container 4</p>
+
+                <div class="situacao-r">                
+                    <p>Situação</p>
+                    <span>Ativo</span>
+                </div>
+
+                <div class="Aumento-r">                
+                    <p>Agora</p>
+                    <span name="namecaminhao" id="fkSensor" value="4"></span>
+                    <span id="temp_agora4">Aguarde...</span>
+                    
+                </div>
+
+                <div class="Quantidade-r">                
+                    <p>Anterior</p>
+                    <span name="namecaminhao" id="fkSensor" value="4"></span>
+                    <span id="temp_anterior4">Aguarde...</span>
+                </div>
+
+                <div class="Perdidas-r">                
+                    <p>Mínima</p>
+                    <span name="namecaminhao" id="fkSensor" value="4"></span>
+                    <span id="temp_min4">Aguarde...</span>
+                </div>
+
+                <div class="Utilizaveis-r">                
+                    <p>Máxima</p>
+                    <span name="namecaminhao" id="fkSensor" value="4"></span>
+                    <span id="temp_max4">Aguarde... </span>
                 </div>
             </div>
             
@@ -356,8 +408,8 @@
         obterdadosporcaminhao(4);
         obterExtremos(1);
         obterExtremos(2);
-        // obterExtremos(3);
-        // obterExtremos(4);
+        obterExtremos(3);
+        obterExtremos(4);
         setTimeout(atualizacaoPeriodica, 5000);
     }
 
@@ -506,15 +558,15 @@
         div_temperatura_alterar.innerHTML = ` ${dados.temperatura}º`;
         temp_agora.innerHTML = div_temperatura.innerHTML;
         temp_agora2.innerHTML = div_temperatura2.innerHTML;
-        // temp_agora3.innerHTML = div_temperatura3.innerHTML;
-        // temp_agora4.innerHTML = div_temperatura4.innerHTML;
+        temp_agora3.innerHTML = div_temperatura3.innerHTML;
+        temp_agora4.innerHTML = div_temperatura4.innerHTML;
         
         
         setInterval(() => {
             temp_anterior.innerHTML = div_temperatura.innerHTML;
             temp_anterior2.innerHTML = div_temperatura2.innerHTML;
-            // temp_anterior3.innerHTML = div_temperatura3.innerHTML;
-            // temp_anterior4.innerHTML = div_temperatura4.innerHTML;
+            temp_anterior3.innerHTML = div_temperatura3.innerHTML;
+            temp_anterior4.innerHTML = div_temperatura4.innerHTML;
         }, 4800);
     }
 
