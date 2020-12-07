@@ -12,7 +12,7 @@
 
     <!-- script do google charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="funcoes.js"></script>
+    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
 
     <style>
         /* Classes CSS para exemplos de alertas */
@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body onload="atualizacaoPeriodica()">
+<body onload="atualizacaoPeriodica(), obterMedia()">
     <!--header inicio-->
 
     <header class="header" id="header">
@@ -56,7 +56,7 @@
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="#" class="nav_link-est">
+                        <a href="tempo-real.html" class="nav_link-est">
                             <i class='bx bx-stats nav_icon-est'></i></i>
                             <span-um class="nav_name">Estatisticas</span>
                         </a>
@@ -68,7 +68,7 @@
                         </a>
                     </div>
                     <div class="nav_list">
-                        <a href="Dashboard/Configuracões/configuracoes2.html" class="nav_link">
+                        <a href="configuracoes2.html" class="nav_link">
                             <i class='bx bxs-cog nav_icon'></i></i>
                             <span class="nav_name">Configurações</span>
                         </a>
@@ -170,6 +170,10 @@
             <span name="namecaminhao" id="fkSensor" value="1"></span>
 
             <div class="valores">
+                <div class="temp_spandiv">
+                    Temperatura:
+                </div>
+                
                 <div class="valor" id="div_temperatura">Temperatura sendo obtida...</div>
                 <!-- <div class="valor" id="div_umidade">Umidade sendo obtida...</div> -->
             </div>
@@ -181,10 +185,13 @@
         </div>
     </div>
         
-
         <div class="grafico_box1">
             <div class="grafico_item1">
                 <span name="namecaminhao" id="fkSensor" value="2"></span>
+                <div class="temp_spandiv">
+                    Temperatura:
+                </div>
+
                 <div class="valores">
                     <div class="valor" id="div_temperatura2">Temperatura sendo obtida...</div>
                     <!-- <div class="valor" id="div_umidade2">Umidade sendo obtida...</div> -->
@@ -200,6 +207,10 @@
         <div class="grafico_box2">
             <div class="grafico_item2">
                 <span name="namecaminhao" id="fkSensor" value="3"></span>
+                <div class="temp_spandiv">
+                    Temperatura:
+                </div>
+
                 <div class="valores">
                     <div class="valor" id="div_temperatura3">Temperatura sendo obtida...</div>
                     <!-- <div class="valor" id="div_umidade3">Umidade sendo obtida...</div> -->
@@ -214,6 +225,10 @@
         <div class="grafico_box3">
             <div class="grafico_item3">
                 <span name="namecaminhao" id="fkSensor" value="4"></span>
+                <div class="temp_spandiv">
+                    Temperatura:
+                </div>
+
                 <div class="valores">
                     <div class="valor" id="div_temperatura4">Temperatura sendo obtida...</div>
                     <!-- <div class="valor" id="div_umidade4">Umidade sendo obtida...</div> -->
@@ -239,74 +254,42 @@
                 
                     <p>Situação</p>
                     <span>Ativo</span>
-                    <i class='bx bx-trending-down' ></i>
+                    <!-- <i class='bx bx-trending-down' ></i> -->
                 </div>
-                <div class="Aumento">
-                
-                    <p>Aumento</p>
-                    <span>50%</span>
-                    <i class='bx bx-trending-down' ></i>
-                </div>
-                <div class="Quantidade">
-                
-                    <p>Quantidade</p>
-                    <span>300</span>
-                    <i class='bx bx-trending-down' ></i>
-                </div>
-                <div class="Perdidas">
-                
-                    <p>Perdidas</p>
-                    <span>6</span>
-                    <i class='bx bx-trending-down' ></i>
-                </div>
-                <div class="Utilizaveis">
-                
-                    <p>Utilizaveis</p>
-                    <span>293</span>
-                    <i class='bx bx-trending-down' ></i>
-                </div>
-            </div>
-            
-            <div class="numero_item-dengue">
-                
-                <i class='bx bx-test-tube'></i>
-                <span>Dengue</span>
-                <p>Container 1</p>
 
-                <div class="situacao-d">
-                
-                    <p>Situação</p>
-                    <span>Ativo</span>
-                    <i class='bx bx-trending-up'></i>
+                <div class="Aumento">                
+                    <p>Agora</p>
+                    <span name="namecaminhao" id="fkSensor" value="1"></span>
+                    <div class="valores">
+                        <div id="temp_agora">Aguarde...</div>
+                    </div>
+                </div>
+
+                <div class="Quantidade">                
+                    <p>Anterior</p>
+                    <span name="namecaminhao" id="fkSensor" value="1"></span>
+                    <div class="valores">
+                        <div id="temp_anterior">Aguarde...</div>
+                    </div>
+                </div>
+
+                <div class="Perdidas">                
+                    <p>Mínima</p>
+                    <span name="namecaminhao" id="fkSensor" value="1"></span>
+                    <div class="valores">
+                        <div id="temp_min">Aguarde...</div>
+                    </div>
+                </div>
+
+                <div class="Utilizaveis">                
+                    <p>Máxima</p>
+                    <span name="namecaminhao" id="fkSensor" value="1"></span>
+                    <div class="valores">
+                        <div id="temp_max">Aguarde...</div>
+                    </div>
+                </div>
+            </div>     
                     
-                </div>
-                <div class="Aumento-d">
-                
-                    <p>Aumento</p>
-                    <span>40%</span>
-                    <i class='bx bx-trending-up'></i>
-                    
-                </div>
-                <div class="Quantidade-d">
-                
-                    <p>Quantidade</p>
-                    <span>560</span>
-                    <i class='bx bx-trending-up'></i>
-                </div>
-                <div class="Perdidas-d">
-                
-                    <p>Perdidas</p>
-                    <span>1</span>
-                    <i class='bx bx-trending-up'></i>
-                </div>
-                <div class="Utilizaveis-d">
-                
-                    <p>Utilizaveis</p>
-                    <span>567 </span>
-                    <i class='bx bx-trending-up'></i>
-                </div>
-            </div>
-          
         
         </div>
     </section>
@@ -364,6 +347,34 @@
             });
     }
 
+    function obterMedia() {
+        //aguardar();
+        fetch(`/leituras/estatisticas`)
+        .then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(function (resposta) {
+
+                    console.log(`Dados recebidos Estatísticas: ${JSON.stringify(resposta)}`);
+                    temp_max.innerHTML = resposta.temp_maxima
+                    // aqui, após registro. use os nomes 
+                    // dos atributos que vem no JSON 
+                    // var dados = {
+                    //     temperatura: resposta.temp_maxima,
+                    //     // umidade: resposta.umidade
+                    // }
+                    // alertar(resposta.temp_maxima, fkSensor);
+                    // atualizarTela(dados, fkSensor);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do caminhao p/ gráfico: ${error.message}`);
+            });
+    }
+
     function alertar(temperatura, fkSensor) {
         // padrão para meu alerta
         var limites = {
@@ -381,23 +392,23 @@
 
         // comparando
         if (temperatura >= limites.max_temperatura) {
-            mensagem_temperatura += 'Temperatura alta demais! <br> <img src="img/alert_max.gif" alt="" width="55%">';
+            mensagem_temperatura += 'Temperatura alta demais! <br> <img src="img/alert_max.gif" width="55%">';
             classe_temperatura = 'alerta alerta-alto';
         }
         if (temperatura >= limites.risco_quente && temperatura < limites.max_temperatura) {
-            mensagem_temperatura = 'Temperatura alta! <br> <img src="img/alert_risco2.gif" alt="" width="55%">';
+            mensagem_temperatura = 'Temperatura alta! <br> <img src="img/alert_risco2.gif" width="55%">';
             classe_temperatura = 'alerta risco-alto';
         }
         if (temperatura <= limites.min_temperatura) {
-            mensagem_temperatura = 'Temperatura muito baixa! <br> <img src="img/alert_min.gif" alt="" width="55%">';
+            mensagem_temperatura = 'Temperatura muito baixa! <br> <img src="img/alert_min.gif" width="55%">';
             classe_temperatura = 'alerta alerta-baixo';
         }
         if (temperatura <= limites.risco_frio && temperatura > limites.min_temperatura) {
-            mensagem_temperatura = 'Temperatura baixa! <br> <img src="img/alert_risco1.gif" alt="" width="55%">';
+            mensagem_temperatura = 'Temperatura baixa! <br> <img src="img/alert_risco1.gif" width="55%">';
             classe_temperatura = 'alerta risco-baixo';
         }
         if (temperatura > limites.risco_frio && temperatura < limites.risco_quente) {
-            mensagem_temperatura = 'Temperatura ideal <br> <img src="img/ok.png" alt="" width="35%">';
+            mensagem_temperatura = 'Temperatura ideal <br> <img src="img/ok.png" width="35%">';
             classe_temperatura = 'alerta normal';
         }
 
@@ -423,9 +434,6 @@
         div_temperatura_alterar.innerHTML = mensagem_temperatura;
         div_temperatura_alterar.style = 'text-align: center';
         div_temperatura_alterar.className = classe_temperatura;
-
-        // div_umidade_alterar.innerHTML = mensagem_umidade;
-        // div_umidade_alterar.className = classe_umidade;
     }
 
     // só altere aqui se souber o que está fazendo!
@@ -435,27 +443,38 @@
 
         // escolhendo qual alterar
         var div_temperatura_alterar
-        // var div_umidade_alterar
 
         if (fkSensor == 1) {
             div_temperatura_alterar = div_temperatura
-            // div_umidade_alterar = div_umidade
         } else if (fkSensor == 2) {
             div_temperatura_alterar = div_temperatura2
-            // div_umidade_alterar = div_umidade2
         } else if (fkSensor == 3) {
             div_temperatura_alterar = div_temperatura3
-            // div_umidade_alterar = div_umidade3
         } else if (fkSensor == 4) {
             div_temperatura_alterar = div_temperatura4
-            // div_umidade_alterar = div_umidade4
         }
 
-        div_temperatura_alterar.innerHTML = `Temperatura: ${dados.temperatura}º`;
+        div_temperatura_alterar.innerHTML = ` ${dados.temperatura}º`;
+        temp_agora.innerHTML = div_temperatura.innerHTML;
+        // temp_min.innerHTML = div_temperatura.innerHTML;
+        
+        setInterval(() => {
+            temp_anterior.innerHTML = div_temperatura.innerHTML;
+        }, 4500);
 
-        // div_umidade_alterar.innerHTML = `Umidade: ${dados.umidade}%`;
+        if (temp_min.innerHTML < temp_agora.innerHTML) {
+            temp_min.innerHTML = temp_agora.innerHTML;
+        }
+
+        if (temp_max.innerHTML > temp_agora.innerHTML) {
+            temp_max.innerHTML = temp_agora.innerHTML;
+        }
 
         
+        // temp_min.innerHTML = 
+        // temp_agora2.innerHTML = div_temperatura.innerHTML;
+        // temp_agora3.innerHTML = div_temperatura3.innerHTML;
+        // temp_agora4.innerHTML = div_temperatura4.innerHTML;
 
     }
 

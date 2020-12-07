@@ -61,7 +61,7 @@ router.get('/tempo-real/:fkSensor', function(req, res, next) {
 	var fkSensor = req.params.fkSensor;
 
 	let instrucaoSql = `select top 1 fkSensor,temp_atual, hr_temp, FORMAT(hr_temp,'HH:mm:ss') as momento_grafico from tbLeitura where fkSensor = ${fkSensor} order by idLeitura desc`;
-	console.log(instrucaoSql);
+	console.log(instrucaoSql);	
 
 	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
 		.then(resultado => {
