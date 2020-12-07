@@ -1,24 +1,26 @@
+
       Planos
  
--- Conteudo abaixo está muito 
-   separado verticalmente.
+-- No início, conteudo abaixo está muito 
+   separado verticalmente do "A saúde nacional..."
+   (texto e imagens muito longe do título).
 
 -- Conteúdo do "Entretanto a 
    complexidade...":
-   Está horizontalmente muito junto
-   (Texto e imagem colados).
+   (Texto e imagem muito colados).
 
 -- Faça sua simulação: conteúdo
-   muito grande.
+   muito grande;
+   inputs com textos de tamanhos diferentes;
+   
 
 -- Veja os Planos:
-   título muito grande e chamativo;
 
 -- "Comece agora" muito colada com
    o conteúdo de preços;
 
--- Botão transparente está estranho
-   (detalhe de fundo não compatível).
+-- Botão melhorou, mas borda pode melhorar
+   (tentar com borda diferente).
 
 ----------------------------------------------------------------
 
