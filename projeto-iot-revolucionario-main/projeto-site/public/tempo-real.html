@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body onload="atualizacaoPeriodica()">
+<body onload="atualizacaoPeriodica(), obterMedia()">
     <!--header inicio-->
 
     <header class="header" id="header">
@@ -339,6 +339,34 @@
                 });
             } else {
 
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do caminhao p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function obterMedia() {
+        //aguardar();
+        fetch(`/leituras/estatisticas`)
+        .then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(function (resposta) {
+
+                    console.log(`Dados recebidos Estatísticas: ${JSON.stringify(resposta)}`);
+                    temp_max.innerHTML = resposta.temp_maxima
+                    // aqui, após registro. use os nomes 
+                    // dos atributos que vem no JSON 
+                    // var dados = {
+                    //     temperatura: resposta.temp_maxima,
+                    //     // umidade: resposta.umidade
+                    // }
+                    // alertar(resposta.temp_maxima, fkSensor);
+                    // atualizarTela(dados, fkSensor);
+                });
+            } else {
                 console.error('Nenhum dado encontrado ou erro na API');
             }
         })
