@@ -15,6 +15,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style_configuracao.css">
+        <script type="text/javascript" src="funcoes.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -106,21 +107,24 @@
                 <div id="linha"></div>
                 <form class="inps" id="form_update" method="post" onsubmit="return entrar()">
                     <span id="nome">Nome completo:</span>
-                    <input class="nome_box" placeholder="Coloque seu nome completo" name="nome"></input>
-                    <span id=emailp>Email pessoal:</span>
-                    <input class="emailp_box" placeholder="Coloque seu email pessoal" name="email" type="email"
+                    <input class="nome_box" placeholder="Altere seu nome completo" name="nome"></input>
+                    <span id=emailp>Email Cadastrado:</span>
+                    <input class="emailp_box" placeholder="Coloque seu email cadastrado" name="email" type="email"
                         required></input>
                     <span id="tele">Telefone:</span>
-                    <input class="tele_box" placeholder="Coloque seu telefone" name="telefone"></input>
+                    <input class="tele_box" placeholder="Altere seu telefone" name="telefone"></input>
                     <span id="cel">Celular:</span>
-                    <input class="cel_box" placeholder="Coloque o seu celular" name="celular"></input>
+                    <input class="cel_box" placeholder="Altere o seu celular" name="celular"></input>
                     <span id="senha">Senha:</span>
-                    <input class="senha_box" placeholder="Coloque a sua senha" name="senha" type="password"></input>
+                    <input class="senha_box" placeholder="Altere a sua senha" name="senha" type="password"></input>
                     <span id="confirme">Confirma sua senha:</span>
-                    <input class="confirme_box" placeholder="Coloque a sua senha" name="confirma_senha"
+                    <input class="confirme_box" placeholder="Confirme a sua senha" name="confirma_senha"
                         type="password"></input>
-                    <button>Alterar</button>
+                    <button id="btn_entrar">Alterar</button>
                 </form>
+                <div id="div_erro">
+
+                </div>
 
             </div>
 
@@ -135,8 +139,8 @@
                         </div>
                     </button>
                 </div>
-                <a href=""><img src="img/sair.png" alt="">
-                    <h2>Sair</h2>
+                <a href="" onclick="logoff()"><img src="img/sair.png" alt="">
+                    <h2  onclick="logoff()">Sair</h2>
                 </a>
             </div>
 
@@ -199,7 +203,10 @@
             btn_entrar.disabled = false;
             // img_aguarde.style.visibility = 'hidden';
             div_erro.style.visibility = 'visible';
-            div_erro.innerHTML = resposta;
+            alert(resposta);
+            window.location.reload()
         }
+
+        verificar_autenticacao();
 
     </script>

@@ -98,6 +98,7 @@ router.post('/alterar', function(req, res, next) {
 				let update = `update tbUsuario set senha = '${senha}' where idUsuario = ${id}`;
 				sequelize.query(update)
 			}
+			res.send("Informações alteradas com sucesso");
 			
 		} else if (resultado.length == 0) {
 			res.status(403).send('Email não encontrado');

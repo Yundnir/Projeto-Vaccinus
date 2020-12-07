@@ -352,7 +352,7 @@ body {
     font-family: poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 37px;
     color: #FFFFFF;
 }
@@ -362,7 +362,7 @@ body {
     width: 295px;
     height: 31px;
     left: 726px;
-    top: 500px;
+    top: 507px;
     color: #FFFFFF;
     background: transparent;
     border: none;
@@ -388,7 +388,7 @@ body {
     width: 295px;
     height: 31px;
     left: 726px;
-    top: 570px;
+    top: 577px;
     color: #FFFFFF;
     background: transparent;
     border: none;
@@ -414,7 +414,7 @@ body {
     width: 295px;
     height: 31px;
     left: 726px;
-    top: 640px;
+    top: 647px;
     color: #FFFFFF;
     background: transparent;
     border: none;
@@ -426,7 +426,7 @@ body {
     width: 218px;
     height: 38px;
     left: 450px;
-    top: 720px;
+    top: 727px;
     font-family: poppins;
     font-style: normal;
     font-weight: normal;
@@ -440,7 +440,7 @@ body {
     width: 295px;
     height: 31px;
     left: 726px;
-    top: 710px;
+    top: 724px;
     color: #FFFFFF;
     background: transparent;
     border: none;
@@ -466,7 +466,7 @@ body {
     width: 295px;
     height: 31px;
     left: 726px;
-    top: 780px;
+    top: 787px;
     color: #FFFFFF;
     background: transparent;
     border: none;
@@ -633,3 +633,11 @@ body {
 
 /*BOTAO LUZ*/
 
+#div_erro {
+    visibility: visible;
+    position: absolute;
+    top: 555px;
+    left: 60px;
+    font-size: 17pt;
+    color: white;
+}
