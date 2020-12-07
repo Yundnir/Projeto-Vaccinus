@@ -1,210 +1,160 @@
-/* Global */
+html {
+    scroll-behavior: smooth;
+}
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #363636;
+    background-color: #101010;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    background-image: linear-gradient(#000000,#101010,#000000);
 }
-
-.header{
-    background-color: #393B44;
-    height: 110px;
-    padding-top: 25px;
+h1{
+    font-size: 75px;
 }
-
-.header .nav .current a,
-.header span{
-    color: #9DD2EE;
+p{
+    font-size: 25px;
+    font-weight: 300;
 }
-
-.header a:hover{
+h3{
+    font-size: 30px;
+}
+a{
     text-decoration: none;
-    color: #9DD2EE;
+    color: white;
+    transition: 0.3s;
 }
-
-.container{
-    /* Largura do elemento */ 
+a:hover{
+    font-size: 24px;
+    transition: 0.3s;
+}
+a .loginli:hover{
+    padding-left: 22px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    font-size: 20px;
+}
+.Docker-Main{
     width: 80%;
     margin: auto;
-
-    /* height: 50px; */
 }
-
-.container img{
-    width: 12%;
+/* NAVBAR */
+.logonavbar{
+    width: 50px;
     float: left;
+    padding-right: 850px;
+    transition: 0.5s;
 }
+.logonavbar:hover{
+    opacity: 0;
 
-
-.title-header h1,
-.nav ul
-{
-    margin: 0;
 }
-
-.title-header{
-    float: left;
-    color: #ffffff;
-}
-
-.title-header h2{
-    padding-top: 15px;
-}
-
-.nav{
-    float: right;
-}
-
-.nav a{
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.nav li{
+.navbar li{
     display: inline-block;
-    padding: 20px;
-    padding: 10px 20px 0px 20px;
-    /* position: absolute; */
-    margin-right: 30px;
-    left: 50px;
-    
+    list-style-type: none;
+    font-weight: bold;
+    margin: 10px 60px 0px 0px;
 }
-
-/* Posicionamento Login Icone */
-.header .icon_login img{
-    width: 35px;
-    margin-top: 10px;
-    float: right;
+.loginli{
+width: 45px;
+height: 25px;
+background-color: #9DD2EE;
+border-radius: 25px;
+padding-left: 25px;
+padding-right: 25px;
+padding-bottom: 10px;
+padding-top: 10px;
+transition: 0.3s;
 }
-/* FIM Global */
-
-/* SHOWCASE */
-.showcase p{
-    font-size: 22px;
-}
-
-/* CARROSSEL E VITRINE */
-
-/* Vitrine do Carrosel do index */
-.texto_index{
-    font-size: 70pt;
-    padding-bottom: 80px;
-}
-.img_index{
+.showcase-main{
     text-align: center;
-    padding-top: 250px;
+    margin-top: 100px;
 }
-
-.V_estilizado {
-    color: #9DD2EE;
+.showcase-main img:hover{
+width: 700px;
 }
-/* FIM Vitrine do Carrosel do index */
-
-/* # pois já tem uma class atribuida nela que está pegando da biblioteca # é usado para atribuir estilos em um id */
-/* Vitrine do Carrossel do missão visao e valores */
-#caption-missao-visao-valores h3{
-    font-size: 80px;
-    padding-bottom: 125px;
-} 
-
-.box {
-    padding-left: 20px;
+.imgmapa{
+    width: 650px;
+    transition: 0.3s;
 }
-
-.box .box-item{
-
-    text-align: center;
-    float: left;
-    padding-left: 140px;
-
-}
-
-.box .box-item p{
-    font-size: 12pt;
-}
-
-/* Uma div na linha 96, justamente para subir os itens acima (imagens e textos), o conteudo dessa div não aparece, esta com display none */
-.Auxiliar {
-    padding-bottom: 430px;
-}
-.Auxiliar p{
-    display: none;
-}
-/* FIM auxiliar */
-/* FIM Vitrine do Carrossel do missão visao e valores */
-
-
-/* # pois já tem uma class atribuida nela que está pegando da biblioteca # é usado para atribuir estilos em um id */
-/* Vitrine do Carrossel do sobre nos*/
-
-#caption-sobre_nos h3{
-    font-size: 80px;
-    padding-bottom: 120px;
-    
-}
-#caption-sobre_nos p{
-    font-size: 45px; 
-    padding-bottom: 110px;
-}
-/* FIM Vitrine do Carrossel do sobre nos*/
-
-/* Vitrine do Carrossel do Simulador Financeiro */
-
-.titulo-vitrine{
-    padding-bottom: 50px;
-
-}
-
-.subtitulo-vitrine{
-    padding-bottom: 30px;
-}
-
-.btn-vitrine{
-    background: none;
+ button{
+    background-color: #9DD2EE;
     color: white;
-    font-size: 20pt;
-    border-color: #9DD2EE;
-    border-width: 5px;
-    height: 85px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 25px;
+    border: 0;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.3s;
 }
-
-.saiba_mais_estilizado{
-    padding-right: 40px;
+button:hover{
+    width: 200px;
+    height: 75px;
+    font-size: 30px;
 }
-/* FIM Vitrine do Carrossel do Simulador Financeiro */
-/* FIM CARROSSEL E VITRINE */
-
-/*FIM SHOWCASE*/
-
-
-/* FOOTER */
-.footer{
+.buttonrgb{
     background-color: #363636;
-    width: 100%;
-    height: 220px;
-    background-image: url(../img/onda3.png);
-    background-size: cover;
-}
-
-.footer p{
-    text-align: center;
-    color: white;
-    font-size: 23px;
-    padding-top: 165px;
-    margin-bottom: -15px;
-}
-
-.footer a{
-    padding-left: 20px;
-    color: white;
-}
-
-.footer a:hover{
     color: #9DD2EE;
-    text-decoration: none;
 }
-
-/* Fim FOOTER */
+.show2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.show2 h3{
+    font-size: 50px;
+}
+.show2 span{
+    font-size: 30px;
+    color: #9DD2EE;
+}
+.cards .card{
+    background:transparent;
+    margin: 0rem 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.CASE3{
+    margin-top: 100px;
+}
+.CASE3 p{
+    font-size: 30px;
+    font-weight: 300;
+}
+.CASE3 h3{
+    font-size: 50px;
+    color: #9DD2EE;
+}
+.CASE3 button{
+    margin-top: 75px;
+    font-size: 30px;
+    width: 200px;
+    height: 75px;
+    border-radius: 50px;
+}
+footer{
+    margin-top: 200px;
+}
+footer h1{
+    font-size: 30px;
+    text-align: center;
+}
+footer .flex{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    margin: 0 690px;
+}
