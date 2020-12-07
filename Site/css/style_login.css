@@ -47,10 +47,11 @@ body {
 
     background-color: #9DD2EE;
     opacity: 0.5;
-    width: 415px;
-    height: 10px;
+    width: 410px;
+    height: 7px;
     padding-left: 97px;
     float: right;
+    margin-top: -30px;
     border-radius: 20px;
 }
 
@@ -81,11 +82,13 @@ body {
 
 .showcase .conteudo input {
     border-radius: 20px;
-    height: 22px;
-    background-color: #C4C4C4;
-    opacity: 0.5;
+    height: 30px;
+    background: rgba(196, 196, 196, 0.15);
+    font-family: roboto;
     width: 300px;
     text-indent: 15px;
+    color: #ffffff;
+    font-size: 25px;
 }
 
 .showcase .conteudo button {
