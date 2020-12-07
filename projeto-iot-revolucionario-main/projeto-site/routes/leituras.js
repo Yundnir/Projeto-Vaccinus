@@ -1,4 +1,5 @@
 var express = require('express');
+const { DataTypes } = require('sequelize/types');
 var router = express.Router();
 var sequelize = require('../models').sequelize;
 var Leitura = require('../models').Leitura;
@@ -83,12 +84,11 @@ router.get('/min-temp', function(req, res, next) {
 	
 	const instrucaoSql = `select min(temp_atual) from tbLeitura where fkSensor = 2`;
 
-	sequelize.query(instrucaoSql, {
-		model: Leitura,
-		mapToModel: true 
+	sequelize.query(instrucaoSql,  {
+		model: Leitura
 	  })
 	  .then(resultado => {
-			console.log(`Encontrados: ${resultado.length}`);
+			console.log(`Encontrados: ${resultado[0]}`);
 			res.json(resultado);
 	  }).catch(erro => {
 			console.error(erro);
