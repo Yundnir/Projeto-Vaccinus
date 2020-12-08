@@ -55,11 +55,6 @@ a .loginli:hover {
     width: 50px;
     float: left;
     padding-right: 850px;
-    transition: 0.5s;
-}
-
-.logonavbar:hover {
-    opacity: 0;
 }
 
 .navbar li {
@@ -274,7 +269,7 @@ footer h3 {
 }
 .gui {
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 650px;
 }
 
