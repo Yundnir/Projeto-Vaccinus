@@ -316,6 +316,12 @@ body {
 
 }
 
+.suport img{
+    height: 40px;
+    position: absolute;
+    top: 157px;
+    right: 115px;
+}
 
 .texto_sair:hover, .suport:hover{
     cursor: pointer;
@@ -504,7 +510,7 @@ body {
 
 .section-prof .suport{
     position: absolute;
-    background-image: url(../img/log-out.png);
+    background-image: url(../img/sair.png);
     background-color: #00000010;
     background-position: center;
     background-repeat: no-repeat;

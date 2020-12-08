@@ -261,9 +261,9 @@ body {
 }
 
 .container span {
-    font-size: 60px;
+    font-size: 50px;
     position: absolute;
-    top: 20px;
+    top: 60px;
     left: 70px;
     width: 1000px;
 }
@@ -282,10 +282,10 @@ body {
 
 .inputs {
     position: absolute;
-    top: 130px;
-    left: 350px;
-    width: 704px;
-    height: 583px;
+    top: 180px;
+    left: 395px;
+    width: 770px;
+    height: 600px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
 }
@@ -333,7 +333,8 @@ body {
 
 .nome_box {
     position: absolute;
-    width: 295px;
+    font-size: 20px;
+    width: 390px;
     height: 31px;
     left: 726px;
     top: 440px;
@@ -359,7 +360,8 @@ body {
 
 .emailp_box {
     position: absolute;
-    width: 295px;
+    font-size: 20px;
+    width: 390px;
     height: 31px;
     left: 726px;
     top: 507px;
@@ -385,7 +387,8 @@ body {
 
 .tele_box {
     position: absolute;
-    width: 295px;
+    font-size: 20px;
+    width: 390px;
     height: 31px;
     left: 726px;
     top: 577px;
@@ -411,7 +414,8 @@ body {
 
 .cel_box {
     position: absolute;
-    width: 295px;
+    font-size: 20px;
+    width: 390px;
     height: 31px;
     left: 726px;
     top: 647px;
@@ -437,7 +441,8 @@ body {
 
 .senha_box {
     position: absolute;
-    width: 295px;
+    font-size: 20px;
+    width: 390px;
     height: 31px;
     left: 726px;
     top: 724px;
@@ -463,7 +468,8 @@ body {
 
 .confirme_box {
     position: absolute;
-    width: 295px;
+    font-size: 20px;
+    width: 390px;
     height: 31px;
     left: 726px;
     top: 787px;
@@ -478,7 +484,7 @@ body {
     width: 210px;
     height: 54px;
     left: 826px;
-    top: 840px;
+    top: 870px;
     background: #6796AF;
     border-radius: 50px;
     font-family: poppins;
@@ -493,9 +499,9 @@ body {
 .plano {
     position: absolute;
     width: 351px;
-    height: 311px;
-    left: 1069px;
-    top: 130px;
+    height: 300px;
+    left: 1195px;
+    top: 180px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
 }
@@ -551,8 +557,8 @@ body {
     position: absolute;
     width: 351px;
     height: 271px;
-    left: 1069px;
-    top: 448px;
+    left: 1195px;
+    top: 507px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     font-style: bold;

@@ -27,11 +27,8 @@ body {
 }
 
 .container span {
-
     color: #9DD2EE;
-    opacity: 0.5;
-
-    
+    /* opacity: 0.5; */
 }
 
 .header .texto-header {
@@ -62,7 +59,7 @@ body {
     margin: 0;
     float: right;
     padding-top: 12px;
-    padding-right: 80px;
+    padding-right: 150px;
 }
 
 .showcase .conteudo p {
@@ -74,9 +71,10 @@ body {
 }
 
 .showcase .conteudo {
-    padding-left: 120px;
+    padding-left: 0;
     float: right;
     padding-top: 20px;
+    padding-right: 100px;
 }
 
 .showcase .conteudo input {
@@ -99,7 +97,7 @@ body {
     font-weight: bolder;
     color: #9DD2EE;
     font-size: 13pt;
-    margin-top: 400px;
+    margin-top: 460px;
 }
 
 .showcase .conteudo .corpo_texto .primeiro_lado {
@@ -141,33 +139,3 @@ a:hover{
     text-decoration: none;
 }
 /*FIM decoração de Link*/
-
-/* FOOTER */
-.footer{
-    /* background-color: #363636; */
-    width: 100%;
-    height: 220px;
-    background-image: url(../img/onda3.png);
-    background-size: cover;
-    bottom: 0;
-}
-
-.footer p{
-    text-align: center;
-    color: white;
-    font-size: 22px;
-    padding-top: 165px;
-    margin-bottom: -15px;
-}
-
-.footer a{
-    padding-left: 20px;
-    color: white;
-}
-
-.footer a:hover{
-    color: #9DD2EE;
-    text-decoration: none;
-}
-
-/*FIM FOOTER*/

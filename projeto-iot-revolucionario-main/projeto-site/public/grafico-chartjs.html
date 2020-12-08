@@ -15,12 +15,11 @@
 
     <!-- script do google charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
 
     <!-- scripts do Chart.js -->
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
-    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
+    <script type="text/javascript" src="funcoes.js"></script>
 
     <style>
         /* Classes CSS para exemplos de alertas */
@@ -136,8 +135,6 @@
                     <p><b id="b_usuario2"></b></p>
                     <a class="suport" onclick="logoff()"></a>
                     <h5 class="texto_sair" onclick="logoff()">Sair</h5>
-
-                    <!-- <button class="settings" onclick="config()"></button> -->
                     
                     <div class="lite">
                         <h3>Planos Lite</h3>
@@ -163,12 +160,6 @@
     
     <div class="graphic">
         <h4>Gráfico de Temperatura</h4>
-    <!-- <div class="menu_botoes">
-        <button class="btn" onclick="chamargraficos(1)">Contêiner 01</button>
-        <button class="btn" onclick="chamargraficos(2)">Contêiner 02</button>
-        <button class="btn" onclick="chamargraficos(3)">Contêiner 03</button>
-        <button class="btn" onclick="chamargraficos(4)">Contêiner 04</button>
-    </div> -->
         <div style="width:95%; padding-left: 30px; padding-top: 30px">
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
@@ -179,6 +170,10 @@
 
 </html>
 <script>
+
+    let usuario;
+
+    verificar_autenticacao();
     
     let proximaAtualizacao;
     var cont = 175;
@@ -207,7 +202,7 @@
 
     }
 
-    verificar_autenticacao();
+    // verificar_autenticacao();
 
     // neste JSON tem que ser 'labels', 'datasets' etc, 
     // porque é o padrão do Chart.js
@@ -445,7 +440,5 @@
         sendData();
     }, 2000);
 
-    let usuario;
-
-    verificar_autenticacao();
+    
 </script>
