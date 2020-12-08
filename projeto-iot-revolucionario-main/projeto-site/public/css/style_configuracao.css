@@ -622,6 +622,7 @@ html{
     position: absolute;
     left: 45px;
     top: 100px;
+    height: 30px;
 }
 
 .contato button {

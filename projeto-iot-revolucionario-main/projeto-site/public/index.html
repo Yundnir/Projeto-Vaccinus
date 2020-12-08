@@ -1,89 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaccinus</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 </head>
 
 <body>
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo"><span class="highlight">Projeto</span> IoT Revolucionário</h1>
-            <div class="nav">
-                <ul>
-                    <li><a href="index.html" class="current">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="meu_cadastro.html">Cadastro</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </div>
-        </div>
+  <!-- DOCKER com todo o conteúdo da página -->
+  <div class="Docker-Main">
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <img src="img/logo_sem.png" class="logonavbar" alt="">
+      <ul>
+        <a href="#sobre"><li>Sobre Nós</li></a>
+        <a href="#Contato"><li>Contato</li></a>
+        <a href="planos.html"><li>Planos</li></a>
+        <a href="login.html"><li class="loginli">Login</li></a>
+      </ul>
     </div>
-    <!--header fim-->
-
-    <!--banner inicio-->
-    <div class="banner">
-        <div class="container">
-            <div class="texto">
-                <h1 class="titulo">
-                    Este projeto tem um design bacana!
-                </h1>
-                <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </h3>
-            </div>
-        </div>
+    <!-- FIM da NAVBAR -->
+    <!-- SHOWCASE 1 -->
+    <h1>Monitore suas vacinas sem esforço!</h1>
+    <p>Acompanhe toda sua trajetória do seu container e veja a temperatura sem sair de casa!</p><br>
+    <div class="showcase-main">
+      <a href="login.html"><button>Começar</button></a> <a href="#showdois"><button class="buttonrgb">Saiba Mais</button></a> <br>
+      <img src="img/mapa.png" class="imgmapa" alt="">
     </div>
-    <!--banner fim-->
+    <!-- FIM do SHOWCASE 1 -->
+    <!-- SHOWCASE 2 -->
+    <section id="showdois">
+    <div class="show2">
+      <span>Viva a nova era</span>
+      <h3>O seu bem nos faz bem!</h3>
 
-    <!--novidades e-mail inicio-->
-    <div class="novidades">
-        <div class="container">
-            <h2>Receba nossas atualizações</h2>
-            <form>
-                <input type="email" placeholder="Digite seu e-mail aqui ">
-                <button type="submit">Enviar</button>
-            </form>
+      <div class="cards">
+        <div class="card">
+          <img src="img/mission1.svg" alt="">
+          <p>Vacinas durante o seu transporte, monitorando em tempo real da temperatura.</p>
         </div>
-    </div>
-    <!--novidades e-mail fim--> 
-
-    <!-- icones inicio -->
-    <div class="box">
-        <div class="container">
-            <div class="box-item">
-                <img src="img/missao.png">
-                <h3>Missão</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="box-item">
-                <img src="img/valores.png">
-                <h3>Valores</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="box-item">
-                <img src="img/visao.png">
-                <h3>Visão</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
+        <div class="card">
+          <img src="img/mission2.svg" alt="">
+          <p>Nos tornamos referência nacional em soluções de IoT para controle de
+            refrigeração de vacinas em transporte.</p>
         </div>
-    </div>
-    <!-- icones fim -->
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com <i class="far fa-heart"></i> por um aluno BandTec &COPY; 2020</h4>
+        <div class="card">
+          <img src="img/mission3.svg" alt="">
+          <p>Integridade: Orientados pela ética,
+            responsabilidade profissional e pessoal</p>
         </div>
+      </div>
+      <br>
+      <div><a href="#sobre"><button class="buttonrgb">Sobre nós</button></a></div>
     </div>
-    <!--footer fim-->
+  </section>
+    <!-- FIM SHOWCASE 2 -->
+    <!-- SHOWCASE 3 -->
+    <section id="sobre">
+    <div class="CASE3">
+      <div class="imgcase3">
+        <br> <br> <br> <br> <br> 
+        <img src="img/sobre.svg" style="width: 200px;" alt="">
+      </div>
+      <div> <h3>Sobre nós</h3> </div>
+      <div>
+      <p>Criada a partir do altruísmo de 6 jovens desenvolvedores, a <br> 
+        Vaccinus surgiu da necessidade de desenvolver soluções <br> 
+        que visem extinguir o desperdício de vacinas durante o <br>
+        transporte, garantindo sua integridade até o seu destino e <br>
+         assim assegurando o bem-estar e saúde da população.</p>
+        </div>
+      <a href="login.html"><button>Começar</button></a>
+    </div>
+  </section>
 
-    
+  <div class="time">
+    <span id="time">Nosso time</span>
+    <span id="subtime">Todos os membros que fizeram o projeto acontecer!</span>
+    <div class="andre">
+    <img src="img/andre.png" alt="">
+    <h1>André Santos</h1>
+    <h3>Desenvolvedor FrontEnd</h3>
+    <a href="http://github.com/AndreSntos"><button id="git"><img src="img/git.svg" alt=""></button></a>
+    <a href="http://www.linkedin.com/in/andre-sntos"><button id="linkedin"><img src="img/linkedin.png" alt=""></button></a>
+  </div>
+  <div class="gui">
+    <img src="img/gui.png" alt="" style="float: left;">
+    <h1>Guilherme Santos</h1>
+    <h3>Desenvolvedor BackEnd</h3>
+    <a href="https://github.com/Guilherme-NascimentoSantos"><button id="git"><img src="img/git.svg" alt=""></button></a>
+    <a href="http://www.linkedin.com/in/guilherme-santos-8721a0177"><button id="linkedin"><img src="img/linkedin.png" alt=""></button></a>
+  </div>
+  <div class="daniels">
+    <img src="img/mat.png" alt="">
+    <h1>Matheus Daniel</h1>
+    <h3>Gestor | Fundador</h3>
+    <a href="http://github.com/lozanodev"><button id="git"><img src="img/git.svg" alt=""></button></a>
+    <a href="https://www.facebook.com/TheParticleAke"><button id="linkedin"><img src="img/linkedin.png" alt=""></button></a>
+  </div>
+  <div class="nicao">
+    <img src="img/nikao.png" alt="">
+    <h1>Nicolas Carvalho</h1>
+    <h3>QA | Fundador</h3>
+    <a href="http://github.com/nicolascarvalhobandtec"><button id="git"><img src="img/git.svg" alt=""></button></a>
+    <a href="https://www.linkedin.com/in/nicolas-campos-de-carvalho-64a33b179/"><button id="linkedin"><img src="img/linkedin.png" alt=""></button></a>
+  </div>
+  <div class="pri">
+    <img src="img/pri.png" alt="">
+    <h1>Priscila Choi</h1>
+    <h3>Desenvolvedor FullStack</h3>
+    <a href="http://github.com/P-Shoyo"><button id="git"><img src="img/git.svg" alt=""></button></a>
+    <a href="http://www.linkedin.com/in/priscilachoi/"><button id="linkedin"><img src="img/linkedin.png" alt=""></button></a>
+  </div>
+  <div class="ren">
+    <img src="img/ren.png" alt="">
+    <h1>Renato Paulino</h1>
+    <h3>Suporte Técnico</h3>
+    <a href="http://github.com/renpaulino"><button id="git"><img src="img/git.svg" alt=""></button></a>
+    <a href="http://www.linkedin.com/in/renatopaulino/"><button id="linkedin"><img src="img/linkedin.png" alt=""></button></a>
+  </div>
+  </div>
+    <!-- FIM SHOWCASE 3 -->
+    <!-- FOOTER -->
+    <section class="contact" id="Contato">
+    <footer>
+      <h1>Contato</h1>
+      <div class="pageContent">
+        <div class="cContainer">
+            <h4>Nos contate para qualquer dúvida</h4> 
+           
+            <div class="rectangle">
+                <div class="localization">
+                    <img src="img/location.png" alt="">
+                    <p>Rua Haddock Lobo, 595 <br>
+                    Cerqueira César, São Paulo - SP <br>
+                    01414-001 </p>
+                </div>
+                
+                <div class="rectWhite">
+                    <img src="img/tel.png" alt="">
+                    <h5>+11 3444-9811</h5>
+                </div>
+
+                <div class="contEmail">
+                    <img src="img/mail.png" alt="">
+                    <p>contato@vaccinus.com.br</p>
+                </div>                
+            </div>
+    </div>
+    <h3 id="footeeer">Copyright © 2020<a href="index.html"> Vaccinus </a><i class="fas fa-heart"></i> Todos os direitos reservados.</a></h3>
+    </footer>
+  </section> 
+  </div>
 </body>
 
 </html>

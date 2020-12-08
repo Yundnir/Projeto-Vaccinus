@@ -1,255 +1,311 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-        /* SÓ COLOCAR QUANDO COLOCAR COR NO HEADER */
-    margin: 0;
-        /* SÓ COLOCAR QUANDO COLOCAR COR NO HEADER */
-        background-color: rgb(255, 95, 37);
+@import 'contato.css';
+html {
+    scroll-behavior: smooth;
 }
 
-.container { 
-    width: 80%;
-    margin: auto;
+body {
+    background-color: #101010;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    background-image: linear-gradient(#000000, #101010, #000000);
 }
 
 h1 {
-    margin: 0;
-    padding: 0;
+    font-size: 75px;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 30px;
 }
 
 a {
     text-decoration: none;
-}
-
-/* CABEÇALHO */
-
-.header {
-    background-color: #232323;
-        /*overflow: auto; /* cuidado*/
-    height: 100px;
-        /*ATENÇÃO VOLTA A NAV AQUI SE SUMIR*/
-    border-bottom: 3px solid orangered;
-}
-
-.header .container {
-    height: 80px;
-}
-
-.header .container .highlight {
-    color: orangered
-}
-
-.header h1 {
-    margin: 0;
-    padding: 0;
-    float: left;
-        /*ATENÇÃO - VAI SUMIR A NAV*/
-    margin-top: 30px;
     color: white;
+    transition: 0.3s;
 }
 
-.header ul {
+a:hover {
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+a .loginli:hover {
+    padding-left: 22px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.Docker-Main {
+    width: 80%;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+.logonavbar {
+    width: 50px;
+    float: left;
+    padding-right: 850px;
+    transition: 0.5s;
+}
+
+.logonavbar:hover {
+    opacity: 0;
+}
+
+.navbar li {
+    display: inline-block;
     list-style-type: none;
-        /*ATENÇÃO - NAO É NO NAV*/
-    float: right;
-        /*ATENÇÃO - VAI SUMIR A NAV*/
-    margin-top: 40px;
-}
-
-.header li {
-    float: left;
-        /*ATENÇÃO ORDENE OS ITENS NA MESMA ORDEM QUE ESTÃO NO HTML*/
-    margin-left: 18px;
-        /* FIM*/
-}
-
-.header a {
-    text-transform: uppercase;
-    color: white;
-}
-
-.header a:hover {
     font-weight: bold;
+    margin: 10px 60px 0px 0px;
 }
 
-.header .current {
-    color: orangered;
-    font-weight: bold;
+.loginli {
+    width: 45px;
+    height: 25px;
+    background-color: #9DD2EE;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 0.3s;
 }
 
-/* JUMBOTRON 
-    aka BANNER */
-
-/*colocar tudo que está acima em header */
-
-.banner {
-    height: 400px;
-    width: 100%;
-    background: url(../img/banner-fundo.jpeg);
-    background-size: cover;
-}
-
-.banner .container {
-    height: 400px;
-}
-
-.banner .texto {
-    color: gray;
+.showcase-main {
     text-align: center;
-    padding-top: 150px;
-
+    margin-top: 100px;
 }
 
-.banner .titulo {
-    font-size: 48px;
-    color: orangered;
+.showcase-main img:hover {
+    width: 700px;
 }
 
-/* NOVIDADES */
-
-.novidades {
-    background-color: #232323;
-    height: 90px;
+.imgmapa {
+    width: 650px;
+    transition: 0.3s;
 }
 
-.novidades .container {
-    padding: 30px 0;
-}
-
-.novidades h2 {
+button {
+    background-color: #9DD2EE;
     color: white;
-    margin-top: 0;
-    padding-top: 0;
-    float: left;
-    font-weight: 400;
-}
-
-.novidades form {
-    float: right;
-}
-
-.novidades input {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 25px;
     border: 0;
-    height: 35px;
-    width: 250px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.novidades button {
-    background-color: orangered;
-    border: 0;
-    height: 38px;
-    padding: 0 20px;
+button:hover {
+    width: 200px;
+    height: 75px;
+    font-size: 30px;
 }
 
-/* ICONES */
-
-.box {
-    overflow: auto;
-    background-color: #fff ;
+.buttonrgb {
+    background-color: #363636;
+    color: #9DD2EE;
 }
 
-.box .box-item {
-    float: left;
-    width: 33%;
+.show2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show2 h3 {
+    font-size: 50px;
+}
+
+.show2 span {
+    font-size: 30px;
+    color: #9DD2EE;
+}
+
+.cards .card {
+    background: transparent;
+    margin: 0rem 5rem;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin: 50px 0;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
-.box .box-item img {
-    height: 100px;
-}
-
-/* FOOTER */
-
-.footer {
-    background-color: rgb(255, 95, 37);
-    text-align: center;
-    height: 100px;
-}
-
-.footer h4 {
+.cards {
+    display: flex;
+    justify-content: space-between;
     color: white;
-    font-weight: 100;
-    margin: 0;
-    padding-top: 40px;
 }
 
-/* SOBRE - ASSUNTOS */
+.CASE3 {
+    margin-top: 100px;
+}
 
-.assuntos {
-    background-color: rgb(241, 241, 241);
-    overflow: auto;
-    padding-top: 30px;
+.CASE3 p {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.CASE3 h3 {
+    font-size: 50px;
+    color: #9DD2EE;
+}
+
+.CASE3 button {
+    margin-top: 75px;
+    font-size: 30px;
+    width: 200px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+.contact{
+    position: absolute;
+    top: 4000px;
+    left: 250px;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+footer h1 {
+    position: absolute;
+    top: 130px;
+    left: 670px;
+    font-size: 45px;
     text-align: center;
-    padding-bottom: 50px; /*aqui oh a diferença entre padding e margin*/
-    color: #3d3d3d
+    color: #9DD2EE;
 }
 
-.assuntos .assunto {
-    border-bottom: 3px solid orangered;
-    background-color: white;
-    padding: 50px 0;
-    float: left;
-    width: 450px;
-    margin-left: 55px; 
+footer .flex {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    margin: 0 690px;
 }
 
-.assuntos h2 {
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
+footer h4 {
+    font-size: 25px;
 }
 
-.assuntos p {
-    line-height: 1.5;
+footer h3 {
+    margin-left: 500px;
 }
 
-/* SOBRE - INTEGRANTES */
+#footeeer {
+    width: 1000px;
+    font-size: 20px;
+}
+.time{
+    position: absolute;
+    top: 2900px;
+}
 
-.nosso-time {
-    background-color: #232323;
+
+.time button {
+    background: rgba(255, 255, 255, 0.17);
+    display: inline-block;
+}
+
+.time h1 {
+ 
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 47px;
     text-align: center;
-    overflow: auto;
-} 
-
-.nosso-time h2 {
-    margin: 0;
-    padding-top: 25px;
-    color: white;
-    text-transform: uppercase;
 }
 
-.nosso-time .integrantes {
-    color: white;
-    overflow: auto;
-    margin-top: 30px;
-    padding-bottom: 35px;
+.time h3 {
+   width: 250px;
+    margin-top: -20px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
 }
 
-
-.nosso-time .integrantes .integrante {
-    /*border: 3px solid cyan;*/
-    width: 180px;
-    float: left;
-    padding: 0;
-    margin-left: 20px;
-    line-height: 1.5;
+#time {
+    position: absolute;
+    width: 428px;
+    height: 55px;
+    left: 570px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
 }
 
-.nosso-time .integrante img {
-    height: 100px;
-    background-color: #ff8968;
-    border-radius: 50%;
-    padding: 10px;
+#subtime {
+    position: absolute;
+    width: 739px;
+    height: 55px;
+    left: 420px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
 }
 
-/* ASSUNTO GRANDE */
+.andre {
+    
+    position: absolute;
+    top: 195px;
+    left: 70px;
+}
+.gui {
+    position: absolute;
+    top: 200px;
+    left: 650px;
+}
 
-.assuntos .assunto-grande {
-    border-bottom: 3px solid orangered;
-    background-color: white;
-    padding: 50px 30px;
-    float: left;
-    /* width: 450px; */
-    margin-left: 55px; 
+.daniels{
+    position: absolute;
+    top: 200px;
+    left: 1250px;
+}
+.nicao{
+    position: absolute;
+    top: 700px;
+    left: 70px;
+}
+
+.pri{
+    position: absolute;
+    top: 700px;
+    left: 650px;
+}
+.ren{
+    position: absolute;
+    top: 700px;
+    left: 1250px;
+}
+
+#git{
+    position: absolute;
+    left: -30px;
+}
+
+#linkedin{
+    position: absolute;
+    left: 130px;
 }
