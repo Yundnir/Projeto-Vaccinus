@@ -4,8 +4,11 @@ body {
     padding: 0 1rem;
     font-family: 'Roboto', sans-serif;
     /* font-family: Arial, Helvetica, sans-serif; */
-    background-color: #363636;
-    
+    background-color: #363636;   
+}
+
+html{
+    overflow: hidden;
 }
 
 

@@ -5,9 +5,9 @@ body {
     background-color: #363636;
 }
 
-/* html{
+html{
     overflow: hidden;
-} */
+}
 
 .l-navbar {
     top: 0;
@@ -228,8 +228,9 @@ body {
     top: 80px;
     position: absolute;
     left: 20px;
-    /* width: 585px; */
+    width: 100%;
 }
+
 /*INPUT SEARCH*/
 .search{
     padding-left: 20px;
