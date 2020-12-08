@@ -4,46 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ</title>
+    <title>Vaccinus – FAQ</title>
+    <link rel="stylesheet" href="css/faq.css">
 </head>
+
 <body>
     <div id="container">
-    <h1>FAQ</h1>
-    <div id="internet">
-    <h2>Problemas de Internet:</h2>
-    <h3>Há conexão de internet no computador do cliente?</h3>
-    <ul>
-        <li>Executar solução de problema do sistema operacional</li>
-        <li>Reiniciar o modem</li>
-        <li>Ligar para a operadora de internet</li>
-    </ul>
+        <h1>FAQ</h1>
+        <div class="sublinhado"></div>
+        <div id="internet">
+            <div class="numero1">
+                <img src="img/numero1.svg">
+            </div>
+            <h2>Problemas de Internet:</h2>
+            <button type="button" class="colapsar1"></button> <!--Botão para abrir e fechar o conteúdo-->
+            <div class="conteudo1"> <!--Div que abriga o conteúdo que será recolhido-->
+                <h3><span style="color: #9DD2EE;">1)</span> Há conexão de internet no computador do cliente?</h3>
+                <ul>
+                    <li>– Executar solução de problema do sistema operacional</li>
+                    <li>– Reiniciar o modem</li>
+                    <li>– Ligar para a operadora de internet</li>
+                </ul>
+            </div>
+        </div>
+        <div id="hardware">
+            <div class="numero2">
+                <img src="img/numero2.svg">
+            </div>
+            <h2>Hardware:</h2>
+            <button type="button" class="colapsar2"></button> <!--Botão para abrir e fechar o conteúdo-->
+            <div class="conteudo2"> <!--Div que abriga o conteúdo que será recolhido-->
+                <div class="pergunta2">
+                    <h3><span style="color: #9DD2EE;">1)</span> Existe algum dano externo na instalação?</h3>
+                </div>
+                <div class="respostas2_1">
+                    <ul>
+                        <li>– Conferir se o led de alimentação está aceso</li>
+                        <li>– Checar as conexões de alimentação do Arduino</li>
+                        <li>– Checar se as baterias estão com carga</li>
+                        <li>– Checar se o Arduino está danificado</li>
+                    </ul>
+                </div>
+                <div class="pergunta2_2">
+                    <h3><span style="color: #9DD2EE;">2)</span> Arduino está ligando, mas os dados não estão sendo
+                        visualizados no dashboard/site</h3>
+                </div>
+                <div class="respostas2_2">
+                    <ul>
+                        <li>– Conferir se o sensor está operacional</li>
+                        <li>– Conferir cabeamento de conexão do sensor do Arduino</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="temperatura"></div>
+        <div class="numero3">
+            <img src="img/numero3.svg">
+        </div>
+        <div class="conteiner">
+            <h2>Container:</h2>
+        </div>
+        <button type="button" class="colapsar3"></button> <!--Botão para abrir e fechar o conteúdo-->
+        <div class="conteudo3"> <!--Div que abriga o conteúdo que será recolhido-->
+            <div class="pergunta3_1">
+                <h3><span style="color: #9DD2EE;">1)</span> Contêiner não está mantendo a temperatura?</h3>
+            </div>
+            <div class="respostas3_1">
+                <ul>
+                    <li>– Enviar o contêiner à Vaccinus para análise</li>
+                </ul>
+            </div>
+            <div class="pergunta3_2">
+                <h3><span style="color: #9DD2EE;">2)</span> Contêiner está danificado?</h3>
+            </div>
+            <div class="respostas3_2">
+                <ul>
+                    <li>– Enviar o contêiner à Vaccinus para análise</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div id="hardware">
-    <h2>Hardware:</h2>
-    <h3>Existe algum dano externo na instalação?</h3>
-    <ul>
-        <li>Conferir se o led de alimentação está aceso</li>
-        <li>Checar as conexões de alimentação do Arduino</li>
-        <li>Checar se as baterias estão com carga</li>
-        <li>Checar se o Arduino está danificado</li>
-    </ul>
-    <h3>Arduino está ligando, mas os dados não estão sendo visualizados no dashboard/site</h3>
-    <ul>
-        <li>Conferir se o sensor está operacional</li>
-        <li>Conferir cabeamento de conexão do sensor do Arduino</li>
-    </ul>
-</div>
-<div id="temperatura"></div>
-    <h2>Container: </h2>
-    <h3>Container não está mantendo a temperatura?</h3>
-    <ul>
-        <li>Enviar o container à Vaccinus para análise</li>
-    </ul>
-    <h3>Container está danificado?</h3>
-    <ul>
-        <li>Enviar o container à Vaccinus para análise</li>
-    </ul>
-    </div>
-</div>
 </body>
+
 </html>
+<script>
+    var coll1 = document.getElementsByClassName("colapsar1");
+    var i1;
+
+    for (i1 = 0; i1 < coll1.length; i1++) {
+        coll1[i1].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var conteudo1 = this.nextElementSibling;
+            if (conteudo1.style.display === "block") {
+                conteudo1.style.display = "none";
+            } else {
+                conteudo1.style.display = "block";
+            }
+        });
+    }
+
+    var coll2 = document.getElementsByClassName("colapsar2");
+    var i2;
+
+    for (i2 = 0; i2 < coll2.length; i2++) {
+        coll2[i2].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var conteudo2 = this.nextElementSibling;
+            if (conteudo2.style.display === "block") {
+                conteudo2.style.display = "none";
+            } else {
+                conteudo2.style.display = "block";
+            }
+        });
+    }
+
+    var coll3 = document.getElementsByClassName("colapsar3");
+    var i3;
+
+    for (i3 = 0; i3 < coll3.length; i3++) {
+        coll3[i3].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var conteudo3 = this.nextElementSibling;
+            if (conteudo3.style.display === "block") {
+                conteudo3.style.display = "none";
+            } else {
+                conteudo3.style.display = "block";
+            }
+        });
+    }
+</script>
