@@ -1,3 +1,4 @@
+@import 'contato.css';
 html {
     scroll-behavior: smooth;
 }
@@ -149,7 +150,7 @@ footer{
     margin-top: 200px;
 }
 footer h1{
-    font-size: 30px;
+    font-size: 45px;
     text-align: center;
 }
 footer .flex{
@@ -157,4 +158,10 @@ footer .flex{
     align-content: center;
     flex-direction: row;
     margin: 0 690px;
+}
+footer h4{
+    font-size: 35px;
+}
+footer h3{
+    margin-left: 500px;
 }
