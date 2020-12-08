@@ -81,13 +81,13 @@ router.get('/min-temp', function(req, res, next) {
 
 	console.log(`Recuperando as ultimas ${limite_linhas} leituras`);
 	
-	const instrucaoSql = `select min(temp_atual) from tbLeitura where fkSensor = 2`;
+	const instrucaoSql = `select min(temp_atual) as 'min_temp', max(temp_atual) as 'max_temp', avg(temp_atual) as 'med_temp' from tbLeitura`;
 
 	sequelize.query(instrucaoSql,  {
 		model: Leitura
 	  })
 	  .then(resultado => {
-			console.log(`Encontrados: ${resultado[0]}`);
+			console.log(`Encontrados: ${resultado}`);
 			res.json(resultado);
 	  }).catch(erro => {
 			console.error(erro);

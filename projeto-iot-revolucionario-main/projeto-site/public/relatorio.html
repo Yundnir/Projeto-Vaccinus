@@ -14,7 +14,7 @@
 
   
 </head>
-<body onload="indicador(), temp_min()">
+<body onload="indicador(), temp_min(), agora()">
     <header class="header" id="header">
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
@@ -142,8 +142,10 @@
                 </div>
 
                 <div class="data_box2">Sobre as vacinas agora.
-                    <div class="data_item2" id="campo_tres">
-                        Temperatura mais baixa encontrada: 4°C
+                    <div class="data_item2b">
+                        <p id="menor_temp"></p>
+                        <p id="maior_temp"></p>
+                        <p id="media_temp"></p>
                     </div>
                 </div>
         </div>
@@ -155,6 +157,7 @@
     <script>
         var cont = 0;
         var teste;
+        var dia;
 
         function indicador() {
 
@@ -180,16 +183,34 @@
                 }, 200);
         }
 
+            dia = agora();
+            function agora() {
+
+            const agora_d = new Date();
+            return `${agora_d.getDate()}/${agora_d.getMonth()+1}/${agora_d.getFullYear()}`;
+
+            }
+
         function imprimir() {
 
             var camp_um = campo_um.innerHTML;
             var camp_dois = campo_dois.innerHTML;
-            var camp_tres = campo_tres.innerHTML;
+            var min_tem = menor_temp.innerHTML;
+            var max_tem = maior_temp.innerHTML;
+            var med_tem = media_temp.innerHTML;
+
+            
+
             var doc = new jsPDF()
             doc.setTextColor('#9dd2ee');
             doc.text("Relatório VACCINUS", 80, 20, 0, 20)
             doc.setTextColor('#000');
-            doc.text(`${camp_um} ${camp_dois} ${camp_tres}`, -25, 30)
+            doc.text(`${camp_um} ${camp_dois}`, -25, 30)
+            doc.text(`${min_tem}`, 12, 100)
+            doc.text(`${max_tem}`, 12, 110)
+            doc.text(`${med_tem}`, 12, 120)
+            doc.text(`${dia}`,  170,  10)
+            doc.text(`Container em trajeto`, 80, 140, 0, 20)
             doc.save('relatorio.pdf')
             
         }
@@ -204,16 +225,20 @@
 
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
+                    
                     // aqui, após registro. use os nomes 
                     // dos atributos que vem no JSON 
                     var dados = {
-                        temperatura: resposta.temp_atual,
+                        min: resposta[0].min_temp,
+                        max: resposta[0].max_temp,
+                        med: resposta[0].med_temp
+                        
                         // umidade: resposta.umidade
                     }
 
-                    var teste = parseInt(`${JSON.stringify(resposta)}`);
+                    // var teste = parseInt(`${JSON.stringify(resposta)}`);
 
-                    campo_tres.innerHTML = `Temperatura mais baixa encontrada: ${JSON.stringify(resposta)}`;
+                    atualizarTela(dados);
 
 
                 });
@@ -225,6 +250,20 @@
         .catch(function (error) {
                 console.error(`Erro na obtenção dos dados do caminhao p/ gráfico: ${error.message}`);
             });
+    }
+
+    function atualizarTela(dados) {
+        console.log('iniciando atualização da tela...');
+        console.log('Temperatura', dados.min);
+        // console.log('Temperatura', min_max.min);
+
+        // escolhendo qual alterar
+        var temp_max_alterar
+        var temp_min_alterar
+
+        menor_temp.innerHTML = (`Temperatura mais baixa encontrada: ${dados.min}º`);
+        maior_temp.innerHTML = (`Temperatura mais alta encontrada: ${dados.max}º`);
+        media_temp.innerHTML = (`Temperatura media durante o trajeto: ${Math.trunc(dados.med)}º`);
     }
     
         

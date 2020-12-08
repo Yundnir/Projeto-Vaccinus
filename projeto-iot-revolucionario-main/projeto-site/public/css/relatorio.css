@@ -446,7 +446,8 @@ body {
     font-size: 18px;
 }
 
-.data_item2 b{
-    color: #888787;
+.data_item2b{
+    font-size: 14pt;
+    width: 500px;
 }
 

@@ -83,10 +83,10 @@
                         </section>
 
                         <section class="section-not">
-                            <div class="notificacao-box">
+                            <div class="notificacao-box" id="alerta">
                                 <div class="notificacao_item">
-                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);"></i> <br><br> <br>
-                                    <span style="color: rgb(151, 151, 151);">Notificações</span>
+                                    <i class='bx bxs-bell-ring' style="color: rgb(151, 151, 151);" id="alerta_img"></i> <br><br> <br>
+                                    <span style="color: white;" id="texto_alertas"></span>
                                     
                                 </div>
                             </div>
@@ -181,6 +181,7 @@
 <script>
     
     let proximaAtualizacao;
+    var cont = 175;
 
     window.onload = obterDadosGraficoPrimeiraVez(1);
     
@@ -193,6 +194,13 @@
     }
 
     function chamargraficos(fkSensor) {
+
+        alerta_img.style = "color: rgb(151, 151, 151)";
+        texto_alertas.innerHTML = "";
+        cont = 175;
+        alerta.style = `height: ${cont}px`
+
+
 
         obterDadosGraficoPrimeiraVez(fkSensor)
         //atualizarGrafico(fkSensor)
@@ -365,6 +373,23 @@
 
                     console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
                     console.log(`Dados atuais do gráfico: ${dados}`);
+
+                    if (novoRegistro.temp_atual > 8 || novoRegistro.temp_atual < 2) {
+                        // alerta.style = "background-color: rgb(255, 225, 0)";
+                        alerta_img.style = "color: red";
+                        texto_alertas.innerHTML += `Temperatura captada: ${novoRegistro.temp_atual}<br><br>pelo sensor do container: ${fkSensor} <br><hr><br>`;
+                        cont += 90;
+                        alerta.style = `height: ${cont}px`
+                        texto_alertas.style = 'font-size: 15pt';
+
+                        } else if (novoRegistro.temp_atual >= 2 && novoRegistro.temp_atual <= 3 || novoRegistro.temp_atual >= 7 && novoRegistro.temp_atual <= 8) {
+                           
+                            alerta_img.style = "color: rgb(255, 225, 0)";
+                            texto_alertas.innerHTML += `Temperatura captada: ${novoRegistro.temp_atual}<br><br>pelo sensor do container: ${fkSensor} <br><hr><br>`;
+                            cont += 90;
+                            alerta.style = `height: ${cont}px`
+                            texto_alertas.style = 'font-size: 15pt';
+                        }
 
                     // tirando e colocando valores no gráfico
                     dados.labels.shift(); // apagar o primeiro

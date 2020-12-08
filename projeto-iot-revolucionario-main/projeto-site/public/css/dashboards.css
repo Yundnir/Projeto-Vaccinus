@@ -173,26 +173,27 @@ body {
 
 .notificacao-box {
     position: absolute;
-    width: 239px;
-    height: 250px;
-    left: 10px;
+    width: 270px;
+    height: 175px;
+    left: -6px;
     right: 10px;
     top: 480px;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
     border-radius: 15px;
+    color: white;
     margin-left: 10px;
 }
 
 .notificacao_item {
     text-align: center;
-    width: 204px;
+    width: 245px;
     height: 15px;
     left: 49px;
     top: 475px;
     padding: 15px;
     font-family: Roboto, sans-serif;
-    color: rgba(0, 0, 0, 0.3);
+    /* color: rgba(0, 0, 0, 0.3); */
     line-height: 15px;
 }
 
