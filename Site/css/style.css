@@ -3,84 +3,99 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: #101010;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 800;
     text-align: center;
-    background-image: linear-gradient(#000000,#101010,#000000);
+    background-image: linear-gradient(#000000, #101010, #000000);
 }
-h1{
+
+h1 {
     font-size: 75px;
 }
-p{
+
+p {
     font-size: 25px;
     font-weight: 300;
 }
-h3{
+
+h3 {
     font-size: 30px;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
     transition: 0.3s;
 }
-a:hover{
+
+a:hover {
     font-size: 24px;
     transition: 0.3s;
 }
-a .loginli:hover{
+
+a .loginli:hover {
     padding-left: 22px;
     padding-right: 25px;
     padding-bottom: 20px;
     margin-top: 0px;
     font-size: 20px;
 }
-.Docker-Main{
+
+.Docker-Main {
     width: 80%;
     margin: auto;
 }
+
 /* NAVBAR */
-.logonavbar{
+
+.logonavbar {
     width: 50px;
     float: left;
     padding-right: 850px;
     transition: 0.5s;
 }
-.logonavbar:hover{
-    opacity: 0;
 
+.logonavbar:hover {
+    opacity: 0;
 }
-.navbar li{
+
+.navbar li {
     display: inline-block;
     list-style-type: none;
     font-weight: bold;
     margin: 10px 60px 0px 0px;
 }
-.loginli{
-width: 45px;
-height: 25px;
-background-color: #9DD2EE;
-border-radius: 25px;
-padding-left: 25px;
-padding-right: 25px;
-padding-bottom: 10px;
-padding-top: 10px;
-transition: 0.3s;
+
+.loginli {
+    width: 45px;
+    height: 25px;
+    background-color: #9DD2EE;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 0.3s;
 }
-.showcase-main{
+
+.showcase-main {
     text-align: center;
     margin-top: 100px;
 }
-.showcase-main img:hover{
-width: 700px;
+
+.showcase-main img:hover {
+    width: 700px;
 }
-.imgmapa{
+
+.imgmapa {
     width: 650px;
     transition: 0.3s;
 }
- button{
+
+button {
     background-color: #9DD2EE;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -91,31 +106,38 @@ width: 700px;
     font-size: 20px;
     font-weight: 800;
     transition: 0.3s;
+    cursor: pointer;
 }
-button:hover{
+
+button:hover {
     width: 200px;
     height: 75px;
     font-size: 30px;
 }
-.buttonrgb{
+
+.buttonrgb {
     background-color: #363636;
     color: #9DD2EE;
 }
-.show2{
+
+.show2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.show2 h3{
+
+.show2 h3 {
     font-size: 50px;
 }
-.show2 span{
+
+.show2 span {
     font-size: 30px;
     color: #9DD2EE;
 }
-.cards .card{
-    background:transparent;
+
+.cards .card {
+    background: transparent;
     margin: 0rem 5rem;
     display: flex;
     flex-direction: column;
@@ -123,45 +145,167 @@ button:hover{
     border-radius: 2rem;
     overflow: hidden;
 }
-.cards{
+
+.cards {
     display: flex;
     justify-content: space-between;
     color: white;
 }
-.CASE3{
+
+.CASE3 {
     margin-top: 100px;
 }
-.CASE3 p{
+
+.CASE3 p {
     font-size: 30px;
     font-weight: 300;
 }
-.CASE3 h3{
+
+.CASE3 h3 {
     font-size: 50px;
     color: #9DD2EE;
 }
-.CASE3 button{
+
+.CASE3 button {
     margin-top: 75px;
     font-size: 30px;
     width: 200px;
     height: 75px;
     border-radius: 50px;
 }
-footer{
+
+.contact{
+    position: absolute;
+    top: 4000px;
+    left: 250px;
+}
+
+footer {
     margin-top: 200px;
 }
-footer h1{
+
+footer h1 {
+    position: absolute;
+    top: 130px;
+    left: 670px;
     font-size: 45px;
     text-align: center;
+    color: #9DD2EE;
 }
-footer .flex{
+
+footer .flex {
     display: flex;
     align-content: center;
     flex-direction: row;
     margin: 0 690px;
 }
-footer h4{
-    font-size: 35px;
+
+footer h4 {
+    font-size: 25px;
 }
-footer h3{
+
+footer h3 {
     margin-left: 500px;
+}
+
+#footeeer {
+    width: 1000px;
+    font-size: 20px;
+}
+.time{
+    position: absolute;
+    top: 2900px;
+}
+
+
+.time button {
+    background: rgba(255, 255, 255, 0.17);
+    display: inline-block;
+}
+
+.time h1 {
+ 
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 47px;
+    text-align: center;
+}
+
+.time h3 {
+   width: 250px;
+    margin-top: -20px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+
+#time {
+    position: absolute;
+    width: 428px;
+    height: 55px;
+    left: 570px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+#subtime {
+    position: absolute;
+    width: 739px;
+    height: 55px;
+    left: 420px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.andre {
+    
+    position: absolute;
+    top: 195px;
+    left: 70px;
+}
+.gui {
+    position: absolute;
+    top: 220px;
+    left: 650px;
+}
+
+.daniels{
+    position: absolute;
+    top: 200px;
+    left: 1250px;
+}
+.nicao{
+    position: absolute;
+    top: 700px;
+    left: 70px;
+}
+
+.pri{
+    position: absolute;
+    top: 700px;
+    left: 650px;
+}
+.ren{
+    position: absolute;
+    top: 700px;
+    left: 1250px;
+}
+
+#git{
+    position: absolute;
+    left: -30px;
+}
+
+#linkedin{
+    position: absolute;
+    left: 130px;
 }
