@@ -21,26 +21,15 @@
 <body>
     <div class="conteudo">
         <!-- Header ou Nav Bar -->
-        <a href="index.html">
-            <img src="img/logo_sem.png" alt="Logo" class="imagemlogo">
-        </a>
-        <div class="header">
-            <div class="container">
-                <div class="title-header">
-                </div>
-                <span class="Headertexto">Escolha o melhor plano para você!</span>
-                <div class="nav">
-                    <!-- Utilizamos o <ul> para criar listas e <li> para item dentro da lista -->
-                    <ul class="linkslista">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li class="current"><a href="planos.html">Planos</a></li>
-                    </ul>
-                    <div class="icon_login">
-                        <a href="login.html">
-                            <img src="img/user-profile.png" alt="" id="user">
-                        </a>
-                    </div>
-                </div>
+        <div class="navbar">
+            <img src="img/logo_sem.png" class="logonavbar" alt="">
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="#Contato"><li>Contato</li></a>
+              <a href="planos.html"><li>Planos</li></a>
+              <a href="login.html"><li class="loginli">Login</li></a>
+            </ul>
+          </div>
                 <!-- Showcase -->
 
                 <div class="container">
@@ -185,12 +174,35 @@
             </div>
         </div>
     </div>
-    <div class="footer" id="footer">
-        <p>Copyright © 2020<a href="index.html">Vaccinus </a><i class="fas fa-heart"></i> Todos os direitos reservados.
-            <a href="https://github.com/nicolascarvalhobandtec/Projeto-Vaccinus"><i class="fab fa-github"></i></a></p>
-        <br>
-
-    </div>
+    <section class="contact" id="Contato">
+        <footer>
+          <h1>Contato</h1>
+          <div class="pageContent">
+            <div class="cContainer">
+                <h4>Nos contate para qualquer dúvida</h4> 
+               
+                <div class="rectangle">
+                    <div class="localization">
+                        <img src="img/location.png" alt="">
+                        <p>Rua Haddock Lobo, 595 <br>
+                        Cerqueira César, São Paulo - SP <br>
+                        01414-001 </p>
+                    </div>
+                    
+                    <div class="rectWhite">
+                        <img src="img/tel.png" alt="">
+                        <h5>+11 3444-9811</h5>
+                    </div>
+    
+                    <div class="contEmail">
+                        <img src="img/mail.png" alt="">
+                        <p>contato@vaccinus.com.br</p>
+                    </div>                
+                </div>
+        </div>
+        <h3 id="footeeer">Copyright © 2020<a href="index.html"> Vaccinus </a><i class="fas fa-heart"></i> Todos os direitos reservados.</a></h3>
+        </footer>
+      </section> 
 
 </body>
 

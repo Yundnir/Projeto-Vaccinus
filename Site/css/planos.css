@@ -5,62 +5,72 @@ body {
     margin: 0;
     padding: 0;
     background-color: #363636;
+    color: white;
 }
 
-.header {
-    height: 110px;
-    padding-top: 25px;
-}
-
-.imagemlogo {
-    position: absolute;
-    left: 43px;
-    width: 79px;
-    height: auto;
-    top: 20px;
-    left: 150px;
-}
-
-.header .nav .current a, span {
-    color: #9DD2EE;
-}
-
-.header a:hover {
+a {
     text-decoration: none;
-    color: #9DD2EE;
+    color: white;
+    transition: 0.3s;
 }
 
-.header .icon_login img {
-    width: 35px;
-    margin-top: 19px;
-    padding-right: 145px;
+a:hover {
+    font-size: 24px;
+    transition: 0.3s;
 }
 
-.Headertexto {
-    position: absolute;
-    width: 971px;
-    height: 52px;
-    left: 246px;
-    top: 49px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 44px;
-    line-height: 52px;
-    color: #FFFCFC;
-    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+a .loginli:hover {
+    padding-left: 22px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    font-size: 20px;
 }
 
-#user {
-    position: absolute;
-    left: 1600px;
-    top: 40px;
+.navbar{
+    margin-left: 200px;
 }
+.logonavbar {
+    width: 50px;
+    float: left;
+    padding-right: 850px;
+    transition: 0.5s;
+}
+
+.logonavbar:hover {
+    opacity: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    list-style-type: none;
+    font-weight: bold;
+    margin: 10px 60px 20px 0px;
+}
+
+.loginli {
+    width: 45px;
+    height: 25px;
+    background-color: #9DD2EE;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+
+
 
 .container {
     /* Largura do elemento */
     width: 80%;
     margin: auto;
+    position: absolute;
+    top: -100px;
+   
     /* height: 50px; */
 }
 
@@ -108,10 +118,12 @@ body {
   
 }
 
-.venda {
+.venda h1 {
     position: absolute;
     top: 250px;
-    font-size: 24px;
+    left: 200px;
+    width: 1600px;
+    font-size: 48px;
     color: #FFFCFC;
     font-family: Roboto;
     font-style: normal;
@@ -122,8 +134,11 @@ body {
 .venda hr {
     background-color: #9DD2EE;
     color: #9DD2EE;
-    width: 1010px;
+    width: 1210px;
     height: 3px;
+    position: absolute;
+    left: 50px;
+    
 }
 
 .conteudoum {
@@ -664,35 +679,6 @@ body {
 
 /* FOOTER */
 
-.footer {
-    position: absolute;
-    top: 4405px;
-    background-color: #363636;
-    width: 100%;
-    height: 210px;
-    background-image: url(../img/onda3.png);
-    background-size: cover;
-    padding-bottom: 10px;
-}
-
-.footer p {
-    text-align: center;
-    color: white;
-    font-size: 23px;
-    padding-top: 165px;
-    margin-bottom: -15px;
-}
-
-.footer a {
-    padding-left: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #9DD2EE;
-    text-decoration: none;
-}
 
 /* Fim FOOTER */
 
@@ -706,4 +692,121 @@ body {
     list-style: none;
     color: #363636;
     text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.contact{
+    position: absolute;
+    top: 4300px;
+    left: 150px;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+footer h1 {
+    position: absolute;
+    top: 50px;
+    left: 670px;
+    font-size: 45px;
+    text-align: center;
+    color: #9DD2EE;
+}
+
+footer .flex {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    margin: 0 690px;
+}
+
+footer h4 {
+    font-size: 25px;
+    position: absolute;
+    left: 570px;
+    top: 120px;
+}
+
+footer h3 {
+    margin-left: 500px;
+}
+
+#footeeer {
+    width: 1000px;
+    font-size: 15px;
+    color: #ffffff;
+   text-align: center;
+}
+.rectangle{
+    background-color: rgba(196,196,196, 0.2);
+    height: 300px;
+    width: 1150px;
+    margin-left: 10%;
+    border-radius: 50px;    
+}
+
+.rectangle p{
+    color: white;
+    font-size: 19px;
+}
+
+.rectangle h5{
+    color: white;
+    font-size: 34px;
+    text-align: center;
+}
+
+
+.localization{
+    width: 370px;
+    height: 300px;
+    display: block;
+    float: left;
+}
+.localization img{
+    height: 150px;
+    margin: 22px 0 20px 125px;
+}
+
+.localization p {
+    margin-left: 75px;
+}
+
+.rectWhite {
+    background-color: rgba(196, 196, 196, 0.4);
+    height: 300px;
+    width: 420px;
+    border-radius: 50px;
+    /* margin-left: 467px; */
+    /* margin-top: -300px; */
+    display:block;
+    float: left;
+}
+.rectWhite h5 {
+    margin-top: 20px;
+}
+
+.rectWhite img{
+    height: 130px;
+    margin: 30px  145px 0;
+}
+
+.contEmail{
+    position: flex;
+    height: 300px;
+    width: 0px;
+    float: right;
+    margin: 25px 325px 100px 0;
+    text-align: center;
+
+}
+
+.contEmail p{
+    font-size: 26px;
+}
+
+.contEmail img{
+    height: 160px;
+    margin-left: 65px;
+    margin-top: 0px;
 }
