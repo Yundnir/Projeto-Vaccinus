@@ -50,15 +50,15 @@
                         <span class="nav_logo-name">accinus</span>
                     </a>
                     <div class="nav_list">
-                        <a href="grafico-chartjs.html" class="nav_link">
-                            <i class='bx bx-grid-alt nav_icon'></i>
-                            <span class="nav_name">Resumo</span>
-                        </a>
-                    </div>
-                    <div class="nav_list">
                         <a href="tempo-real.html" class="nav_link-est">
                             <i class='bx bx-stats nav_icon-est'></i></i>
                             <span-um class="nav_name">Estatisticas</span>
+                            </a>
+                        </div>
+                    <div class="nav_list">
+                        <a href="grafico-chartjs.html" class="nav_link">
+                            <i class='bx bx-grid-alt nav_icon'></i>
+                            <span class="nav_name">Gráfico</span>
                         </a>
                     </div>
                     <div class="nav_list">
@@ -555,7 +555,7 @@
             
         }
 
-        div_temperatura_alterar.innerHTML = ` ${dados.temperatura}º`;
+        div_temperatura_alterar.innerHTML = ` ${dados.temperatura}ºC`;
         temp_agora.innerHTML = div_temperatura.innerHTML;
         temp_agora2.innerHTML = div_temperatura2.innerHTML;
         temp_agora3.innerHTML = div_temperatura3.innerHTML;
@@ -580,17 +580,17 @@
         var temp_min_alterar
 
         if (fkSensor == 1) {
-            temp_min.innerHTML = ` ${min_max.min}º`;
-            temp_max.innerHTML = ` ${min_max.max}º`;
+            temp_min.innerHTML = ` ${min_max.min}ºC`;
+            temp_max.innerHTML = ` ${min_max.max}ºC`;
         } else if (fkSensor == 2) {
-            temp_min2.innerHTML = ` ${min_max.min}º`;
-            temp_max2.innerHTML = ` ${min_max.max}º`;
+            temp_min2.innerHTML = ` ${min_max.min}ºC`;
+            temp_max2.innerHTML = ` ${min_max.max}ºC`;
         } else if (fkSensor == 3) {
-            temp_min3.innerHTML = ` ${min_max.min}º`;
-            temp_max3.innerHTML = ` ${min_max.max}º`;
+            temp_min3.innerHTML = ` ${min_max.min}ºC`;
+            temp_max3.innerHTML = ` ${min_max.max}ºC`;
         } else if (fkSensor == 4) {
-            temp_min4.innerHTML = ` ${min_max.min}º`;
-            temp_max4.innerHTML = ` ${min_max.max}º`;
+            temp_min4.innerHTML = ` ${min_max.min}ºC`;
+            temp_max4.innerHTML = ` ${min_max.max}ºC`;
         }
     }
 

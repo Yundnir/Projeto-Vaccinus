@@ -10,6 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
 
 
   
@@ -24,15 +25,15 @@
                         <span class="nav_logo-name">accinus</span>
                     </a>
                     <div class="nav_list">
-                        <a href="grafico-chartjs.html" class="nav_link">
-                            <i class='bx bx-grid-alt nav_icon'></i>
-                            <span class="nav_name">Resumo</span>
-                        </a>
-                    </div>
-                    <div class="nav_list">
                         <a href="tempo-real.html" class="nav_link">
                             <i class='bx bx-stats nav_icon'></i></i>
                             <span-um class="nav_name">Estatisticas</span>
+                        </a>
+                    </div>
+                    <div class="nav_list">
+                        <a href="grafico-chartjs.html" class="nav_link">
+                            <i class='bx bx-grid-alt nav_icon'></i>
+                            <span class="nav_name">Gráfico</span>
                         </a>
                     </div>
                     <div class="nav_list">
@@ -206,9 +207,9 @@
             doc.text("Relatório VACCINUS", 80, 20, 0, 20)
             doc.setTextColor('#000');
             doc.text(`${camp_um} ${camp_dois}`, -25, 30)
-            doc.text(`${min_tem}`, 12, 100)
-            doc.text(`${max_tem}`, 12, 110)
-            doc.text(`${med_tem}`, 12, 120)
+            doc.text(`${min_tem}°C`, 12, 100)
+            doc.text(`${max_tem}°C`, 12, 110)
+            doc.text(`${med_tem}°C`, 12, 120)
             doc.text(`${dia}`,  170,  10)
             doc.text(`Container em trajeto`, 80, 140, 0, 20)
             doc.save('relatorio.pdf')
@@ -261,9 +262,9 @@
         var temp_max_alterar
         var temp_min_alterar
 
-        menor_temp.innerHTML = (`Temperatura mais baixa encontrada: ${dados.min}º`);
-        maior_temp.innerHTML = (`Temperatura mais alta encontrada: ${dados.max}º`);
-        media_temp.innerHTML = (`Temperatura media durante o trajeto: ${Math.trunc(dados.med)}º`);
+        menor_temp.innerHTML = (`Temperatura mais baixa encontrada: ${dados.min}ºC`);
+        maior_temp.innerHTML = (`Temperatura mais alta encontrada: ${dados.max}ºC`);
+        media_temp.innerHTML = (`Temperatura media durante o trajeto: ${Math.trunc(dados.med)}ºC`);
     }
     
         
