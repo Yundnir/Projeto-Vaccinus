@@ -228,12 +228,12 @@
         var perdas_totais = perdidas.value * inp_vacina.value;
         var perda_percentual = (perdas_totais * 100) / total;
         var ganho_total = (perdas_totais/2) + 45;
-        var ganho_percentual = (ganho_total*100) /  perdas_totais; 
-        valor_total_perdas.innerHTML = `<br>Você teve um <span style="color:red;">prejuízo</span> de <span style="color:red;">R$${perdas_totais}</span> referente às vacinas que foram estragadas
+        var ganho_percentual = Math.trunc((ganho_total*100) /  perdas_totais); 
+        valor_total_perdas.innerHTML = `<br>Você teve um <span style="color:red;">prejuízo</span> de <span style="color:red;">R$${perdas_totais.toFixed(2)}</span> referente às vacinas que foram estragadas
                                         no processo de transporte.<br>
                                         O que corresponde a um prejuízo de <span style="color:red;">${perda_percentual.toFixed(2)}%</span> do investimento inicial.<br><br>
                                         Porém, com o serviço <span style="color:#9dd2ee;">Vaccinus</span>, você terá um lucro de 
-                                        <span style="color:green;">R$${ganho_total}</span> referente às vacinas que não seriam estragadas com o nosso monitoramento no processo de transporte!
+                                        <span style="color:green;">R$${ganho_total.toFixed(2)}</span> referente às vacinas que não seriam estragadas com o nosso monitoramento no processo de transporte!
                                         Onde corresponde a um aumento de <span style="color:green;">${ganho_percentual}%</span>  do investimento inicial em apenas um container!`;
     }
 </script>
