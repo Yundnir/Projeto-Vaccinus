@@ -288,7 +288,7 @@
                                 yAxisID: 'y-temperatura',
                                 label: 'Temperatura',
                                 borderColor: ['#8C52FF'],
-                                // backgroundColor: window.chartColors.red,
+                                backgroundColor: ['#8C52FF'],
                                 fill: false,
                                 data: []
                                 
@@ -297,7 +297,7 @@
                                 label: "Temp. Mínima",
                                 type: 'line',
                                 borderColor: ['#86EAE9'],
-                                // backgroundColor: ['#e1ecec']
+                                backgroundColor: ['#86EAE9'],
                                 fill: 'false',  
                                 data: [2,2,2,2,2,2,2,2,2,2],
                                 defaultFontSize: '15'
@@ -306,7 +306,7 @@
                                 label: "Alerta Frio",
                                 type: 'line',
                                 borderColor: ['#2C92D5'],
-                                // backgroundColor: ['#e1ecec']
+                                backgroundColor: ['#2C92D5'],
                                 fill: 'false',
                                 data: [3,3,3,3,3,3,3,3,3,3]
                             },
@@ -314,7 +314,7 @@
                                 label: "Temp. Ideal",
                                 type: 'line',
                                 borderColor: ['#008037'],
-                                // backgroundColor: ['#e1ecec']
+                                backgroundColor: ['#008037'],
                                 fill: 'false',
                                 data: [5,5,5,5,5,5,5,5,5,5]
                             },
@@ -322,7 +322,7 @@
                                 label: "Alerta Quente",
                                 type: 'line',
                                 borderColor: ['#F45D00'],
-                                // backgroundColor: ['#e1ecec']
+                                backgroundColor: ['#F45D00'],
                                 fill: 'false',
                                 data: [7,7,7,7,7,7,7,7,7,7]
                             },
@@ -330,21 +330,19 @@
                                 label: "Temp. Máxima",
                                 type: 'line',
                                 borderColor: ['#FF1616'],
-                                // backgroundColor: ['#e1ecec']
+                                backgroundColor: ['#FF1616'],
                                 fill: 'false',
                                 data: [8,8,8,8,8,8,8,8,8,8]
                             }			
                                 ]
                     };
+
                     for (i = 0; i < resposta.length; i++) {
                         var registro = resposta[i];
-                        // dados.labels.push(registro.momento_grafico);
                         dados.labels.push(registro.hr_temp);
                         dados.datasets[0].data.push(registro.temp_atual);
-                        // dados.datasets[0].data.push(registro.temperatura);
-                        // dados.datasets[1].data.push(registro.umidade);
-
                     }
+
                     console.log(JSON.stringify(dados));
                     div_aguarde.style.display = 'none';
                     plotarGrafico(dados, fkSensor);
@@ -358,8 +356,6 @@
             });
 
     }
-
-
 
     // só mexer se quiser alterar o tempo de atualização
     // ou se souber o que está fazendo!

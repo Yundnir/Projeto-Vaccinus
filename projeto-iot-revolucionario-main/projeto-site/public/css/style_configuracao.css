@@ -513,6 +513,7 @@ html{
 .plano h1 {
     position: absolute;
     left: 35px;
+    top: 10px;
     font-family: poppins;
     font-style: normal;
     font-weight: normal;
@@ -548,7 +549,7 @@ html{
     width: 66px;
     height: 53px;
     left: 165px;
-    top: 185px;
+    top: 202px;
     font-family: poppins;
     font-style: normal;
     font-weight: normal;
@@ -577,6 +578,7 @@ html{
     font-size: 25px;
     line-height: 37px;
     color: #FFFFFF;
+    top: 10px;
 }
 
 #linhacon {

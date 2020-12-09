@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style_configuracao.css">
+        <link rel="stylesheet" href="css/faq_copia.css">
         <script type="text/javascript" src="funcoes.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
@@ -27,6 +28,8 @@
         <!-- Start of vaccinushelp Zendesk Widget script -->
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a0ae2c1e-4394-4336-ae13-2023d7a7dfd1"> </script>
         <!-- End of vaccinushelp Zendesk Widget script -->
+        <!-- Modal Library w3 school-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     </head>
 
@@ -139,20 +142,85 @@
             </div>
 
             <div class="contato">
-                <h1>Tem alguma dúvida!?</h1>
+                <h1>Tem alguma dúvida?</h1>
                 <div id="linhacon"></div>
                 <img src="img/email.png" alt="" id="imgemail">
                 <h2>+11 3444-9811</h2>
                 <img src="img/tel.png" alt="" id="imgtel">
                 <h3>Contato@vaccinus.com.br</h3>
-                <button>FAQ?</button>
+                <!-- Modal do FAQ-->
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">FAQ?</button> 
             </div>
         </section>
-
+        <div id="id01" class="w3-modal">
+        <div id="container" class="w3-modal-content">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h1>FAQ</h1>
+            <div class="sublinhado"></div>
+            <div class="numero1">
+                <img src="img/numero1.svg">
+            </div>
+            <button class="accordion" style="padding-left: 90px;">Problemas de Internet:</button>
+            <div class="panel">
+                <span style="font-size: 28px;"><span style="color: #9DD2EE;">1)</span> Há conexão de internet no computador
+                    do cliente?</span> <br>
+                – Executar solução de problema do sistema operacional. <br>
+                – Reiniciar o modem. <br>
+                – Ligar para a operadora de internet. <br>
+            </div>
+            <div id="hardware">
+                <div class="numero2">
+                    <img src="img/numero2.svg">
+                </div>
+                <button class="accordion" style="padding-left: 90px;">Hardware:</button>
+                <div class="panel">
+                    <span style="font-size: 28px;"><span style="color: #9DD2EE;">1)</span> Existe algum dano externo na instalação?</span> <br>
+                    – Conferir se o led de alimentação está aceso. <br>
+                    – Checar as conexões de alimentação do Arduino. <br>
+                    – Checar se as baterias estão com carga. <br>
+                    – Checar se o Arduino está danificado. <br><br>
+    
+                    <span style="font-size: 28px;"><span style="color: #9DD2EE;">2)</span> Arduino está ligando, mas os dados não estão sendo
+                    visualizados no dashboard/site</span> <br>
+                    – Conferir se o sensor está operacional. <br>
+                    – Conferir cabeamento de conexão do sensor do Arduino. <br>
+                </div>
+            </div>
+            <div class="numero3">
+                <img src="img/numero3.svg">
+            </div>
+            <button class="accordion" style="padding-left: 90px;">Contêiner:</button>
+            <div class="panel">
+                <span style="font-size: 28px;"><span style="color: #9DD2EE;">1)</span> Contêiner não está mantendo a temperatura?</span><br>
+                – Enviar o contêiner à Vaccinus para análise. <br><br>
+                <span style="font-size: 28px;"><span style="color: #9DD2EE;">2)</span> Contêiner está danificado?</span><br>
+                – Enviar o contêiner à Vaccinus para análise.
+            </div>
+        </div>
+    </div>
     </body>
 
     </html>
     <script>
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
 
         function entrar() {
             aguardar();
